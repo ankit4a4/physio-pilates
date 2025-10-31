@@ -11,10 +11,7 @@ export default function Gallery() {
   return (
     <section className="relative py-8 md:py-16 bg-[#F7F4EF]">
       {/* Soft luxury glows */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-[-150px] right-[-100px] w-[350px] h-[350px] bg-[#5CE2E7]/30 blur-[120px] rounded-full"></div>
-        <div className="absolute bottom-[-150px] left-[-100px] w-[300px] h-[300px] bg-[#352C1C]/15 blur-[150px] rounded-full"></div>
-      </div>
+     
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 space-y-4">
