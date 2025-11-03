@@ -148,14 +148,14 @@ export default function Hero() {
 
       <button
         onClick={prevSlide}
-        className="absolute hidden md:block left-4 md:left-8 top-1/2 -translate-y-1/2 bg-[#5CE2E7] hover:bg-white/30 backdrop-blur-sm p-3 rounded-full transition-all duration-300 z-10"
+        className="absolute hidden md:block left-4 md:left-8 top-1/2 -translate-y-1/2 bg-[#b49559] hover:bg-white/30 backdrop-blur-sm p-3 rounded-full transition-all duration-300 z-10"
       >
         <ChevronLeft className="h-6 w-6 text-white" />
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-4 hidden md:block md:right-8 top-1/2 -translate-y-1/2 bg-[#5CE2E7] hover:bg-white/30 backdrop-blur-sm p-3 rounded-full transition-all duration-300 z-10"
+        className="absolute right-4 hidden md:block md:right-8 top-1/2 -translate-y-1/2 bg-[#b49559] hover:bg-white/30 backdrop-blur-sm p-3 rounded-full transition-all duration-300 z-10"
       >
         <ChevronRight className="h-6 w-6 text-white" />
       </button>
@@ -169,8 +169,8 @@ export default function Hero() {
               setCurrentSlide(index);
             }}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide
-              ? 'bg-[#5CE2E7] w-8'
-              : 'bg-[#5CE2E7]/50 hover:bg-white/70'
+              ? 'bg-[#b49559] w-8'
+              : 'bg-[#b49559]/50 hover:bg-white/70'
               }`}
           />
         ))}

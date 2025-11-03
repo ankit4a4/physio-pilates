@@ -9,135 +9,77 @@ import "aos/dist/aos.css";
 export default function Services() {
 
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      once: true,
-    });
+    AOS.init({ duration: 1000, easing: "ease-in-out", once: true });
   }, []);
 
   const services = [
-    {
-      icon: Activity,
-      title: "Physiotherapy & Rehabilitation",
-      description:
-        "Clinical physiotherapy programs to treat pain, injuries, posture issues, and mobility limitations with scientific rehab protocols.",
-    },
-    {
-      icon: Heart,
-      title: "Pilates Training",
-      description:
-        "Personalised pilates sessions designed to build core strength, improve posture, enhance flexibility, and develop long-term body control.",
-    },
-    {
-      icon: Droplet,
-      title: "Dry Needling & Cupping Therapy",
-      description:
-        "Advanced pain-management techniques for muscle tightness, nerve tension, sports injuries & deep tissue recovery.",
-    },
-    {
-      icon: GraduationCap,
-      title: "Teacher Training Courses",
-      description:
-        "Professional certification in Pilates & Yoga with expert guidance, hands-on practice and industry-standard training modules.",
-    },
+    { icon: Activity, title: "Physiotherapy & Rehabilitation", description: "Scientific programs to recover strength, mobility & posture using advanced physio protocols." },
+    { icon: Heart, title: "Pilates Training", description: "Personalised pilates training for core strength, flexibility & posture correction." },
+    { icon: Droplet, title: "Dry Needling & Cupping", description: "Effective pain relief techniques for muscle tightness, nerve tension & sports injuries." },
+    { icon: GraduationCap, title: "Teacher Training Courses", description: "Professional certification programs in Pilates & Yoga with hands-on training." },
   ];
 
   return (
     <section
-      className="relative py-8 md:py-28 overflow-visible bg-fixed bg-cover bg-center"
-      style={{ backgroundImage: `url(${backgroundImage.src})` }}
+      className="relative py-8 md:py-28 bg-[#5CE2E7]/10 bg-cover bg-center"
       data-aos="fade-up"
     >
-      {/* Black Overlay */}
-      <div className="absolute inset-0 bg-black/70 -z-0"></div>
+      {/* Soft Overlay */}
+      <div className="absolute inset-0 bg-white/60 backdrop-blur-[2px]"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Header */}
+        <div className="text-center mb-20 space-y-4" data-aos="fade-down">
+          <span className="inline-block px-5 py-2 rounded-full bg-[#b49559]/10 text-[#b49559] font-semibold tracking-wide">
+            OUR SERVICES
+          </span>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative overflow-visible">
-
-        {/* Header Section */}
-        <div
-          className="text-center mb-20 space-y-6"
-          data-aos="fade-down"
-        >
-          <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full border border-white/20 shadow-sm">
-            <div className="w-2 h-2 bg-[#5CE2E7] rounded-full animate-pulse"></div>
-            <span className="text-sm font-semibold tracking-widest text-white">
-              OUR SERVICES
-            </span>
-          </div>
-
-          <h2 className="text-5xl md:text-6xl font-bold text-white tracking-tight">
-            Expert Care For <span className="text-[#5CE2E7]">Your Body</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#b49559]">
+            Care Designed For <span className="text-[#b49559]">Your Wellness</span>
           </h2>
-
-          <p className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-            Comprehensive wellness solutions combining modern science with holistic healing approaches
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Personalized and science-based treatments to enhance your strength, posture & recovery.
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 relative overflow-visible">
-          <div className="space-y-8">
-            {services.slice(0, 2).map((service, index) => (
-              <ServiceCard key={index} service={service} index={index} aos="fade-up" />
-            ))}
-          </div>
+        {/* Services */}
+        <div className="grid lg:grid-cols-2 gap-8">
+          {services.map((service, i) => (
+            <div
+              key={i}
+              className="bg-white border border-[#b49559]/20 rounded-2xl shadow-md p-8 hover:shadow-xl transition-all duration-500"
+              data-aos="fade-up"
+            >
+              <div className="w-14 h-14 flex items-center justify-center bg-[#5CE2E7] text-[#fff] rounded-xl mb-5">
+                <service.icon className="w-8 h-8" />
+              </div>
 
-          <div className="space-y-8 md:mt-16">
-            {services.slice(2, 4).map((service, index) => (
-              <ServiceCard key={index + 2} service={service} index={index + 2} aos="fade-up" />
-            ))}
-          </div>
+              <h3 className="text-2xl font-semibold text-[#b49559] mb-3">
+                {service.title}
+              </h3>
+
+              <p className="text-gray-600 mb-5 leading-relaxed">
+                {service.description}
+              </p>
+
+              <Link
+                href="#"
+                className="inline-flex items-center gap-2 font-medium text-[#5CE2E7] hover:text-black transition"
+              >
+                Learn More
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-20" data-aos="zoom-in">
-          <button className="group relative inline-flex items-center gap-4 px-8 py-4 bg-[#b49559] hover:bg-[#5CE2E7] text-white rounded-2xl transition-all duration-500 shadow-lg hover:shadow-xl hover:scale-105">
-            <span className="text-lg font-semibold tracking-wide">View All Services</span>
-            <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-all">
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </div>
+        {/* Button */}
+        <div className="text-center mt-16" data-aos="zoom-in">
+          <button className="inline-flex items-center gap-3 px-8 py-4 bg-[#b49559] text-white rounded-xl font-semibold hover:bg-[#5CE2E7] transition">
+            View All Services
+            <ArrowRight className="w-5 h-5" />
           </button>
         </div>
       </div>
     </section>
-  );
-}
-
-function ServiceCard({ service, index, aos }: { service: any; index: number; aos: string }) {
-  return (
-    <div className="group relative overflow-visible z-10" data-aos={aos}>
-      <div className="absolute inset-0 bg-gradient-to-br from-[#5CE2E7]/10 to-[#b49559]/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-      <div className="relative p-8 bg-white/90 backdrop-blur-sm border border-[#5CE2E7]/10 rounded-2xl shadow-sm transition-all duration-500 group-hover:scale-[1.04] group-hover:border-[#5CE2E7]/30 group-hover:z-20 overflow-visible">
-        <div className="relative mb-6">
-          <div className="absolute -inset-4 bg-[#5CE2E7]/10 rounded-2xl transform scale-0 group-hover:scale-100 transition-transform duration-500"></div>
-          <div className="relative w-16 h-16 flex items-center justify-center bg-gradient-to-br from-[#5CE2E7] to-[#b49559] rounded-2xl shadow-lg">
-            <service.icon className="w-8 h-8 text-white" />
-          </div>
-          <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#5CE2E7] rounded-full flex items-center justify-center">
-            <span className="text-xs font-bold text-white">{index + 1}</span>
-          </div>
-        </div>
-
-        <div className="space-y-4">
-          <h3 className="text-2xl font-bold text-[#b49559] tracking-tight group-hover:text-[#5CE2E7] transition-colors duration-300">
-            {service.title}
-          </h3>
-          <p className="text-[#b49559]/70 leading-relaxed text-lg">{service.description}</p>
-
-          <div className="pt-4">
-            <Link href="#" className="inline-flex items-center gap-3 group/link">
-              <span className="text-sm font-semibold tracking-widest text-[#b49559] group-hover/link:text-[#5CE2E7] transition-colors duration-300">
-                LEARN MORE
-              </span>
-              <div className="w-8 h-8 bg-[#5CE2E7]/10 rounded-full flex items-center justify-center group-hover/link:bg-[#5CE2E7] transition-all duration-300">
-                <ArrowRight className="w-4 h-4 text-[#5CE2E7] group-hover/link:text-white transition-colors duration-300 group-hover/link:translate-x-1" />
-              </div>
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 }

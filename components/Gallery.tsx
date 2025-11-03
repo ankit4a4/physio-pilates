@@ -62,11 +62,7 @@ export default function Gallery() {
           <Link
             href="/gallery"
             className="
-              inline-block px-10 py-3 rounded-full font-semibold tracking-wide
-              border border-[#b49559] text-[#b49559]
-              hover:bg-[#b49559] hover:text-[#5CE2E7]
-              transition-all duration-300
-              hover:shadow-[0_0_25px_rgba(0,0,0,0.4)]
+             inline-flex items-center gap-3 border hover:bg-[#5CE2E7] px-8 py-4 bg-[#b49559]  text-white rounded-xl font-semibold hover:scale-[1.1] transition shadow-md border-white
             "
           >
             View More
