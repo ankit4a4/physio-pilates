@@ -8,42 +8,43 @@ import Logo from "@/assets/logo2.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'Physiotherapy', href: '/physiotherapy' },
-    { name: 'Pilates', href: '/pilates' },
-    { name: 'Yoga', href: '/yoga' },
-    { name: 'Dry Needling & Cupping', href: '/dry-needling-cupping' },
-    { name: 'Teacher Training', href: '/teacher-training' },
-    { name: 'Gallery', href: '/gallery' },
     { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Gallery', href: '/gallery' },
     { name: 'Contact', href: '/contact' },
   ];
 
-  // Disable scroll when menu open
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+    const handleScroll = () => {
+      if (window.scrollY > 30) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
 
   return (
-    <nav className="fixed top-0 w-[100vw] z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 py-2 shadow-sm">
+    <nav className={`fixed top-0 w-[100vw] z-50 transition-all duration-300 
+      ${scrolled ? "bg-white/95 backdrop-blur-sm shadow-md border-b border-gray-100" : "bg-transparent"}
+    `}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div className="flex justify-between items-center h-16">
-          
+        <div className="flex justify-between items-center h-20">
+
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <Image 
-              src={Logo} 
-              alt="Wellness Logo" 
-              className="h-20 w-auto"
-              priority
-            />
+            <Image src={Logo} alt="Wellness Logo" className="h-20 w-auto" priority />
           </Link>
 
           {/* Desktop Menu */}
@@ -52,7 +53,9 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm  tracking-wide text-[#352C1C] hover:text-[#5CE2E7] transition-colors duration-300"
+                className={`text-sm tracking-wide transition-colors duration-300 
+                  ${scrolled ? "text-[#352C1C]" : "text-white"} 
+                  hover:text-[#5CE2E7]`}
               >
                 {item.name}
               </Link>
@@ -62,7 +65,9 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-[#352C1C] hover:text-[#5CE2E7] transition-colors"
+            className={`lg:hidden p-2 transition-colors duration-300 
+              ${scrolled ? "text-[#352C1C]" : "text-white"} 
+              hover:text-[#5CE2E7]`}
           >
             {isOpen ? <X size={26} /> : <Menu size={26} />}
           </button>

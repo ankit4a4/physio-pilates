@@ -2,7 +2,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function CTA() {
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-8 md:py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
 
         {/* Heading */}

@@ -58,3 +58,10 @@ body{
   --ring: 0 0% 3.9%;
   --radius: 0.5rem;
 }
+
+
+@media screen and (max-width : 768px) {
+  body{
+    overflow-x: hidden;
+  }
+}
