@@ -54,7 +54,7 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 className={`text-sm tracking-wide transition-colors duration-300 
-                  ${scrolled ? "text-[#352C1C]" : "text-white"} 
+                  ${scrolled ? "text-[#b49559]" : "text-white"} 
                   hover:text-[#5CE2E7]`}
               >
                 {item.name}
@@ -66,7 +66,7 @@ export default function Navbar() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={`lg:hidden p-2 transition-colors duration-300 
-              ${scrolled ? "text-[#352C1C]" : "text-white"} 
+              ${scrolled ? "text-[#b49559]" : "text-white"} 
               hover:text-[#5CE2E7]`}
           >
             {isOpen ? <X size={26} /> : <Menu size={26} />}
@@ -82,7 +82,7 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="block text-base tracking-wide text-[#352C1C] hover:text-[#5CE2E7] transition-colors duration-300"
+                className="block text-base tracking-wide text-[#b49559] hover:text-[#5CE2E7] transition-colors duration-300"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}

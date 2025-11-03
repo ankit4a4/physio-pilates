@@ -17,7 +17,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-8 md:py-24 bg-gradient-to-br from-white to-[#352C1C0D]"
+      className="py-8 md:py-24 bg-gradient-to-br from-white to-[#b495590D]"
       data-aos="fade-up"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,55 +27,55 @@ export default function About() {
           {/* Left Side Text */}
           <div className="space-y-8" data-aos="fade-up">
             <div className="space-y-4" data-aos="zoom-in">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#352C1C0F] rounded-full border border-[#352C1C22]">
-                <div className="w-2 h-2 bg-[#352C1C] rounded-full"></div>
-                <span className="text-sm font-medium tracking-widest text-[#352C1C]">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#b495590F] rounded-full border border-[#b4955922]">
+                <div className="w-2 h-2 bg-[#b49559] rounded-full"></div>
+                <span className="text-sm font-medium tracking-widest text-[#b49559]">
                   ABOUT US
                 </span>
               </div>
 
-              <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#352C1C] font-bold leading-tight">
-                Physio • Pilates • <span className="text-[#352C1C]/80">Wellness</span> Redefined
+              <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#b49559] font-bold leading-tight">
+                Physio • Pilates • <span className="text-[#b49559]">Wellness</span> Redefined
               </h2>
             </div>
 
-            <div className="space-y-6 text-[#352C1C]/80 leading-relaxed text-lg">
-              <p className="bg-white/70 p-4 rounded-xl border border-[#352C1C15]" data-aos="fade-up">
-                Welcome to <strong className="text-[#352C1C]">Physio Pilates</strong> — a holistic health & movement studio 
+            <div className="space-y-6 text-[#b49559]/80 leading-relaxed text-lg">
+              <p className="bg-white/70 p-4 rounded-xl border border-[#b4955915]" data-aos="fade-up">
+                Welcome to <strong className="text-[#b49559]">Physio Pilates</strong> — a holistic health & movement studio 
                 dedicated to healing, strengthening and transforming the body through science-based care.
               </p>
               <p data-aos="fade-up">
-                We specialize in <strong className="text-[#352C1C]">Physiotherapy, Pilates, Yoga, Dry Needling & Cupping Therapy</strong>,
+                We specialize in <strong className="text-[#b49559]">Physiotherapy, Pilates, Yoga, Dry Needling & Cupping Therapy</strong>,
                 offering personalised recovery & posture correction programs.
               </p>
               <p data-aos="fade-up">
-                We also offer <strong className="text-[#352C1C]">Teacher Training Courses</strong> for future wellness professionals.
+                We also offer <strong className="text-[#b49559]">Teacher Training Courses</strong> for future wellness professionals.
               </p>
-              <p className="bg-[#352C1C08] p-4 rounded-xl border border-[#352C1C15]" data-aos="fade-up">
-                With modern equipment & expert care, we help you <strong className="text-[#352C1C]">feel better, move better & live better</strong>.
+              <p className="bg-[#b4955908] p-4 rounded-xl border border-[#b4955915]" data-aos="fade-up">
+                With modern equipment & expert care, we help you <strong className="text-[#b49559]">feel better, move better & live better</strong>.
               </p>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-2 md:gap-8 md:pt-8">
-              <div data-aos="zoom-in" className="text-center p-4 rounded-2xl bg-white/60 border border-[#352C1C20] shadow-sm hover:shadow-md transition-shadow">
-                <div className="text-2xl md:text-3xl font-bold text-[#352C1C] mb-2">800+</div>
-                <div className="text-sm font-medium text-[#352C1C]/70 tracking-wide">Happy Patients</div>
+              <div data-aos="zoom-in" className="text-center p-4 rounded-2xl bg-white/60 border border-[#b4955920] shadow-sm hover:shadow-md transition-shadow">
+                <div className="text-2xl md:text-3xl font-bold text-[#b49559] mb-2">800+</div>
+                <div className="text-sm font-medium text-[#b49559]/70 tracking-wide">Happy Patients</div>
               </div>
-              <div data-aos="zoom-in" className="text-center p-4 rounded-2xl bg-white/60 border border-[#352C1C20] shadow-sm hover:shadow-md transition-shadow">
-                <div className="text-2xl md:text-3xl font-bold text-[#352C1C] mb-2">20+</div>
-                <div className="text-sm font-medium text-[#352C1C]/70 tracking-wide">Certified Experts</div>
+              <div data-aos="zoom-in" className="text-center p-4 rounded-2xl bg-white/60 border border-[#b4955920] shadow-sm hover:shadow-md transition-shadow">
+                <div className="text-2xl md:text-3xl font-bold text-[#b49559] mb-2">20+</div>
+                <div className="text-sm font-medium text-[#b49559]/70 tracking-wide">Certified Experts</div>
               </div>
-              <div data-aos="zoom-in" className="text-center p-4 rounded-2xl bg-white/60 border border-[#352C1C20] shadow-sm hover:shadow-md transition-shadow">
-                <div className="text-2xl md:text-3xl font-bold text-[#352C1C] mb-2">10+</div>
-                <div className="text-sm font-medium text-[#352C1C]/70 tracking-wide">Years Experience</div>
+              <div data-aos="zoom-in" className="text-center p-4 rounded-2xl bg-white/60 border border-[#b4955920] shadow-sm hover:shadow-md transition-shadow">
+                <div className="text-2xl md:text-3xl font-bold text-[#b49559] mb-2">10+</div>
+                <div className="text-sm font-medium text-[#b49559]/70 tracking-wide">Years Experience</div>
               </div>
             </div>
           </div>
 
           {/* Right Side Images */}
           <div className="relative h-[600px] flex items-center justify-center overflow-hidden" data-aos="zoom-in">
-            <div className="absolute inset-0 bg-gradient-to-br from-[#352C1C22] to-[#352C1C0A] rounded-3xl -rotate-3 scale-105"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#b4955922] to-[#b495590A] rounded-3xl -rotate-3 scale-105"></div>
             
             <div className="relative z-20 group">
               <img

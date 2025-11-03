@@ -6,25 +6,25 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#352C1C] text-white/60 py-12 border-t border-white/10">
+    <footer className="bg-[#342811] text-white/60 py-12 border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-12">
           <div className="space-y-4">
-            <div className="text-2xl   tracking-widest text-white">
+            <div className="text-2xl    text-white">
               <Image src={logo.src} height={100} width={100} alt="Wellness Studio" className="w-32" />
             </div>
-            <p className="text-sm   leading-relaxed">
+            <p className="text-md  ">
               Transform your life through mindful movement and expert care.
             </p>
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-white   tracking-wide">Services</h3>
+            <h3 className="text-white   text-2xl ">Services</h3>
             <ul className="space-y-2 text-sm  ">
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#5CE2E7] transition-colors duration-300"
+                  className="hover:text-[#5CE2E7] transition-colors duration-300 text-md"
                 >
                   Physiotherapy
                 </Link>
@@ -32,7 +32,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#5CE2E7] transition-colors duration-300"
+                  className="hover:text-[#5CE2E7] transition-colors duration-300 text-md"
                 >
                   Pilates
                 </Link>
@@ -40,7 +40,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#5CE2E7] transition-colors duration-300"
+                  className="hover:text-[#5CE2E7] transition-colors duration-300 text-md"
                 >
                   Yoga
                 </Link>
@@ -48,7 +48,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#5CE2E7] transition-colors duration-300"
+                  className="hover:text-[#5CE2E7] transition-colors duration-300 text-md"
                 >
                   Teacher Training
                 </Link>
@@ -57,12 +57,12 @@ export default function Footer() {
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-white   tracking-wide">Company</h3>
+            <h3 className="text-white   text-2xl ">Company</h3>
             <ul className="space-y-2 text-sm  ">
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#5CE2E7] transition-colors duration-300"
+                  className="hover:text-[#5CE2E7] transition-colors duration-300 text-md"
                 >
                   About Us
                 </Link>
@@ -70,7 +70,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#5CE2E7] transition-colors duration-300"
+                  className="hover:text-[#5CE2E7] transition-colors duration-300 text-md"
                 >
                   Gallery
                 </Link>
@@ -78,7 +78,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#5CE2E7] transition-colors duration-300"
+                  className="hover:text-[#5CE2E7] transition-colors duration-300 text-md"
                 >
                   Contact
                 </Link>
@@ -86,7 +86,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#5CE2E7] transition-colors duration-300"
+                  className="hover:text-[#5CE2E7] transition-colors duration-300 text-md"
                 >
                   Blog
                 </Link>
@@ -95,12 +95,12 @@ export default function Footer() {
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-white   tracking-wide">Follow Us</h3>
+            <h3 className="text-white   text-2xl ">Follow Us</h3>
             <ul className="space-y-2 text-sm  ">
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#5CE2E7] transition-colors duration-300"
+                  className="hover:text-[#5CE2E7] transition-colors duration-300 text-md"
                 >
                   Instagram
                 </Link>
@@ -108,7 +108,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#5CE2E7] transition-colors duration-300"
+                  className="hover:text-[#5CE2E7] transition-colors duration-300 text-md"
                 >
                   Facebook
                 </Link>
@@ -116,7 +116,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#5CE2E7] transition-colors duration-300"
+                  className="hover:text-[#5CE2E7] transition-colors duration-300 text-md"
                 >
                   LinkedIn
                 </Link>
@@ -124,7 +124,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="#"
-                  className="hover:text-[#5CE2E7] transition-colors duration-300"
+                  className="hover:text-[#5CE2E7] transition-colors duration-300 text-md"
                 >
                   YouTube
                 </Link>

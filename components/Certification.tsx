@@ -23,7 +23,7 @@ export default function Certification() {
   ];
 
   return (
-    <section className="py-8 md:py-24 bg-[#352C1C] text-white" data-aos="fade-up">
+    <section className="py-8 md:py-24 bg-[#b49559] text-white" data-aos="fade-up">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-16 items-center">
 
@@ -59,7 +59,7 @@ export default function Certification() {
 
             <Link
               href="#"
-              className="inline-block px-8 py-4 border border-[#5CE2E7] text-[#5CE2E7] text-sm tracking-widest hover:bg-[#5CE2E7] hover:text-[#352C1C] transition-all duration-500 mt-4"
+              className="inline-block px-8 py-4 border border-[#5CE2E7] text-[#5CE2E7] text-sm tracking-widest hover:bg-[#5CE2E7] hover:text-[#b49559] transition-all duration-500 mt-4"
               data-aos="zoom-in"
             >
               VIEW CERTIFICATIONS
@@ -68,9 +68,9 @@ export default function Certification() {
 
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
-              <div data-aos="zoom-in" className="bg-[#5CE2E7]/10 p-8 aspect-square flex flex-col justify-center items-center text-center rounded-lg">
-                <div className="text-4xl text-[#5CE2E7] mb-2">100%</div>
-                <div className="text-sm tracking-wide text-white/80">Certification Success</div>
+              <div data-aos="zoom-in" className="bg-[#5CE2E7]/60 p-8 aspect-square flex flex-col justify-center items-center text-center rounded-lg">
+                <div className="text-4xl text-[#b49559] mb-2">100%</div>
+                <div className="text-sm tracking-wide text-black/80">Certification Success</div>
               </div>
 
               <div data-aos="zoom-in" className="bg-white/5 p-8 aspect-square flex flex-col justify-center items-center text-center rounded-lg">
@@ -85,9 +85,9 @@ export default function Certification() {
                 <div className="text-sm tracking-wide text-white/80">Training Experience</div>
               </div>
 
-              <div data-aos="zoom-in" className="bg-[#5CE2E7]/10 p-8 aspect-square flex flex-col justify-center items-center text-center rounded-lg">
-                <div className="text-4xl text-[#5CE2E7] mb-2">25+</div>
-                <div className="text-sm tracking-wide text-white/80">Professional Programs</div>
+              <div data-aos="zoom-in" className="bg-[#5CE2E7]/60 p-8 aspect-square flex flex-col justify-center items-center text-center rounded-lg">
+                <div className="text-4xl text-[#b49559] mb-2">25+</div>
+                <div className="text-sm tracking-wide text-[#000]/80">Professional Programs</div>
               </div>
             </div>
           </div>

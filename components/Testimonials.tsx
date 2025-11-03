@@ -57,10 +57,10 @@ export default function Testimonials() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center mb-16 space-y-4" data-aos="fade-up">
-          <span className="text-sm tracking-widest text-[#352C1C]">
+          <span className="text-sm tracking-widest text-[#b49559]">
             TESTIMONIALS
           </span>
-          <h2 className="text-4xl md:text-5xl text-[#352C1C] tracking-wide">
+          <h2 className="text-4xl md:text-5xl text-[#b49559] tracking-wide">
             Client Stories
           </h2>
         </div>
@@ -78,7 +78,7 @@ export default function Testimonials() {
                 ))}
               </div>
 
-              <p className="text-lg text-[#352C1C] leading-relaxed mb-6">
+              <p className="text-lg text-[#b49559] leading-relaxed mb-6">
                 "{t.content}"
               </p>
 
@@ -89,8 +89,8 @@ export default function Testimonials() {
                   className="w-14 h-14 rounded-full object-cover"
                 />
                 <div>
-                  <h4 className="text-[#352C1C] font-medium">{t.name}</h4>
-                  <span className="text-sm text-[#352C1C]/70">{t.role}</span>
+                  <h4 className="text-[#b49559] font-medium">{t.name}</h4>
+                  <span className="text-sm text-[#b49559]/70">{t.role}</span>
                 </div>
               </div>
             </div>
@@ -105,14 +105,14 @@ export default function Testimonials() {
             onClick={prev}
             className="p-3 border border-gray-300 hover:border-[#5CE2E7] hover:bg-[#5CE2E7]/10 rounded-full transition-all duration-300"
           >
-            <ChevronLeft className="w-5 h-5 text-[#352C1C]" />
+            <ChevronLeft className="w-5 h-5 text-[#b49559]" />
           </button>
 
           <button
             onClick={next}
             className="p-3 border border-gray-300 hover:border-[#5CE2E7] hover:bg-[#5CE2E7]/10 rounded-full transition-all duration-300"
           >
-            <ChevronRight className="w-5 h-5 text-[#352C1C]" />
+            <ChevronRight className="w-5 h-5 text-[#b49559]" />
           </button>
         </div>
 

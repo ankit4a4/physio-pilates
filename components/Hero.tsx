@@ -61,8 +61,8 @@ export default function Hero() {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
-  const slideVariants = { 
-    enter: (direction : any) => ({
+  const slideVariants = {
+    enter: (direction: any) => ({
       x: direction > 0 ? 1000 : -1000,
       opacity: 0,
     }),
@@ -70,7 +70,7 @@ export default function Hero() {
       x: 0,
       opacity: 1,
     },
-    exit: (direction : any) => ({
+    exit: (direction: any) => ({
       x: direction < 0 ? 1000 : -1000,
       opacity: 0,
     }),
@@ -134,7 +134,7 @@ export default function Hero() {
                     <motion.button
                       whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(167, 199, 231, 0.5)' }}
                       whileTap={{ scale: 0.95 }}
-                      className="bg-[#A7C7E7] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#8AB4D9] transition-all duration-300 shadow-lg"
+                      className="bg-[#b49559] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#8AB4D9] transition-all duration-300 shadow-lg"
                     >
                       {slides[currentSlide].cta}
                     </motion.button>
@@ -148,14 +148,14 @@ export default function Hero() {
 
       <button
         onClick={prevSlide}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm p-3 rounded-full transition-all duration-300 z-10"
+        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 bg-[#b49559] hover:bg-white/30 backdrop-blur-sm p-3 rounded-full transition-all duration-300 z-10"
       >
         <ChevronLeft className="h-6 w-6 text-white" />
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm p-3 rounded-full transition-all duration-300 z-10"
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 bg-[#b49559] hover:bg-white/30 backdrop-blur-sm p-3 rounded-full transition-all duration-300 z-10"
       >
         <ChevronRight className="h-6 w-6 text-white" />
       </button>
@@ -168,11 +168,10 @@ export default function Hero() {
               setDirection(index > currentSlide ? 1 : -1);
               setCurrentSlide(index);
             }}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide
-                ? 'bg-white w-8'
-                : 'bg-white/50 hover:bg-white/70'
-            }`}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide
+              ? 'bg-white w-8'
+              : 'bg-white/50 hover:bg-white/70'
+              }`}
           />
         ))}
       </div>

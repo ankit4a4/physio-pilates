@@ -92,7 +92,7 @@ export default function Services() {
 
         {/* Bottom CTA */}
         <div className="text-center mt-20" data-aos="zoom-in">
-          <button className="group relative inline-flex items-center gap-4 px-8 py-4 bg-[#352C1C] hover:bg-[#5CE2E7] text-white rounded-2xl transition-all duration-500 shadow-lg hover:shadow-xl hover:scale-105">
+          <button className="group relative inline-flex items-center gap-4 px-8 py-4 bg-[#b49559] hover:bg-[#5CE2E7] text-white rounded-2xl transition-all duration-500 shadow-lg hover:shadow-xl hover:scale-105">
             <span className="text-lg font-semibold tracking-wide">View All Services</span>
             <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-all">
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -107,12 +107,12 @@ export default function Services() {
 function ServiceCard({ service, index, aos }: { service: any; index: number; aos: string }) {
   return (
     <div className="group relative overflow-visible z-10" data-aos={aos}>
-      <div className="absolute inset-0 bg-gradient-to-br from-[#5CE2E7]/10 to-[#352C1C]/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#5CE2E7]/10 to-[#b49559]/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
       <div className="relative p-8 bg-white/90 backdrop-blur-sm border border-[#5CE2E7]/10 rounded-2xl shadow-sm transition-all duration-500 group-hover:scale-[1.04] group-hover:border-[#5CE2E7]/30 group-hover:z-20 overflow-visible">
         <div className="relative mb-6">
           <div className="absolute -inset-4 bg-[#5CE2E7]/10 rounded-2xl transform scale-0 group-hover:scale-100 transition-transform duration-500"></div>
-          <div className="relative w-16 h-16 flex items-center justify-center bg-gradient-to-br from-[#5CE2E7] to-[#352C1C] rounded-2xl shadow-lg">
+          <div className="relative w-16 h-16 flex items-center justify-center bg-gradient-to-br from-[#5CE2E7] to-[#b49559] rounded-2xl shadow-lg">
             <service.icon className="w-8 h-8 text-white" />
           </div>
           <div className="absolute -top-2 -right-2 w-6 h-6 bg-[#5CE2E7] rounded-full flex items-center justify-center">
@@ -121,14 +121,14 @@ function ServiceCard({ service, index, aos }: { service: any; index: number; aos
         </div>
 
         <div className="space-y-4">
-          <h3 className="text-2xl font-bold text-[#352C1C] tracking-tight group-hover:text-[#5CE2E7] transition-colors duration-300">
+          <h3 className="text-2xl font-bold text-[#b49559] tracking-tight group-hover:text-[#5CE2E7] transition-colors duration-300">
             {service.title}
           </h3>
-          <p className="text-[#352C1C]/70 leading-relaxed text-lg">{service.description}</p>
+          <p className="text-[#b49559]/70 leading-relaxed text-lg">{service.description}</p>
 
           <div className="pt-4">
             <Link href="#" className="inline-flex items-center gap-3 group/link">
-              <span className="text-sm font-semibold tracking-widest text-[#352C1C] group-hover/link:text-[#5CE2E7] transition-colors duration-300">
+              <span className="text-sm font-semibold tracking-widest text-[#b49559] group-hover/link:text-[#5CE2E7] transition-colors duration-300">
                 LEARN MORE
               </span>
               <div className="w-8 h-8 bg-[#5CE2E7]/10 rounded-full flex items-center justify-center group-hover/link:bg-[#5CE2E7] transition-all duration-300">

@@ -17,10 +17,10 @@ export default function CTA() {
           <span className="text-sm tracking-[3px] text-[#5CE2E7]">
             GET IN TOUCH
           </span>
-          <h2 className="text-4xl md:text-5xl font-semibold text-[#352C1C] mt-2">
+          <h2 className="text-4xl md:text-5xl font-semibold text-[#b49559] mt-2">
             Begin Your Wellness Journey
           </h2>
-          <p className="text-[#352C1C]/70 text-base max-w-xl mx-auto mt-3 leading-relaxed">
+          <p className="text-[#b49559]/70 text-base max-w-xl mx-auto mt-3 leading-relaxed">
             Connect with us to book your personalized wellness session today.
           </p>
         </motion.div>
@@ -51,13 +51,13 @@ export default function CTA() {
               <div className="w-12 h-12 mx-auto rounded-full bg-[#5CE2E7]/20 flex items-center justify-center mb-4">
                 {item.icon}
               </div>
-              <p className="text-sm tracking-widest text-[#352C1C]/60">{item.label}</p>
-              <p className="text-lg font-medium text-[#352C1C] mt-1">{item.val}</p>
+              <p className="text-sm tracking-widest text-[#b49559]/60">{item.label}</p>
+              <p className="text-lg font-medium text-[#b49559] mt-1">{item.val}</p>
             </motion.div>
           ))}
         </motion.div>
         <motion.div
-          className="bg-[#352C1C] rounded-2xl p-10 text-center text-white shadow-xl"
+          className="bg-[#b49559] rounded-2xl p-10 text-center text-white shadow-xl"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
@@ -73,13 +73,13 @@ export default function CTA() {
             <Link
               href="https://wa.me/1234567890"
               target="_blank"
-              className="px-8 py-4 bg-[#5CE2E7] text-[#352C1C] font-medium rounded-full hover:bg-white transition duration-300"
+              className="px-8 py-4 bg-[#5CE2E7] text-[#b49559] font-medium rounded-full hover:bg-white transition duration-300"
             >
               WhatsApp Us
             </Link>
             <Link
               href="#"
-              className="px-8 py-4 bg-white/10 border border-white/30 text-white font-medium rounded-full hover:bg-white hover:text-[#352C1C] transition duration-300"
+              className="px-8 py-4 bg-white/10 border border-white/30 text-white font-medium rounded-full hover:bg-white hover:text-[#b49559] transition duration-300"
             >
               Book Online
             </Link>
