@@ -1,6 +1,7 @@
 "use client";
 import { Activity, Heart, Droplet, GraduationCap, ArrowRight } from "lucide-react";
 import backgroundImage from "@/assets/home/background.jpg";
+import Link from "next/link";
 
 export default function Services() {
   const services = [
@@ -113,14 +114,14 @@ function ServiceCard({ service , index }: { service: any; index: number }) {
           <p className="text-[#352C1C]/70 leading-relaxed text-lg">{service.description}</p>
 
           <div className="pt-4">
-            <a href="#" className="inline-flex items-center gap-3 group/link">
+            <Link href="#" className="inline-flex items-center gap-3 group/link">
               <span className="text-sm font-semibold tracking-widest text-[#352C1C] group-hover/link:text-[#5CE2E7] transition-colors duration-300">
                 LEARN MORE
               </span>
               <div className="w-8 h-8 bg-[#5CE2E7]/10 rounded-full flex items-center justify-center group-hover/link:bg-[#5CE2E7] transition-all duration-300">
                 <ArrowRight className="w-4 h-4 text-[#5CE2E7] group-hover/link:text-white transition-colors duration-300 group-hover/link:translate-x-1" />
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

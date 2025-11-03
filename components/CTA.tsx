@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin } from "lucide-react";
-
+import Link from "next/link";
 export default function CTA() {
   return (
     <section id="contact" className="py-8 md:py-20 bg-white">
@@ -61,21 +61,21 @@ export default function CTA() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
-            <a
+            <Link
               href="https://wa.me/1234567890"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-[#5CE2E7] text-[#352C1C] font-medium rounded-full hover:bg-white transition duration-300"
             >
               WhatsApp Us
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="#"
               className="px-8 py-4 bg-white/10 border border-white/30 text-white font-medium rounded-full hover:bg-white hover:text-[#352C1C] transition duration-300"
             >
               Book Online
-            </a>
+            </Link>
 
           </div>
         </div>

@@ -1,4 +1,5 @@
 import { Award, CheckCircle } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Certification() {
   const certifications = [
@@ -43,12 +44,12 @@ export default function Certification() {
               ))}
             </div>
 
-            <a
+            <Link
               href="#"
               className="inline-block px-8 py-4 border border-[#5CE2E7] text-[#5CE2E7] text-sm tracking-widest hover:bg-[#5CE2E7] hover:text-[#352C1C] transition-all duration-500 mt-4"
             >
               VIEW CERTIFICATIONS
-            </a>
+            </Link>
           </div>
 
           <div className="grid grid-cols-2 gap-4">

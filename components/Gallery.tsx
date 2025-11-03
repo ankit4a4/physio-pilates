@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 export default function Gallery() {
   const images = [
@@ -44,8 +45,8 @@ export default function Gallery() {
 
         {/* ✅ View More Button */}
         <div className="text-center mt-12">
-          <a 
-            href="/gallery"
+          <Link
+            href="/#"
             className="
               inline-block px-8 py-3 rounded-full
               border border-white text-white 
@@ -55,7 +56,7 @@ export default function Gallery() {
             "
           >
             View More
-          </a>
+          </Link>
         </div>
 
       </div>

@@ -1,5 +1,6 @@
 import logo from "@/assets/logo2.png"
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -21,36 +22,36 @@ export default function Footer() {
             <h3 className="text-white   tracking-wide">Services</h3>
             <ul className="space-y-2 text-sm  ">
               <li>
-                <a
+                <Link
                   href="#"
                   className="hover:text-[#5CE2E7] transition-colors duration-300"
                 >
                   Physiotherapy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="hover:text-[#5CE2E7] transition-colors duration-300"
                 >
                   Pilates
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="hover:text-[#5CE2E7] transition-colors duration-300"
                 >
                   Yoga
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="hover:text-[#5CE2E7] transition-colors duration-300"
                 >
                   Teacher Training
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -59,36 +60,36 @@ export default function Footer() {
             <h3 className="text-white   tracking-wide">Company</h3>
             <ul className="space-y-2 text-sm  ">
               <li>
-                <a
+                <Link
                   href="#"
                   className="hover:text-[#5CE2E7] transition-colors duration-300"
                 >
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="hover:text-[#5CE2E7] transition-colors duration-300"
                 >
                   Gallery
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="hover:text-[#5CE2E7] transition-colors duration-300"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="hover:text-[#5CE2E7] transition-colors duration-300"
                 >
                   Blog
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -97,36 +98,36 @@ export default function Footer() {
             <h3 className="text-white   tracking-wide">Follow Us</h3>
             <ul className="space-y-2 text-sm  ">
               <li>
-                <a
+                <Link
                   href="#"
                   className="hover:text-[#5CE2E7] transition-colors duration-300"
                 >
                   Instagram
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="hover:text-[#5CE2E7] transition-colors duration-300"
                 >
                   Facebook
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="hover:text-[#5CE2E7] transition-colors duration-300"
                 >
                   LinkedIn
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="hover:text-[#5CE2E7] transition-colors duration-300"
                 >
                   YouTube
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
