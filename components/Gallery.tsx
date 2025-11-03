@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Gallery() {
   const images = [
@@ -15,44 +16,57 @@ export default function Gallery() {
     <section className="py-8 md:py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* ✅ Section Heading */}
-        <div className="text-center mb-12">
+        {/* Title Animation */}
+        <motion.div 
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-[#b1965b]">
             Our Physiotherapy Work
           </h2>
           <p className="mt-3 text-gray-400 text-lg max-w-2xl mx-auto">
             Real treatment moments & patient care from our center
           </p>
-        </div>
+        </motion.div>
 
-        {/* ✅ Masonry Grid */}
+        {/* Grid Images with Scroll Animation */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[250px]">
           {images.map((url, i) => (
-            <div key={i} className="group relative overflow-hidden rounded-3xl">
+            <motion.div
+              key={i}
+              className="group relative overflow-hidden rounded-3xl"
+              initial={{ opacity: 0, scale: 0.85 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: i * 0.15 }}
+              viewport={{ once: true }}
+            >
               <img 
                 src={url}
-                alt=""
                 className="
                   w-full h-full object-cover 
                   grayscale group-hover:grayscale-0 
-                  transition-all duration-500 ease-out 
-                  scale-100 group-hover:scale-105
+                  transition-all duration-700 ease-[cubic-bezier(.22,.68,0,.99)] 
+                  scale-100 group-hover:scale-110
                 "
               />
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+            </motion.div>
           ))}
         </div>
 
-        {/* ✅ View More Button */}
+        {/* Button */}
         <div className="text-center mt-12">
           <Link
-            href="/#"
+            href="/gallery"
             className="
-              inline-block px-8 py-3 rounded-full
-              border border-white text-white 
-              hover:bg-[#b1965b] hover:text-white 
-              transition-all duration-300 
-              font-medium tracking-wide
+              inline-block px-10 py-3 rounded-full font-semibold tracking-wide
+              border border-[#b1965b] text-[#b1965b]
+              hover:bg-[#b1965b] hover:text-black
+              transition-all duration-300
+              hover:shadow-[0_0_25px_rgba(177,150,91,0.4)]
             "
           >
             View More
@@ -60,19 +74,6 @@ export default function Gallery() {
         </div>
 
       </div>
-
-      {/* ✅ Masonry Row Spans */}
-      <style jsx>{`
-        .auto-rows-[250px] > :nth-child(1) { grid-row: span 2; }
-        .auto-rows-[250px] > :nth-child(5) { grid-row: span 2; }
-        .auto-rows-[250px] > :nth-child(3) { grid-row: span 2; }
-
-        @media (min-width: 768px) {
-          .auto-rows-[250px] > :nth-child(1) { grid-row: span 2; }
-          .auto-rows-[250px] > :nth-child(3) { grid-row: span 2; }
-          .auto-rows-[250px] > :nth-child(6) { grid-row: span 2; }
-        }
-      `}</style>
     </section>
   );
 }

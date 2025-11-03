@@ -1,10 +1,20 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 900,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
 
   const testimonials = [
     {
@@ -43,10 +53,10 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-8 md:py-16  bg-white overflow-auto">
+    <section className="py-8 md:py-16 bg-white overflow-auto" data-aos="fade">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div className="text-center mb-16 space-y-4">
+        <div className="text-center mb-16 space-y-4" data-aos="fade-up">
           <span className="text-sm tracking-widest text-[#352C1C]">
             TESTIMONIALS
           </span>
@@ -59,6 +69,7 @@ export default function Testimonials() {
           {visible.map((t, i) => (
             <div
               key={i}
+              data-aos="zoom-in"
               className="bg-[#F9FAFB] p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300"
             >
               <div className="flex gap-1 mb-4">
@@ -86,7 +97,10 @@ export default function Testimonials() {
           ))}
         </div>
 
-        <div className="flex justify-center items-center gap-4 mt-10">
+        <div
+          className="flex justify-center items-center gap-4 mt-10"
+          data-aos="fade-up"
+        >
           <button
             onClick={prev}
             className="p-3 border border-gray-300 hover:border-[#5CE2E7] hover:bg-[#5CE2E7]/10 rounded-full transition-all duration-300"

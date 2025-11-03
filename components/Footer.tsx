@@ -135,8 +135,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/10 text-center text-sm  ">
           <p>
-            © {currentYear} Wellness Studio. All rights reserved. Designed for
-            excellence.
+            © {currentYear} Physio Pilates. All rights reserved. | Powered by <Link href="https://rankmantra.com/" target="_blank">Rankmantra</Link>
           </p>
         </div>
       </div>

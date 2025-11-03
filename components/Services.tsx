@@ -2,8 +2,20 @@
 import { Activity, Heart, Droplet, GraduationCap, ArrowRight } from "lucide-react";
 import backgroundImage from "@/assets/home/background.jpg";
 import Link from "next/link";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Services() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
+
   const services = [
     {
       icon: Activity,
@@ -35,16 +47,18 @@ export default function Services() {
     <section
       className="relative py-8 md:py-28 overflow-visible bg-fixed bg-cover bg-center"
       style={{ backgroundImage: `url(${backgroundImage.src})` }}
+      data-aos="fade-up"
     >
       {/* Black Overlay */}
       <div className="absolute inset-0 bg-black/70 -z-0"></div>
 
-      {/* Gradient & Effects Hata diye (Background overlay ke andar chala jayega) */}
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative overflow-visible">
 
         {/* Header Section */}
-        <div className="text-center mb-20 space-y-6">
+        <div
+          className="text-center mb-20 space-y-6"
+          data-aos="fade-down"
+        >
           <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full border border-white/20 shadow-sm">
             <div className="w-2 h-2 bg-[#5CE2E7] rounded-full animate-pulse"></div>
             <span className="text-sm font-semibold tracking-widest text-white">
@@ -65,19 +79,19 @@ export default function Services() {
         <div className="grid lg:grid-cols-2 gap-8 relative overflow-visible">
           <div className="space-y-8">
             {services.slice(0, 2).map((service, index) => (
-              <ServiceCard key={index} service={service} index={index} />
+              <ServiceCard key={index} service={service} index={index} aos="fade-up" />
             ))}
           </div>
 
           <div className="space-y-8 md:mt-16">
             {services.slice(2, 4).map((service, index) => (
-              <ServiceCard key={index + 2} service={service} index={index + 2} />
+              <ServiceCard key={index + 2} service={service} index={index + 2} aos="fade-up" />
             ))}
           </div>
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-20">
+        <div className="text-center mt-20" data-aos="zoom-in">
           <button className="group relative inline-flex items-center gap-4 px-8 py-4 bg-[#352C1C] hover:bg-[#5CE2E7] text-white rounded-2xl transition-all duration-500 shadow-lg hover:shadow-xl hover:scale-105">
             <span className="text-lg font-semibold tracking-wide">View All Services</span>
             <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-all">
@@ -90,13 +104,12 @@ export default function Services() {
   );
 }
 
-function ServiceCard({ service , index }: { service: any; index: number }) {
+function ServiceCard({ service, index, aos }: { service: any; index: number; aos: string }) {
   return (
-    <div className="group relative overflow-visible z-10">
+    <div className="group relative overflow-visible z-10" data-aos={aos}>
       <div className="absolute inset-0 bg-gradient-to-br from-[#5CE2E7]/10 to-[#352C1C]/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
       <div className="relative p-8 bg-white/90 backdrop-blur-sm border border-[#5CE2E7]/10 rounded-2xl shadow-sm transition-all duration-500 group-hover:scale-[1.04] group-hover:border-[#5CE2E7]/30 group-hover:z-20 overflow-visible">
-
         <div className="relative mb-6">
           <div className="absolute -inset-4 bg-[#5CE2E7]/10 rounded-2xl transform scale-0 group-hover:scale-100 transition-transform duration-500"></div>
           <div className="relative w-16 h-16 flex items-center justify-center bg-gradient-to-br from-[#5CE2E7] to-[#352C1C] rounded-2xl shadow-lg">
