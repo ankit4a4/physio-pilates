@@ -53,7 +53,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-8 md:py-16 bg-white overflow-auto" data-aos="fade">
+    <section className="py-8 md:py-16 bg-white " data-aos="fade">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="text-center mb-16 space-y-4" data-aos="fade-up">
