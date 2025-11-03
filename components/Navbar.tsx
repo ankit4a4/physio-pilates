@@ -36,7 +36,7 @@ export default function Navbar() {
   }, [isOpen]);
 
   return (
-    <nav className={`fixed top-0 w-[100vw] z-50 transition-all duration-300 
+    <nav className={`fixed py-2 top-0 w-[100vw] z-50 transition-all duration-300 
       ${scrolled ? "bg-white/95 backdrop-blur-sm shadow-md border-b border-gray-100" : "bg-transparent"}
     `}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

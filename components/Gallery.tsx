@@ -13,10 +13,10 @@ export default function Gallery() {
   ];
 
   return (
-    <section className="py-8 md:py-20 bg-black">
+    <section className="py-8 md:py-20 bg-[#5CE2E7]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Title Animation */}
+        {/* Title */}
         <motion.div 
           className="text-center mb-12"
           initial={{ opacity: 0, y: 30 }}
@@ -24,15 +24,15 @@ export default function Gallery() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#b1965b]">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#b49559]">
             Our Physiotherapy Work
           </h2>
-          <p className="mt-3 text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="mt-3 text-[#483d28] text-lg max-w-2xl mx-auto">
             Real treatment moments & patient care from our center
           </p>
         </motion.div>
 
-        {/* Grid Images with Scroll Animation */}
+        {/* Image Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[250px]">
           {images.map((url, i) => (
             <motion.div
@@ -47,12 +47,12 @@ export default function Gallery() {
                 src={url}
                 className="
                   w-full h-full object-cover 
-                  grayscale group-hover:grayscale-0 
-                  transition-all duration-700 ease-[cubic-bezier(.22,.68,0,.99)] 
-                  scale-100 group-hover:scale-110
+                  brightness-90 group-hover:brightness-100
+                  transition-all duration-700 ease-[cubic-bezier(.22,.68,0,.99)]
+                  scale-100 group-hover:scale-110 
                 "
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0B2B2B]/70 via-[#0B2B2B]/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
             </motion.div>
           ))}
         </div>
@@ -63,10 +63,10 @@ export default function Gallery() {
             href="/gallery"
             className="
               inline-block px-10 py-3 rounded-full font-semibold tracking-wide
-              border border-[#b1965b] text-[#b1965b]
-              hover:bg-[#b1965b] hover:text-black
+              border border-[#b49559] text-[#b49559]
+              hover:bg-[#b49559] hover:text-[#5CE2E7]
               transition-all duration-300
-              hover:shadow-[0_0_25px_rgba(177,150,91,0.4)]
+              hover:shadow-[0_0_25px_rgba(0,0,0,0.4)]
             "
           >
             View More

@@ -71,7 +71,7 @@ export default function About() {
                 <div className="text-sm font-medium text-[#b49559]/70 tracking-wide">Years Experience</div>
               </div>
             </div>
-          </div>
+          </div >
 
           {/* Right Side Images */}
           <div className="relative h-[600px] flex items-center justify-center overflow-hidden" data-aos="zoom-in">

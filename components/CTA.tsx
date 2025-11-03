@@ -14,7 +14,7 @@ export default function CTA() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <span className="text-sm tracking-[3px] text-[#5CE2E7]">
+          <span className="text-sm tracking-[3px] text-[#b49559]">
             GET IN TOUCH
           </span>
           <h2 className="text-4xl md:text-5xl font-semibold text-[#b49559] mt-2">
@@ -51,7 +51,7 @@ export default function CTA() {
               <div className="w-12 h-12 mx-auto rounded-full bg-[#5CE2E7]/20 flex items-center justify-center mb-4">
                 {item.icon}
               </div>
-              <p className="text-sm tracking-widest text-[#b49559]/60">{item.label}</p>
+              <p className="text-sm tracking-widest text-[#b49559]/90">{item.label}</p>
               <p className="text-lg font-medium text-[#b49559] mt-1">{item.val}</p>
             </motion.div>
           ))}
