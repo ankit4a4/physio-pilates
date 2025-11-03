@@ -31,10 +31,10 @@ export default function Certification() {
           <div className="space-y-8" data-aos="fade-up">
             <div className="flex  gap-4" data-aos="zoom-in">
               <div className="w-16 h-16 flex items-center justify-center bg-white/20 rounded-full">
-                <Award className="w-8 h-8 text-[#5CE2E7]" />
+                <Award className="w-8 h-8 text-[#fff]" />
               </div>
               <div>
-                <h2 className="text-2xl md:text-4xl text-[#5CE2E7] tracking-wide font-semibold">
+                <h2 className="text-2xl md:text-4xl text-[#fff] tracking-wide font-semibold">
                   Certified & Trusted Training
                 </h2>
                 <p className="text-xs tracking-widest text-white/80 mt-1">
@@ -52,7 +52,7 @@ export default function Certification() {
             <div className="space-y-4">
               {certifications.map((cert, index) => (
                 <div key={index} className="flex items-center gap-3" data-aos="fade-up">
-                  <CheckCircle className="w-5 h-5 text-[#5CE2E7] flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#fff] flex-shrink-0" />
                   <span className="text-white/90">{cert}</span>
                 </div>
               ))}
@@ -75,14 +75,14 @@ export default function Certification() {
                 <div className="text-sm tracking-wide text-black/80">Certification Success</div>
               </div>
 
-              <div data-aos="zoom-in" className="bg-[#5CE2E7] p-8 aspect-square flex flex-col justify-center items-center text-center rounded-lg">
+              <div data-aos="zoom-in" className="bg-[#b49559] shadow shadow-white/60 p-8 aspect-square flex flex-col justify-center items-center text-center rounded-lg">
                 <div className="text-4xl text-white mb-2 font-semibold">5000+</div>
                 <div className="text-sm tracking-wide text-white/90">Trained Students</div>
               </div>
             </div>
 
             <div className="space-y-4 mt-8">
-              <div data-aos="zoom-in" className="bg-[#5CE2E7] p-8 aspect-square flex flex-col justify-center items-center text-center rounded-lg">
+              <div data-aos="zoom-in" className="bg-[#b49559] shadow shadow-white/60 p-8 aspect-square flex flex-col justify-center items-center text-center rounded-lg">
                 <div className="text-4xl text-white mb-2 font-semibold">10+ Years</div>
                 <div className="text-sm tracking-wide text-white/90">Training Experience</div>
               </div>

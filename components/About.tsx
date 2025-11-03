@@ -48,9 +48,6 @@ export default function About() {
                 We specialize in <strong className="text-[#b49559]">Physiotherapy, Pilates, Yoga, Dry Needling & Cupping Therapy</strong>,
                 offering personalised recovery & posture correction programs.
               </p>
-              <p data-aos="fade-up">
-                We also offer <strong className="text-[#b49559]">Teacher Training Courses</strong> for future wellness professionals.
-              </p>
               <p className="bg-[#b4955908] p-4 rounded-xl border border-[#b4955915]" data-aos="fade-up">
                 With modern equipment & expert care, we help you <strong className="text-[#b49559]">feel better, move better & live better</strong>.
               </p>

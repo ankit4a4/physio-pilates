@@ -39,7 +39,7 @@ export default function CTA() {
           <Link
             href="https://wa.me/1234567890"
             target="_blank"
-            className="px-8 py-3 bg-[#5CE2E7] hover:bg-[#b49559] text-white font-semibold rounded-xl shadow-md transition-all duration-300 hover:scale-105"
+            className="px-8 py-3 bg-[#b49559] hover:bg-[#5CE2E7] text-white border border-white font-semibold rounded-xl shadow-md transition-all duration-300 hover:scale-105"
           >
             WhatsApp Us
           </Link>
