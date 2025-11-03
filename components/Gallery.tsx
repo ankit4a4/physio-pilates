@@ -5,7 +5,7 @@ export default function Gallery() {
   const images = [
     'https://images.pexels.com/photos/3822167/pexels-photo-3822167.jpeg?auto=compress&cs=tinysrgb&w=600',
     'https://images.pexels.com/photos/3822906/pexels-photo-3822906.jpeg?auto=compress&cs=tinysrgb&w=600',
-    'https://images.pexels.com/photos/3822843/pexels-photo-3822843.jpeg?auto=compress&cs=tinysrgb&w=600',
+    'https://www.health.com/thmb/7fFFXMLVCzMmhjxfXfs3kTiRS6w=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/HLTH_MoveYourBody_YogaPoses_THUMB-LARGE-726a28603c8043eba44eb9f128f30551.jpg',
     'https://exceedhealthhub.com.au/wp-content/uploads/2021/11/Dry-Needling-_-Cupping-scaled.jpg',
     'https://uploads-ssl.webflow.com/61791a8b6c568b9710518140/619511a7fa674f472e307f10_KMD00810-min.jpg',
     'https://images.pexels.com/photos/3822668/pexels-photo-3822668.jpeg?auto=compress&cs=tinysrgb&w=600',
