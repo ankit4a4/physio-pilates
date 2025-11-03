@@ -7,9 +7,7 @@ export default function CTA() {
   return (
     <section id="contact" className="py-8 md:py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-
-        {/* Heading */}
-        <motion.div 
+        <motion.div
           className="text-center mb-14"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -26,16 +24,14 @@ export default function CTA() {
             Connect with us to book your personalized wellness session today.
           </p>
         </motion.div>
-
-        {/* Contact Cards */}
-        <motion.div 
+        <motion.div
           className="grid md:grid-cols-3 gap-6 mb-16"
           initial="hidden"
           whileInView="show"
           variants={{
             hidden: { opacity: 0, y: 40 },
-            show: { 
-              opacity: 1, 
+            show: {
+              opacity: 1,
               y: 0,
               transition: { staggerChildren: 0.15, duration: 0.6 }
             }
@@ -60,9 +56,7 @@ export default function CTA() {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* CTA Box */}
-        <motion.div 
+        <motion.div
           className="bg-[#352C1C] rounded-2xl p-10 text-center text-white shadow-xl"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,9 +69,7 @@ export default function CTA() {
           <p className="text-white/70 text-sm max-w-md mx-auto mb-8 leading-relaxed">
             Book your session or chat with our team on WhatsApp for guidance.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-
             <Link
               href="https://wa.me/1234567890"
               target="_blank"
@@ -85,17 +77,14 @@ export default function CTA() {
             >
               WhatsApp Us
             </Link>
-
             <Link
               href="#"
               className="px-8 py-4 bg-white/10 border border-white/30 text-white font-medium rounded-full hover:bg-white hover:text-[#352C1C] transition duration-300"
             >
               Book Online
             </Link>
-
           </div>
         </motion.div>
-
       </div>
     </section>
   );
