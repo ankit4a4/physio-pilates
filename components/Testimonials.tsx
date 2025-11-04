@@ -37,7 +37,7 @@ export default function Testimonials() {
       name: 'Emma Thompson',
       role: 'Certified Instructor',
       content:
-        'The teacher training program was exceptional. The level of detail and support I received has prepared me perfectly for my career.',
+        'The Instructor training program was exceptional. The level of detail and support I received has prepared me perfectly for my career.',
       image:
         'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200',
     },

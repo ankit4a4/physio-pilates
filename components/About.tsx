@@ -33,12 +33,10 @@ export default function About() {
                   ABOUT US
                 </span>
               </div>
-
               <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#b49559] font-bold leading-tight">
                 Physio • Pilates • <span className="text-[#b49559]">Wellness</span> Redefined
               </h2>
             </div>
-
             <div className="space-y-6 text-[#b49559]/80 leading-relaxed text-lg">
               <p className="bg-white/70 p-4 rounded-xl border border-[#b4955915]" data-aos="fade-up">
                 Welcome to <strong className="text-[#b49559]">Physio Pilates</strong> — a holistic health & movement studio 

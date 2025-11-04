@@ -10,7 +10,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: 'Wellness Studio | Premium Pilates, Yoga & Physiotherapy',
-  description: 'Transform your wellness journey with our luxury studio offering Pilates, Yoga, Physiotherapy, and certified teacher training programs.',
+  description: 'Transform your wellness journey with our luxury studio offering Pilates, Yoga, Physiotherapy, and certified Instructor training programs.',
 };
 
 export default function RootLayout({

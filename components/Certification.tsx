@@ -21,7 +21,6 @@ export default function Certification() {
     'Advanced Practical Learning',
     'Lifetime Support & Guidance',
   ];
-
   return (
     <section className="py-8 md:py-24 bg-[#b49559] text-white" data-aos="fade-up">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

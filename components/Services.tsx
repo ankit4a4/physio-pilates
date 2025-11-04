@@ -16,7 +16,7 @@ export default function Services() {
     { icon: Activity, title: "Physiotherapy & Rehabilitation", description: "Scientific programs to recover strength, mobility & posture using advanced physio protocols." },
     { icon: Heart, title: "Pilates Training", description: "Personalised pilates training for core strength, flexibility & posture correction." },
     { icon: Droplet, title: "Dry Needling & Cupping", description: "Effective pain relief techniques for muscle tightness, nerve tension & sports injuries." },
-    { icon: GraduationCap, title: "Teacher Training Courses", description: "Professional certification programs in Pilates & Yoga with hands-on training." },
+    { icon: GraduationCap, title: "Instructor Training Courses", description: "Professional certification programs in Pilates & Yoga with hands-on training." },
   ];
 
   return (

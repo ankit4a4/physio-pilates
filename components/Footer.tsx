@@ -30,7 +30,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-white font-semibold text-2xl">Services</h3>
             <ul className="space-y-2">
-              {["Physiotherapy", "Pilates", "Yoga", "Teacher Training"].map((item, i) => (
+              {["Physiotherapy", "Pilates", "Yoga", "Instructor Training"].map((item, i) => (
                 <li key={i}>
                   <Link href="#" className="flex items-center gap-2 text-lg hover:text-white text-white  transition">
                     <ChevronRight size={18} /> {item}
