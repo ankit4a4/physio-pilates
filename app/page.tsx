@@ -7,6 +7,7 @@ import Gallery from '@/components/home/Gallery';
 import CTA from '@/components/home/CTA';
 
 export default function Home() {
+
   return (
     <main className="min-h-screen bg-white">
       <Hero />
