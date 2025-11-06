@@ -55,7 +55,6 @@ export default function Certification() {
                 </div>
               ))}
             </div>
-
             <Link
               href="#"
               className="inline-flex items-center gap-3 border hover:bg-[#5CE2E7] px-8 py-4 bg-[#b49559] text-white rounded-xl font-semibold hover:scale-[1.05] transition shadow-md border-white"

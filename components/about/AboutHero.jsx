@@ -1,54 +1,74 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function AboutHero() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
+
   return (
-    <section className="relative h-[85vh] w-full overflow-hidden flex items-center justify-center bg-black">
-      {/* Background */}
+    <section
+      className="relative min-h-[75vh] md:min-h-[90vh] flex items-center justify-center bg-[#fefdfb] overflow-hidden"
+      data-aos="fade-up"
+    >
+      {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center brightness-[0.45] scale-105 md:scale-100 transition-transform duration-1000"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=1920&q=80')",
+            "url('https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg?auto=compress&cs=tinysrgb&w=1600')",
         }}
-      >
-        <div className="absolute inset-0 bg-black/60" />
-      </div>
+      ></div>
+
+      {/* Elegant overlay gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#00101010] via-[#00101070] to-[#001010A0]"></div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 md:px-12">
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-5xl md:text-7xl font-bold text-white mb-6"
+      <div className="relative z-10 text-center px-6 sm:px-8 md:px-10 text-white">
+        {/* Tagline */}
+        <div
+          className="inline-flex items-center gap-2 px-4 py-2 bg-white/15 backdrop-blur-md rounded-full border border-white/20 shadow-sm"
+          data-aos="zoom-in"
         >
-          Our Journey to Excellence
-        </motion.h1>
+          <div className="w-2.5 h-2.5 bg-[#b59659] rounded-full shadow-sm shadow-[#5CE2E760]" />
+          <span className="text-xs sm:text-sm font-medium tracking-[0.2em] uppercase text-[#EAEAEA]">
+            About Us
+          </span>
+        </div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
-          className="text-lg md:text-2xl text-white/90 max-w-2xl mx-auto mb-8 leading-relaxed"
+        {/* Heading */}
+        <h1
+          className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mt-6 leading-snug md:leading-tight tracking-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]"
+          data-aos="fade-up"
         >
-          From humble beginnings to becoming a trusted name in wellness, we’ve
-          built our legacy on care, innovation, and expertise.
-        </motion.p>
+          Building <span className="text-[#b59659]">Strength</span>,{" "}
+          <br className="hidden sm:block" /> Balance & Wellness — Together
+        </h1>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
+        {/* Paragraph */}
+        <p
+          className="text-base sm:text-lg md:text-xl mt-6 sm:mt-8 max-w-2xl mx-auto text-gray-100/90 leading-relaxed"
+          data-aos="fade-up"
+          data-aos-delay="200"
         >
-          <Link href="/about/our-story">
-            <button className="bg-[#b49559] hover:bg-[#a88a50] text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-lg">
-              Explore Our Story
-            </button>
-          </Link>
-        </motion.div>
+          We’re redefining movement therapy through a mindful blend of
+          physiotherapy, pilates, and holistic wellness — empowering every
+          individual to move, heal, and thrive naturally.
+        </p>
+
+        {/* Optional subtle divider */}
+        <div
+          className="w-20 h-1 mt-10 mx-auto bg-gradient-to-r from-[#b59659] to-[#b49559] rounded-full"
+          data-aos="zoom-in"
+          data-aos-delay="300"
+        ></div>
       </div>
     </section>
   );
