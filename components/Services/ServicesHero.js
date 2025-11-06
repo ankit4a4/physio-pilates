@@ -10,7 +10,7 @@ const ServicesHero = ({ service }) => {
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${service.mainimg})` }}
+        style={{ backgroundImage: `url(${service.mainimg.src})` }}
       >
         <div className="absolute inset-0 bg-black/60" />
       </div>

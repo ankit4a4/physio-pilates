@@ -22,7 +22,7 @@ export default function Navbar() {
     { name: 'Therapy', href: '/services/dry-needling-and-cup-therapy' },
     { name: 'Courses', href: '/courses' },
     { name: 'Gallery', href: '/gallery' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Blogs', href: '/blogs' },
     { name: 'Contact', href: '/contact' },
   ];
 
