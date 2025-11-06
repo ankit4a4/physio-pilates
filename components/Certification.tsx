@@ -56,7 +56,6 @@ export default function Certification() {
                 </div>
               ))}
             </div>
-
             <Link
               href="#"
               className="inline-flex items-center gap-3 border hover:bg-[#5CE2E7] px-8 py-4 bg-[#b49559]  text-white rounded-xl font-semibold hover:scale-[1.5] transition shadow-md border-white"
@@ -65,7 +64,6 @@ export default function Certification() {
               VIEW CERTIFICATIONS
             </Link>
           </div>
-
           {/* RIGHT BOXES */}
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
