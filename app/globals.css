@@ -69,20 +69,18 @@ body{
 
 
 
-/* --- Slick Slider Dots Customization --- */
 .slick-dots {
-  bottom: -35px; /* Move dots slightly below the cards */
+  bottom: -35px; 
 }
 
 .slick-dots li {
-  margin: 0 5px; /* Space between dots */
+  margin: 0 5px; 
 }
 
-/* Default dot style */
 .slick-dots li button:before {
-  font-size: 10px;         /* Make the dots smaller */
-  color: #14b8a6;          /* Tailwind teal-500 */
-  opacity: 0.4;            /* Slightly faded */
+  font-size: 10px;        
+  color: #14b8a6;        
+  opacity: 0.4;           
   transition: all 0.3s ease;
 }
 
