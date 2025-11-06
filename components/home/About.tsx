@@ -5,7 +5,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function About() {
-
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -13,7 +12,6 @@ export default function About() {
       once: true,
     });
   }, []);
-
   return (
     <section
       id="about"
@@ -97,7 +95,6 @@ export default function About() {
               />
             </div>
           </div>
-
         </div>
       </div>
     </section>
