@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Check } from "lucide-react"; // ✅ Tick icon import
+import { Check } from "lucide-react"; 
 
 export default function ServicesSection({ service }) {
   if (!service) return null;
