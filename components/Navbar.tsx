@@ -20,7 +20,7 @@ export default function Navbar() {
     { name: 'Pilates', href: '/services/pilates' },
     { name: 'Yoga', href: '/services/yog' },
     { name: 'Therapy', href: '/services/dry-needling-and-cup-therapy' },
-    { name: 'Courses', href: '/courses' },
+    { name: 'Courses', href: '/teacher-training-courses' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
