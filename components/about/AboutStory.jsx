@@ -3,6 +3,8 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import img from "../../assets/about/ourstory.webp";
+
 
 export default function AboutStory() {
   useEffect(() => {
@@ -27,7 +29,7 @@ export default function AboutStory() {
         >
           <div className="absolute -inset-4 bg-[#b4955915] rounded-3xl blur-xl mt-3"></div>
           <img
-            src="https://images.pexels.com/photos/3822191/pexels-photo-3822191.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            src={img.src}
             alt="Physio Pilates Studio"
             className="relative rounded-3xl shadow-2xl w-full h-[450px] object-cover border border-[#b4955922]"
           />

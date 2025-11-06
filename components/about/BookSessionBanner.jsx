@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import img from "../../assets/about/about-cta.jpeg"
 
 export default function BookSessionBanner() {
   return (
@@ -11,8 +12,7 @@ export default function BookSessionBanner() {
         <div
           className="relative h-[350px] md:h-[500px] bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url('https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1600')",
+            backgroundImage: `url(${img.src})`,
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-[#b49559]/70 via-[#b49559]/40 to-transparent"></div>
