@@ -96,7 +96,7 @@ export default function GallerySection() {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                   selectedCategory === category
-                    ? 'bg-[#A7C7E7] text-white shadow-lg'
+                    ? 'bg-[#5CE2E7] text-white shadow-lg'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -130,7 +130,7 @@ export default function GallerySection() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                      <span className="inline-block bg-[#A7C7E7] px-3 py-1 rounded-full text-sm mb-2">
+                      <span className="inline-block bg-[#5CE2E7] px-3 py-1 rounded-full text-sm mb-2">
                         {image.category}
                       </span>
                       <h3 className="text-xl font-semibold">{image.title}</h3>
@@ -175,7 +175,7 @@ export default function GallerySection() {
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 rounded-b-2xl">
-                <span className="inline-block bg-[#A7C7E7] px-3 py-1 rounded-full text-sm text-white mb-2">
+                <span className="inline-block bg-[#5CE2E7] px-3 py-1 rounded-full text-sm text-white mb-2">
                   {selectedImage.category}
                 </span>
                 <h3 className="text-2xl font-semibold text-white">{selectedImage.title}</h3>

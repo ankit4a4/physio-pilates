@@ -16,7 +16,7 @@ const GalleryHero = () => {
             {/* Content */}
             <div className="relative z-10 text-center text-white px-4">
                 <h1 className="text-4xl md:text-6xl font-bold uppercase tracking-wide">
-                    Our Gallery
+                    Our <span className="text-[#b49559]">Gallery</span>
                 </h1>
                 <p className="mt-3 text-lg md:text-xl text-gray-200">
                     Moments from our physiotherapy, pilates & wellness sessions
