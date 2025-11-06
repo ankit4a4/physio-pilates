@@ -15,8 +15,8 @@ const ContactHero = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4">
-        <h1 className="text-4xl md:text-6xl font-bold uppercase tracking-wide">
-          Contact Us
+        <h1 className="text-4xl text-[#fff] md:text-6xl font-bold uppercase tracking-wide">
+          Contact <span className="text-[#b49559]">Us</span>
         </h1>
         <p className="mt-3 text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">
           Get in touch with our physiotherapy & wellness team — we’re here to help you heal, move, and feel better.

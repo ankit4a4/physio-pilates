@@ -66,8 +66,8 @@ export default function ContactForm() {
                     whileHover={{ x: 10 }}
                     className="flex items-start space-x-4"
                   >
-                    <div className="bg-[#A7C7E7]/20 p-3 rounded-full flex-shrink-0">
-                      <MapPin className="h-6 w-6 text-[#A7C7E7]" />
+                    <div className="bg-[#b49559] 20 p-3 rounded-full flex-shrink-0">
+                      <MapPin className="h-6 w-6 text-[#fff]" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-800 mb-1">Address</h3>
@@ -83,8 +83,8 @@ export default function ContactForm() {
                     whileHover={{ x: 10 }}
                     className="flex items-start space-x-4"
                   >
-                    <div className="bg-[#A7C7E7]/20 p-3 rounded-full flex-shrink-0">
-                      <Phone className="h-6 w-6 text-[#A7C7E7]" />
+                    <div className="bg-[#b49559] p-3 rounded-full flex-shrink-0">
+                      <Phone className="h-6 w-6 text-[#fff]" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-800 mb-1">Phone</h3>
@@ -96,8 +96,8 @@ export default function ContactForm() {
                     whileHover={{ x: 10 }}
                     className="flex items-start space-x-4"
                   >
-                    <div className="bg-[#A7C7E7]/20 p-3 rounded-full flex-shrink-0">
-                      <Mail className="h-6 w-6 text-[#A7C7E7]" />
+                    <div className="bg-[#b49559] p-3 rounded-full flex-shrink-0">
+                      <Mail className="h-6 w-6 text-[#fff]" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-800 mb-1">Email</h3>
@@ -109,8 +109,8 @@ export default function ContactForm() {
                     whileHover={{ x: 10 }}
                     className="flex items-start space-x-4"
                   >
-                    <div className="bg-[#A7C7E7]/20 p-3 rounded-full flex-shrink-0">
-                      <Clock className="h-6 w-6 text-[#A7C7E7]" />
+                    <div className="bg-[#b49559] p-3 rounded-full flex-shrink-0">
+                      <Clock className="h-6 w-6 text-[#fff]" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-800 mb-1">Opening Hours</h3>
@@ -149,8 +149,8 @@ export default function ContactForm() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#A7C7E7] focus:border-transparent transition-all"
-                        placeholder="John Doe"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#b49559] focus:border-transparent transition-all"
+                        placeholder="Full Name"
                       />
                     </div>
 
@@ -165,8 +165,8 @@ export default function ContactForm() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#A7C7E7] focus:border-transparent transition-all"
-                        placeholder="john@example.com"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#b49559] focus:border-transparent transition-all"
+                        placeholder="Email"
                       />
                     </div>
                   </div>
@@ -182,8 +182,8 @@ export default function ContactForm() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#A7C7E7] focus:border-transparent transition-all"
-                        placeholder="+1 (555) 123-4567"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#b49559] focus:border-transparent transition-all"
+                        placeholder="Phone Number"
                       />
                     </div>
 
@@ -196,9 +196,9 @@ export default function ContactForm() {
                         name="service"
                         value={formData.service}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#A7C7E7] focus:border-transparent transition-all"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#b49559] focus:border-transparent transition-all"
                       >
-                        <option value="">Select a service</option>
+                        <option value="" disabled>Select a service</option>
                         <option value="physiotherapy">Physiotherapy</option>
                         <option value="pilates">Pilates</option>
                         <option value="yoga">Yoga</option>
@@ -219,7 +219,7 @@ export default function ContactForm() {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#A7C7E7] focus:border-transparent transition-all resize-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#b49559] focus:border-transparent transition-all resize-none"
                       placeholder="Tell us about your needs or questions..."
                     />
                   </div>
@@ -231,10 +231,10 @@ export default function ContactForm() {
                     disabled={isSubmitting || submitted}
                     className={`w-full py-4 rounded-lg font-semibold text-white transition-all duration-300 flex items-center justify-center space-x-2 ${
                       submitted
-                        ? 'bg-green-500'
+                        ? 'bg-[#b49559]'
                         : isSubmitting
                         ? 'bg-gray-400'
-                        : 'bg-[#A7C7E7] hover:bg-[#8AB4D9] shadow-lg'
+                        : 'bg-[#b49559] hover:bg-[#5CE2E7] shadow-lg'
                     }`}
                   >
                     {submitted ? (
