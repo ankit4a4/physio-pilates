@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Check } from "lucide-react"; 
+import { Check } from "lucide-react";
 
 export default function ServicesSection({ service }) {
   if (!service) return null;
@@ -11,7 +11,6 @@ export default function ServicesSection({ service }) {
   return (
     <section className="w-full py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center gap-10">
-        
         {/* 🖼️ LEFT: Image */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -40,9 +39,7 @@ export default function ServicesSection({ service }) {
             {service.title}
           </h2>
 
-          <p className="text-gray-700 text-lg mb-4">
-            {service.description1}
-          </p>
+          <p className="text-gray-700 text-lg mb-4">{service.description1}</p>
 
           <ul className="list-disc ml-6 text-gray-600 space-y-2 mb-6">
             {service.description2?.map((line, index) => (
@@ -65,7 +62,10 @@ export default function ServicesSection({ service }) {
 
           {/* Button */}
           <Link href={service.button}>
-            <button className="bg-[#b49559] hover:bg-[#a88a50] text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 shadow-md">
+            <button
+              className="bg-[#b49559] hover:bg-[#a88a50] text-white px-8 py-3 rounded-full text-lg font-semibold 
+  transition-all duration-300 shadow-md transform hover:scale-95"
+            >
               Learn More
             </button>
           </Link>
