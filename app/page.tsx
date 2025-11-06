@@ -1,4 +1,3 @@
-import Navbar from '@/components/Navbar';
 import Hero from '@/components/home/Hero';
 import About from '@/components/home/About';
 import Services from '@/components/home/Services';
@@ -6,12 +5,11 @@ import Certification from '@/components/home/Certification';
 import Testimonials from '@/components/home/Testimonials';
 import Gallery from '@/components/home/Gallery';
 import CTA from '@/components/home/CTA';
-import Footer from '@/components/Footer';
 
 export default function Home() {
+
   return (
     <main className="min-h-screen bg-white">
-      <Navbar />
       <Hero />
       <About />
       <Services />
@@ -19,7 +17,6 @@ export default function Home() {
       <Testimonials />
       <Gallery />
       <CTA />
-      <Footer />
     </main>
   );
 }
