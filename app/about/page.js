@@ -10,14 +10,12 @@ import Footer from "@/components/Footer";
 export default function AboutPage() {
   return (
     <main>
-      <Navbar />
       <AboutHero />
       <AboutStory />
       <OurPhilosophy/>
       <MissionVision/>
       <MeetTheExperts/>
       <BookSessionBanner />
-      <Footer />
     </main>
   );
 }

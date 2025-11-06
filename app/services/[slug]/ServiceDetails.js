@@ -8,7 +8,6 @@ import GallerySlider from "../../../components/Services/GallerySlider";
 export default function ServiceDetails({ service }) {
   return (
     <main>
-      <Navbar />
       <ServicesHero service={service} />
       <ServicesSection service={service} />
       <GallerySlider service={service} />

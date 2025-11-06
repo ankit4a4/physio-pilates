@@ -7,10 +7,8 @@ import Footer from '@/components/Footer'
 const page = () => {
   return (
     <>
-      <Navbar />
       <GalleryHero />
       <GallerySection />
-      <Footer />
     </>
   )
 }
