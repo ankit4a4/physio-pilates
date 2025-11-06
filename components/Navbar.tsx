@@ -13,12 +13,19 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const navItems = [
-    { name: 'Home', href: '/' },
+    // { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
+    // { name: 'Services', href: '/services' },
+    { name: 'Physiotherapy', href: '/services/physiotherapy' },
+    { name: 'Pilates', href: '/services/pilates' },
+    { name: 'Yoga', href: '/services/yog' },
+    { name: 'Therapy', href: '/services/dry-needling-and-cup-therapy' },
+    { name: 'Courses', href: '/courses' },
     { name: 'Gallery', href: '/gallery' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ];
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,24 +55,24 @@ export default function Navbar() {
           </Link>
 
         {/* Desktop Menu */}
-<div className="hidden lg:flex items-center space-x-8">
+<div className="hidden lg:flex items-center space-x-12">
   {navItems.map((item) => {
     const isActive = pathname === item.href;
     return (
       <Link
         key={item.name}
         href={item.href}
-        className={`group relative text-sm tracking-wide transition-all duration-300 pb-1
+        className={`group relative text-md font-semibold tracking-wide transition-all duration-300 pb-1
           ${
             scrolled
               ? isActive
-                ? 'text-[#5de3e8]'
+                ? 'text-[#b49559]'
                 : 'text-gray-700'
               : isActive
-              ? 'text-[#5de3e8]'
+              ? 'text-[#b49559]'
               : 'text-white'
           }
-          hover:text-[#5de3e8]
+          hover:text-[#b49559]
         `}
       >
         {item.name}
@@ -73,8 +80,8 @@ export default function Navbar() {
           className={`absolute left-0 -bottom-1 h-[2px] rounded-full transition-all duration-300 ease-in-out
             ${
               isActive
-                ? 'w-full bg-[#5de3e8]'
-                : 'w-0 bg-[#5de3e8] group-hover:w-full'
+                ? 'w-full bg-[#b49559]'
+                : 'w-0 bg-[#b49559] group-hover:w-full'
             }
           `}
         />
