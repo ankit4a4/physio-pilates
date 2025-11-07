@@ -88,7 +88,7 @@ export default function ContactForm() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-800 mb-1">Phone</h3>
-                      <p className="text-gray-600">+1 (555) 123-4567</p>
+                      <p className="text-gray-600">+91 9717505326</p>
                     </div>
                   </motion.div>
 
