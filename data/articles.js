@@ -1,4 +1,4 @@
-import BlogImg from "../assets/services/physio/phy-1.jpeg";
+import BlogImg from "../assets/services/physio/phy-1.jpg";
 
 export const articles = [
   {

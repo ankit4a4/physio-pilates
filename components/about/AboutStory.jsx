@@ -3,8 +3,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import img from "../../assets/about/ourstory.webp";
-
+import img from "../../assets/about/AboutSection.jpg";
 
 export default function AboutStory() {
   useEffect(() => {

@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import img from "@/assets/services/yog/yog-5.jpg"
 
 export default function CoursesHero() {
   useEffect(() => {
@@ -23,7 +24,7 @@ export default function CoursesHero() {
         className="absolute inset-0 bg-cover bg-center brightness-[0.45] scale-105 md:scale-100 transition-transform duration-1000"
         style={{
           backgroundImage:
-            "url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1600')",
+            `url('${img.src}')`,
         }}
       ></div>
 

@@ -3,6 +3,10 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import img1 from "@/assets/home/HomeAbout1.jpg"
+import img2 from "@/assets/home/HomeAbout2.jpg"
+import img3 from "@/assets/home/HomeAbout3.jpg"
+import Image from "next/image";
 
 export default function About() {
   useEffect(() => {
@@ -37,7 +41,7 @@ export default function About() {
             </div>
             <div className="space-y-6 text-[#b49559]/80 leading-relaxed text-lg">
               <p className="bg-white/70 p-4 rounded-xl border border-[#b4955915]" data-aos="fade-up">
-                Welcome to <strong className="text-[#b49559]">Physio Pilates</strong> — a holistic health & movement studio 
+                Welcome to <strong className="text-[#b49559]">Physio Pilates</strong> — a holistic health & movement studio
                 dedicated to healing, strengthening and transforming the body through science-based care.
               </p>
               <p data-aos="fade-up">
@@ -69,10 +73,12 @@ export default function About() {
           {/* Right Side Images */}
           <div className="relative h-[600px] flex items-center justify-center overflow-hidden" data-aos="zoom-in">
             <div className="absolute inset-0 bg-gradient-to-br from-[#b4955922] to-[#b495590A] rounded-3xl -rotate-3 scale-105"></div>
-            
+
             <div className="relative z-20 group">
-              <img
-                src="https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg?auto=compress&cs=tinysrgb&w=800"
+              <Image
+                src={img1.src}
+                height={100}
+                width={100}
                 className="w-80 md:w-[400px] h-[480px] object-cover rounded-2xl shadow-2xl transform group-hover:scale-105 transition-transform duration-500"
                 alt="Main Studio"
                 data-aos="fade-up"
@@ -80,16 +86,20 @@ export default function About() {
             </div>
 
             <div className="absolute left-4 md:left-8 top-8 z-30 group" data-aos="zoom-in">
-              <img
-                src="https://images.pexels.com/photos/3845766/pexels-photo-3845766.jpeg?auto=compress&cs=tinysrgb&w=800"
+              <Image
+                height={100}
+                width={100}
+                src={img2.src}
                 className="relative w-48 h-64 md:w-56 md:h-72 object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition-transform"
                 alt="Pilates"
               />
             </div>
 
             <div className="absolute right-4 md:right-8 bottom-8 z-30 group" data-aos="zoom-in">
-              <img
-                src="https://images.pexels.com/photos/3822864/pexels-photo-3822864.jpeg?auto=compress&cs=tinysrgb&w=800"
+              <Image
+                src={img3.src}
+                height={100}
+                width={100}
                 className="relative w-48 h-64 md:w-56 md:h-72 object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition-transform"
                 alt="Rehab"
               />

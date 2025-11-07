@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
+import img from "@/assets/course.jpg"
 
 export default function WhyChooseUs() {
   const [active, setActive] = useState(0);
@@ -107,7 +108,7 @@ export default function WhyChooseUs() {
           {/* Main Image */}
           <div className="relative bg-white shadow-xl rounded-3xl overflow-hidden border border-[#b495591a]">
             <Image
-              src="https://images.pexels.com/photos/4324020/pexels-photo-4324020.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              src={img.src}
               alt="Why Choose Us"
               width={600}
               height={420}
