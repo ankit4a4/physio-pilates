@@ -51,6 +51,7 @@ export default function Gallery() {
               viewport={{ once: true }}
             >
               < Image
+              alt="dfdf"
                 height={100}
                 width={100}
                 src={url.src}
