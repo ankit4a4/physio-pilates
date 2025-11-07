@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { GraduationCap, Users, Clock } from "lucide-react";
+import Image from "next/image";
+import img from "@/assets/home/homegallery4.jpg"
 
 export default function CourseOverview() {
   return (
@@ -62,12 +64,13 @@ export default function CourseOverview() {
           transition={{ duration: 0.8 }}
           className="relative rounded-3xl overflow-hidden shadow-2xl"
         >
-          <img
-            src="https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg?auto=compress&cs=tinysrgb&w=1600"
+          <Image
+            height={100}
+            width={100}
+            src={img.src}
             alt="Teacher Training"
             className="w-full h-full object-cover brightness-[0.9]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0d9488]/40 to-transparent"></div>
         </motion.div>
       </div>
     </section>

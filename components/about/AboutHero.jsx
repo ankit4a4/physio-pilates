@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import heroImage from "@/assets/about/aboutHero.jpg"
 export default function AboutHero() {
   useEffect(() => {
     AOS.init({
@@ -23,12 +23,12 @@ export default function AboutHero() {
         className="absolute inset-0 bg-cover bg-center brightness-[0.45] scale-105 md:scale-100 transition-transform duration-1000"
         style={{
           backgroundImage:
-            "url('https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg?auto=compress&cs=tinysrgb&w=1600')",
+            `url(${heroImage.src})`,
         }}
       ></div>
 
       {/* Elegant overlay gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#00101010] via-[#00101070] to-[#001010A0]"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#00101010] via-[#00101038] to-[#00101043]"></div>
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 sm:px-8 md:px-10 text-white">

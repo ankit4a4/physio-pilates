@@ -4,83 +4,69 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
+import phy1 from "@/assets/services/physio/phy-1.jpg";
+import phy2 from "@/assets/services/physio/phy-2.jpg";
+import phy3 from "@/assets/services/physio/phy-3.jpg";
+import phy4 from "@/assets/services/physio/phy-4.jpg";
+import phy5 from "@/assets/services/physio/phy-5.jpg";
+
+import pilate1 from "@/assets/services/pilate/pilate-1.jpg";
+import pilate2 from "@/assets/services/pilate/pilate-2.jpg";
+import pilate3 from "@/assets/services/pilate/pilate-3.jpg";
+import pilate4 from "@/assets/services/pilate/pilate-4.jpg";
+import pilate5 from "@/assets/services/pilate/pilate-5.jpg";
+
+import yog1 from "@/assets/services/yog/yog-1.jpg";
+import yog2 from "@/assets/services/yog/yog-2.jpg";
+import yog3 from "@/assets/services/yog/yog-3.jpg";
+import yog4 from "@/assets/services/yog/yog-4.jpg";
+import yog5 from "@/assets/services/yog/yog-5.jpg";
+
+import therapy1 from "@/assets/services/therapy/therapy-1.jpg";
+import therapy2 from "@/assets/services/therapy/therapy-2.jpg";
+import therapy3 from "@/assets/services/therapy/therapy-3.jpg";
+import therapy4 from "@/assets/services/therapy/therapy-4.jpg";
+import therapy5 from "@/assets/services/therapy/therapy-5.jpg";
+
 const galleryImages = [
-  {
-    src: 'https://images.pexels.com/photos/3822843/pexels-photo-3822843.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'Physiotherapy',
-    title: 'One-on-One Sessions',
-  },
-  {
-    src: 'https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'Pilates',
-    title: 'Reformer Classes',
-  },
-  {
-    src: 'https://images.pexels.com/photos/3822621/pexels-photo-3822621.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'Yoga',
-    title: 'Morning Flow',
-  },
-  {
-    src: 'https://images.pexels.com/photos/3822694/pexels-photo-3822694.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'Facility',
-    title: 'Treatment Rooms',
-  },
-  {
-    src: 'https://images.pexels.com/photos/5473182/pexels-photo-5473182.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'Physiotherapy',
-    title: 'Sports Rehabilitation',
-  },
-  {
-    src: 'https://images.pexels.com/photos/4056535/pexels-photo-4056535.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'Pilates',
-    title: 'Mat Pilates',
-  },
-  {
-    src: 'https://images.pexels.com/photos/3822356/pexels-photo-3822356.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'Yoga',
-    title: 'Group Practice',
-  },
-  {
-    src: 'https://images.pexels.com/photos/7195133/pexels-photo-7195133.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'Treatments',
-    title: 'Specialized Therapy',
-  },
-  {
-    src: 'https://images.pexels.com/photos/3822864/pexels-photo-3822864.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'Facility',
-    title: 'Reception Area',
-  },
-  {
-    src: 'https://images.pexels.com/photos/3997986/pexels-photo-3997986.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'Treatments',
-    title: 'Massage Therapy',
-  },
-  {
-    src: 'https://images.pexels.com/photos/5473181/pexels-photo-5473181.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'Physiotherapy',
-    title: 'Manual Therapy',
-  },
-  {
-    src: 'https://images.pexels.com/photos/3822357/pexels-photo-3822357.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'Yoga',
-    title: 'Private Sessions',
-  },
+  { src: phy1, category: 'Physiotherapy'},
+  { src: phy2, category: 'Physiotherapy'},
+  { src: phy3, category: 'Physiotherapy' },
+  { src: phy4, category: 'Physiotherapy'  },
+  { src: phy5, category: 'Physiotherapy'  },
+
+  { src: pilate1, category: 'Pilates'},
+  { src: pilate2, category: 'Pilates'},
+  { src: pilate3, category: 'Pilates' },
+  { src: pilate4, category: 'Pilates' },
+  { src: pilate5, category: 'Pilates' },
+
+  { src: yog1, category: 'Yoga' },
+  { src: yog2, category: 'Yoga' },
+  { src: yog3, category: 'Yoga' },
+  { src: yog4, category: 'Yoga' },
+  { src: yog5, category: 'Yoga' },
+
+  { src: therapy1, category: 'Dry Needling & Cup Therapy'},
+  { src: therapy2, category: 'Dry Needling & Cup Therapy'},
+  { src: therapy3, category: 'Dry Needling & Cup Therapy' },
+  { src: therapy4, category: 'Dry Needling & Cup Therapy' },
+  { src: therapy5, category: 'Dry Needling & Cup Therapy'},
 ];
 
-const categories = ['All', 'Physiotherapy', 'Pilates', 'Yoga', 'Treatments', 'Facility'];
-
+const categories = ['All', 'Physiotherapy', 'Pilates', 'Yoga', 'Dry Needling & Cup Therapy'];
 
 export default function GallerySection() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const filteredImages = selectedCategory === 'All'
-    ? galleryImages
-    : galleryImages.filter(img => img.category === selectedCategory);
+  const filteredImages =
+    selectedCategory === 'All'
+      ? galleryImages
+      : galleryImages.filter((img) => img.category === selectedCategory);
 
   return (
-    <div >
-   
+    <div>
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -110,7 +96,7 @@ export default function GallerySection() {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             <AnimatePresence>
-              {filteredImages.map((image, index) => (
+              {filteredImages.map((image) => (
                 <motion.div
                   key={image.src}
                   layout
@@ -124,7 +110,7 @@ export default function GallerySection() {
                 >
                   <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
                     <img
-                      src={image.src}
+                      src={image.src.src}
                       alt={image.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
@@ -178,12 +164,14 @@ export default function GallerySection() {
                 <span className="inline-block bg-[#5CE2E7] px-3 py-1 rounded-full text-sm text-white mb-2">
                   {selectedImage.category}
                 </span>
-                <h3 className="text-2xl font-semibold text-white">{selectedImage.title}</h3>
+                <h3 className="text-2xl font-semibold text-white">
+                  {selectedImage.title}
+                </h3>
               </div>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
-  );
+    </div>
+  );
 }

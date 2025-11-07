@@ -3,6 +3,12 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
+import img1 from "@/assets/home/Hero1.jpg"
+import img2 from "@/assets/home/Hero2.jpg"
+import img3 from "@/assets/home/Hero3.jpg"
+import img4 from "@/assets/home/Hero4.jpg"
+import img5 from "@/assets/home/Hero5.jpg"
 import Link from 'next/link';
 
 const slides = [
@@ -10,31 +16,31 @@ const slides = [
     title: 'Rebuild • Recover • Transform',
     subtitle: 'Advanced physiotherapy treatments to heal pain, restore strength and improve mobility naturally.',
     cta: 'Book Physiotherapy Session',
-    image: 'https://truebalancepainrelief.com/wp-content/uploads/2023/07/Rebuild-Recover-Excel_the-Road-to-Success-With-Sports-Rehabilitation-in-Denver-e1689377128222.jpeg',
+    image: img1.src,
   },
   {
     title: 'Strength Through Pilates',
     subtitle: 'Strengthen your core, improve posture and build a balanced body with personalised pilates training.',
     cta: 'Join Pilates Program',
-    image: 'https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    image: img2.src,
   },
   {
     title: 'Yoga For Body & Mind',
     subtitle: 'Enhance flexibility, balance and inner peace with our guided yoga sessions for all levels.',
     cta: 'Start Your Yoga Journey',
-    image: 'https://images.pexels.com/photos/3822621/pexels-photo-3822621.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    image: img3.src,
   },
   {
     title: 'Dry Needling & Cupping Therapy',
     subtitle: 'Targeted relief from chronic pain, tension and muscle tightness using scientific deep-tissue therapy.',
     cta: 'Experience Relief',
-    image: 'https://images.pexels.com/photos/5473181/pexels-photo-5473181.jpeg?auto=compress&cs=tinysrgb&w=1920',
+    image: img4.src,
   },
   {
     title: 'Become a Certified Trainer',
     subtitle: 'Professional Instructor training courses in physiotherapy, pilates and yoga to build your healthcare career.',
     cta: 'Enroll Now',
-    image: 'https://2.bp.blogspot.com/-zg4nwCpbt1M/V2f-u55V6OI/AAAAAAAApsg/XMoflZdoypMEVzo_wx2yi4Sa_Mq8DeHfACLcB/s1600/shutterstock_194690771.jpg',
+    image: img5.src,
   },
 ];
 
