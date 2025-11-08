@@ -80,7 +80,7 @@ export default function Navbar() {
                         {item.name}
                       </Link>
                       <ChevronDown
-                        size={14}
+                        size={20}
                         className={`transition-transform duration-200 ${
                           // rotate on hover for a little UI nicety
                           'group-hover:-rotate-180'
@@ -90,14 +90,14 @@ export default function Navbar() {
 
                     {/* Dropdown: visible on group hover */}
                     <div
-                      className="absolute left-0 top-full mt-2 bg-white shadow-md rounded-lg py-2 min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+                      className="absolute left-0 top-full mt-2 bg-[#b49559] shadow-md rounded-lg py-2 min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
                       // keep it visible while hovering the dropdown itself
                     >
                       {aboutSubItems.map((sub) => (
                         <Link
                           key={sub.name}
                           href={sub.href}
-                          className="block px-4 py-2 text-gray-700 hover:bg-[#b49559] hover:text-white text-sm whitespace-nowrap"
+                          className="block px-4 py-2 text-white  text-sm whitespace-nowrap"
                         >
                           {sub.name}
                         </Link>

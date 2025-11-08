@@ -49,11 +49,11 @@ export default function CourseOverview() {
           </div>
 
           <motion.a
-            href="#courses"
+            href="/contact"
             whileHover={{ scale: 1.05 }}
-            className="inline-block mt-8 bg-[#5de3e8] text-white font-semibold px-8 py-3 rounded-full shadow-md hover:bg-[#14b8a6] transition-all duration-300"
+            className="inline-block mt-8 bg-[#5de3e8] text-white font-semibold px-8 py-3 rounded-full shadow-md hover:bg-[#b59659] transition-all duration-300"
           >
-            View Courses
+            Learn More
           </motion.a>
         </motion.div>
 

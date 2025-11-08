@@ -1,55 +1,99 @@
 "use client";
 
+import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { CalendarDays, User } from "lucide-react";
-import { articles } from "@/data/articles"; 
-import BlogsImg from "../../assets/services/physio/phy-2.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { articles } from "@/data/articles";
+import BlogsImg from "@/assets/services/physio/phy-2.jpg";
 
 export default function BlogsPage() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
+
   return (
     <main className="w-full min-h-screen bg-white text-gray-800">
       {/* 🔹 Hero Section */}
-      <section className="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
-        <Image
-          src={BlogsImg.src}
-          alt="Blogs Hero"
-          fill
-          className="object-cover brightness-75"
-        />
-        <div className="relative z-10 text-center px-6">
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold text-white mb-4"
+      <section
+        className="relative min-h-[75vh] md:min-h-[80vh] flex items-center justify-center bg-[#fefdfb] overflow-hidden"
+        data-aos="fade-up"
+      >
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center brightness-[0.45] scale-105 md:scale-100 transition-transform duration-1000"
+          style={{
+            backgroundImage: `url(${BlogsImg.src})`,
+          }}
+        ></div>
+
+        {/* Elegant Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#00101010] via-[#00101060] to-[#00101090]"></div>
+
+        {/* Hero Content */}
+        <div className="relative z-10 text-center px-6 sm:px-8 md:px-10 text-white">
+          {/* Tagline */}
+          <div
+            className="inline-flex items-center gap-2 px-4 py-2 bg-white/15 backdrop-blur-md rounded-full border border-white/20 shadow-sm"
+            data-aos="zoom-in"
           >
-            Our Blog
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-white/90 text-lg md:text-xl max-w-2xl mx-auto"
+            <div className="w-2.5 h-2.5 bg-[#b59659] rounded-full shadow-sm shadow-[#b5965960]" />
+            <span className="text-xs sm:text-sm font-medium tracking-[0.2em] uppercase text-[#EAEAEA]">
+              Wellness Insights
+            </span>
+          </div>
+
+          {/* Heading */}
+          <h1
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mt-6 leading-snug md:leading-tight tracking-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]"
+            data-aos="fade-up"
+          >
+            Our <span className="text-[#b59659]">Blog</span>
+          </h1>
+
+          {/* Subtext */}
+          <p
+            className="text-base sm:text-lg md:text-xl mt-6 sm:mt-8 max-w-2xl mx-auto text-gray-100/90 leading-relaxed"
+            data-aos="fade-up"
+            data-aos-delay="200"
           >
             Stay informed with the latest health, fitness, and wellness insights
-            from our experts.
-          </motion.p>
+            from our experts — empowering you to live a stronger, balanced life.
+          </p>
+
+          {/* Divider */}
+          <div
+            className="w-20 h-1 mt-10 mx-auto bg-gradient-to-r from-[#b59659] to-[#b49559] rounded-full"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          ></div>
         </div>
       </section>
 
       {/* 🔹 Description Section */}
-      <section className="py-16 px-6 md:px-12 text-center max-w-3xl mx-auto">
+      <section
+        className="py-16 px-6 md:px-12 text-center max-w-3xl mx-auto"
+        data-aos="fade-up"
+      >
         <p className="text-lg text-gray-600 leading-relaxed">
           Explore our collection of expert articles covering physiotherapy,
-          pilates, yoga, and more. Learn from professionals and stay ahead in
-          your wellness journey.
+          pilates, yoga, and holistic wellness. Learn from professionals and
+          stay ahead in your health journey.
         </p>
       </section>
 
       {/* 🔹 Blog Cards Section */}
-      <section className="pb-20 px-6 md:px-12 max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <section
+        className="pb-20 px-6 md:px-12 max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
+        data-aos="fade-up"
+      >
         {articles.map((blog, i) => (
           <motion.div
             key={i}

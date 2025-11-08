@@ -16,7 +16,7 @@ export default function CoursesHero() {
 
   return (
     <section
-      className="relative min-h-[75vh] md:min-h-[90vh] flex items-center justify-center bg-[#fefdfb] overflow-hidden"
+      className="relative min-h-[75vh] md:min-h-[80vh] flex items-center justify-center bg-[#fefdfb] overflow-hidden"
       data-aos="fade-up"
     >
       {/* Background Image */}
