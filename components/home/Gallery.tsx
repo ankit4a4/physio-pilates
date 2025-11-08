@@ -1,15 +1,22 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import img1 from "@/assets/home/homegallery1.jpg"
+import img2 from "@/assets/home/homegallery2.jpg"
+import img3 from "@/assets/home/homegallery3.jpg"
+import img4 from "@/assets/home/homegallery4.jpg"
+import img5 from "@/assets/home/homegallery5.jpg"
+import img6 from "@/assets/home/homegallery6.jpg"
+import Image from "next/image";
 
 export default function Gallery() {
   const images = [
-    'https://images.pexels.com/photos/3822167/pexels-photo-3822167.jpeg?auto=compress&cs=tinysrgb&w=600',
-    'https://images.pexels.com/photos/3822906/pexels-photo-3822906.jpeg?auto=compress&cs=tinysrgb&w=600',
-    'https://www.health.com/thmb/7fFFXMLVCzMmhjxfXfs3kTiRS6w=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/HLTH_MoveYourBody_YogaPoses_THUMB-LARGE-726a28603c8043eba44eb9f128f30551.jpg',
-    'https://exceedhealthhub.com.au/wp-content/uploads/2021/11/Dry-Needling-_-Cupping-scaled.jpg',
-    'https://uploads-ssl.webflow.com/61791a8b6c568b9710518140/619511a7fa674f472e307f10_KMD00810-min.jpg',
-    'https://images.pexels.com/photos/3822668/pexels-photo-3822668.jpeg?auto=compress&cs=tinysrgb&w=600',
+    img1,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6,
   ];
 
   return (
@@ -17,7 +24,7 @@ export default function Gallery() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Title */}
-        <motion.div 
+        <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,8 +50,11 @@ export default function Gallery() {
               transition={{ duration: 0.6, delay: i * 0.15 }}
               viewport={{ once: true }}
             >
-              <img 
-                src={url}
+              < Image
+              alt="dfdf"
+                height={100}
+                width={100}
+                src={url.src}
                 className="
                   w-full h-full object-cover 
                   brightness-90 group-hover:brightness-100

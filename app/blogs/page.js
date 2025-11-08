@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { CalendarDays, User } from "lucide-react";
 import { articles } from "@/data/articles"; 
-import BlogsImg from "../../assets/services/physio/phy-2.jpeg";
+import BlogsImg from "../../assets/services/physio/phy-2.jpg";
 
 export default function BlogsPage() {
   return (

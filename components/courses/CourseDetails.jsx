@@ -5,6 +5,10 @@ import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Clock, Heart, PhoneCall, CheckCircle } from "lucide-react";
+import img1 from "@/assets/services/pilate/pilate-2.jpg"
+import img2 from "@/assets/services/pilate/pilate-5.jpg"
+import img3 from "@/assets/services/therapy/therapy-5.jpg"
+import img4 from "@/assets/services/physio/phy-5.jpg"
 
 export default function CourseDetails() {
   useEffect(() => {
@@ -22,7 +26,7 @@ const courses = [
       "Live sessions with senior mentors",
       "Internationally recognized certification",
     ],
-    img: "https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    img: img1.src,
   },
   {
     title: "300-Hour Advanced Pilates Training",
@@ -34,7 +38,7 @@ const courses = [
       "Client-specific correction techniques",
       "Hands-on mentorship & evaluation",
     ],
-    img: "https://images.pexels.com/photos/4324037/pexels-photo-4324037.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    img: img2.src,
   },
   {
     title: "Holistic Body Conditioning Program",
@@ -46,7 +50,7 @@ const courses = [
       "Focus on strength & flexibility balance",
       "Ideal for fitness professionals & enthusiasts",
     ],
-    img: "https://images.pexels.com/photos/4498219/pexels-photo-4498219.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    img: img3.src,
   },
   {
     title: "Reformer & Equipment Masterclass",
@@ -58,7 +62,7 @@ const courses = [
       "Postural correction principles",
       "Advanced movement sequencing",
     ],
-    img: "https://images.pexels.com/photos/3822220/pexels-photo-3822220.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    img: img4.src,
   },
 ];
 

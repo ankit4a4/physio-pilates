@@ -1,26 +1,26 @@
-import phy1 from "../assets/services/physio/phy-1.jpeg";
-import phy2 from "../assets/services/physio/phy-2.jpeg";
-import phy3 from "../assets/services/physio/phy-3.jpeg";
-import phy4 from "../assets/services/physio/phy-4.jpeg";
-import phy5 from "../assets/services/physio/phy-5.jpeg";
+import phy1 from "../assets/services/physio/phy-1.jpg";
+import phy2 from "../assets/services/physio/phy-2.jpg";
+import phy3 from "../assets/services/physio/phy-3.jpg";
+import phy4 from "../assets/services/physio/phy-4.jpg";
+import phy5 from "../assets/services/physio/phy-5.jpg";
 //------------------------ Pilates--------------------------//
-import Pilate1 from "../assets/services/pilate/pilate-1.jpeg";
-import Pilate2 from "../assets/services/pilate/pilate-2.jpeg";
-import Pilate3 from "../assets/services/pilate/pilate-3.jpeg";
-import Pilate4 from "../assets/services/pilate/pilate-4.jpeg";
-import Pilate5 from "../assets/services/pilate/pilate-5.jpeg";
+import Pilate1 from "../assets/services/pilate/pilate-1.jpg";
+import Pilate2 from "../assets/services/pilate/pilate-2.jpg";
+import Pilate3 from "../assets/services/pilate/pilate-3.jpg";
+import Pilate4 from "../assets/services/pilate/pilate-4.jpg";
+import Pilate5 from "../assets/services/pilate/pilate-5.jpg";
 //----------------------- yog-------------------------------- //
-import Yog1 from "../assets/services/yog/yog-1.jpeg";
-import Yog2 from "../assets/services/yog/yog-2.jpeg";
-import Yog3 from "../assets/services/yog/yog-3.jpeg";
-import Yog4 from "../assets/services/yog/yog-4.jpeg";
-import Yog5 from "../assets/services/yog/yog-5.jpeg";
+import Yog1 from "../assets/services/yog/yog-1.jpg";
+import Yog2 from "../assets/services/yog/yog-2.jpg";
+import Yog3 from "../assets/services/yog/yog-3.jpg";
+import Yog4 from "../assets/services/yog/yog-4.jpg";
+import Yog5 from "../assets/services/yog/yog-5.jpg";
 //---------------------- therapy--------------------------------- //
-import Therapy1 from "../assets/services/therapy/therapy-1.jpeg";
-import Therapy2 from "../assets/services/therapy/therapy-2.jpeg";
-import Therapy3 from "../assets/services/therapy/therapy-3.jpeg";
-import Therapy4 from "../assets/services/therapy/therapy-4.jpeg";
-import Therapy5 from "../assets/services/therapy/therapy-5.jpeg";
+import Therapy1 from "../assets/services/therapy/therapy-1.jpg";
+import Therapy2 from "../assets/services/therapy/therapy-2.jpg";
+import Therapy3 from "../assets/services/therapy/therapy-3.jpg";
+import Therapy4 from "../assets/services/therapy/therapy-4.jpg";
+import Therapy5 from "../assets/services/therapy/therapy-5.jpg";
 
 export const services = [
   {

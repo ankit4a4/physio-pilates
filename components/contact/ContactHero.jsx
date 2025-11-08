@@ -1,11 +1,12 @@
 import React from 'react'
+import img from "@/assets/services/pilate/pilate-2.jpg"
 
 const ContactHero = () => {
   return (
     <div className="relative w-full h-[60vh] flex items-center justify-center">
       {/* Background Image */}
       <img
-        src="https://www.absolutehealth.net.au/wp-content/uploads/2020/10/sportsphysio-1200x627.jpg"
+        src={img.src}
         alt="Contact Background"
         className="absolute inset-0 w-full h-full object-cover  "
       />

@@ -1,14 +1,15 @@
 import React from 'react'
-
+import img from "@/assets/home/homegallery1.jpg"
 const GalleryHero = () => {
     return (
         <div className="relative w-full h-[400px] flex items-center justify-center ">
             {/* Background Image */}
             <img
-                src="https://mpfitgyms.com/wp-content/uploads/2022/03/PHOTO-2018-12-14-21-07-37-1.jpg"
+                src={img.src}
                 alt="Gallery Background"
                 className="absolute inset-0 w-full h-full object-cover object-top"
             />
+          
 
             {/* Black Overlay */}
             <div className="absolute inset-0 bg-black/40"></div>
