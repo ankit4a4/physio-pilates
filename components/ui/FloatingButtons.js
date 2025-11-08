@@ -5,7 +5,7 @@ import { Phone, MessageCircle } from "lucide-react";
 
 export default function FloatingButtons() {
   return (
-    <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+    <div className="fixed bottom-12 right-6 flex flex-col gap-3 z-50">
       {/* WhatsApp Button */}
       <Link
         href="https://wa.me/919717505326?text=Hi!%20I%20would%20like%20to%20know%20more%20about%20your%20services."

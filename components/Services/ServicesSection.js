@@ -11,12 +11,12 @@ export default function ServicesSection({ service }) {
   return (
     <section className="w-full py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center gap-10">
-        {/* 🖼️ LEFT: Image */}
+        {/* 🖼️ LEFT: Image & Levels */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="md:w-1/2 w-full h-full flex justify-center"
+          className="md:w-1/2 w-full h-full flex flex-col items-center"
         >
           <div className="w-full h-[350px] md:h-[450px] relative rounded-2xl overflow-hidden shadow-lg">
             <Image
@@ -25,6 +25,19 @@ export default function ServicesSection({ service }) {
               fill
               className="object-cover"
             />
+          </div>
+
+          {/* ✅ Levels BELOW the image */}
+          <div className="flex flex-wrap justify-center gap-3 mt-6">
+            {service.levels?.map((level, index) => (
+              <span
+                key={index}
+                className="flex items-center gap-2 bg-[#b49559]/10 border border-[#b49559] text-[#b49559] px-4 py-2 rounded-full text-sm font-medium"
+              >
+                <Check size={16} className="text-[#b49559]" />
+                {level}
+              </span>
+            ))}
           </div>
         </motion.div>
 
@@ -47,20 +60,7 @@ export default function ServicesSection({ service }) {
             ))}
           </ul>
 
-          {/* ✅ Levels with blue ticks */}
-          <div className="flex flex-wrap gap-3 mb-6">
-            {service.levels?.map((level, index) => (
-              <span
-                key={index}
-                className="flex items-center gap-2 bg-[#b49559]/10 border border-[#b49559] text-[#b49559] px-4 py-2 rounded-full text-sm font-medium"
-              >
-                <Check size={16} className="text-blue-500" />
-                {level}
-              </span>
-            ))}
-          </div>
-
-          {/* Button */}
+          {/* 🔘 Button */}
           <Link href={service.button}>
             <button
               className="bg-[#b49559] hover:bg-[#a88a50] text-white px-8 py-3 rounded-full text-lg font-semibold 

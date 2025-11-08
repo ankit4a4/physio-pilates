@@ -1,3 +1,4 @@
+"use client";
 import logo from "@/assets/logo2.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +11,6 @@ import {
   MapPin,
   Phone,
   Mail,
-  MessageCircle,
 } from "lucide-react";
 
 export default function Footer() {
@@ -39,16 +39,46 @@ export default function Footer() {
             <div className="space-y-4">
               <h3 className="text-black font-semibold text-xl">Services</h3>
               <ul className="space-y-2">
-                {["Physiotherapy", "Pilates", "Yoga", "Instructor Training"].map((item, i) => (
-                  <li key={i}>
-                    <Link
-                      href="#"
-                      className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#B49559] transition"
-                    >
-                      <ChevronRight size={18} /> {item}
-                    </Link>
-                  </li>
-                ))}
+                <li>
+                  <Link
+                    href="/services/physiotherapy"
+                    className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#B49559] transition"
+                  >
+                    <ChevronRight size={18} /> Physiotherapy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/pilates"
+                    className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#B49559] transition"
+                  >
+                    <ChevronRight size={18} /> Pilates
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/dry-needling-and-cup-therapy"
+                    className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#B49559] transition"
+                  >
+                    <ChevronRight size={18} /> Therapy
+                  </Link>
+                </li>
+                  <li>
+                  <Link
+                    href="/services/yog"
+                    className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#B49559] transition"
+                  >
+                    <ChevronRight size={18} />Yoga
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/teacher-training-courses"
+                    className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#B49559] transition"
+                  >
+                    <ChevronRight size={18} /> Courses
+                  </Link>
+                </li>
               </ul>
             </div>
 
@@ -56,16 +86,38 @@ export default function Footer() {
             <div className="space-y-4">
               <h3 className="text-black font-semibold text-xl">Company</h3>
               <ul className="space-y-2">
-                {["About Us", "Gallery", "Contact", "Blog"].map((item, i) => (
-                  <li key={i}>
-                    <Link
-                      href="#"
-                      className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#B49559] transition"
-                    >
-                      <ChevronRight size={18} /> {item}
-                    </Link>
-                  </li>
-                ))}
+                <li>
+                  <Link
+                    href="/about"
+                    className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#B49559] transition"
+                  >
+                    <ChevronRight size={18} /> About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/gallery"
+                    className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#B49559] transition"
+                  >
+                    <ChevronRight size={18} /> Gallery
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/contact"
+                    className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#B49559] transition"
+                  >
+                    <ChevronRight size={18} /> Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blog"
+                    className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#B49559] transition"
+                  >
+                    <ChevronRight size={18} /> Blog
+                  </Link>
+                </li>
               </ul>
             </div>
 
@@ -89,7 +141,8 @@ export default function Footer() {
               <ul className="flex items-center gap-5 pt-2">
                 <li>
                   <Link
-                    href="#"
+                    href="https://www.instagram.com/physiopilates" // update later
+                    target="_blank"
                     className="text-[#B49559] hover:text-[#5CE2E7] transition"
                   >
                     <Instagram size={22} />
@@ -97,7 +150,8 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="https://www.facebook.com/physiopilates" // update later
+                    target="_blank"
                     className="text-[#B49559] hover:text-[#5CE2E7] transition"
                   >
                     <Facebook size={22} />
@@ -105,7 +159,8 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="https://www.linkedin.com/company/physiopilates" // update later
+                    target="_blank"
                     className="text-[#B49559] hover:text-[#5CE2E7] transition"
                   >
                     <Linkedin size={22} />
@@ -113,21 +168,21 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="https://www.youtube.com/@physiopilates" // update later
+                    target="_blank"
                     className="text-[#B49559] hover:text-[#5CE2E7] transition"
                   >
                     <Youtube size={22} />
                   </Link>
                 </li>
               </ul>
-
             </div>
           </div>
         </div>
       </footer>
 
       {/* Bottom Bar */}
-      <div className="py-6 bg-[#B49559] border-t border-white/20 text-center text-sm">
+      <div className="py-6 h-16 bg-[#B49559] border-t border-white/20 text-center text-sm">
         <p className="text-white">
           © {currentYear} Physio Pilates. All rights reserved. | Powered by{" "}
           <Link

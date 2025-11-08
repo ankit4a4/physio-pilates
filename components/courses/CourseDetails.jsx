@@ -135,7 +135,7 @@ const courses = [
                   </p>
                   <a
                     href="tel:+919876543210"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#5de3e8] text-white font-semibold rounded-full hover:bg-teal-700 transition-all duration-300 shadow-md"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-[#5de3e8] text-white font-semibold rounded-full hover:bg-[#b59659] transition-all duration-300 shadow-md"
                   >
                     <PhoneCall className="w-5 h-5" /> Call Now
                   </a>
