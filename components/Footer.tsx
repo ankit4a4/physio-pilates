@@ -112,7 +112,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/blog"
+                    href="/blogs"
                     className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#B49559] transition"
                   >
                     <ChevronRight size={18} /> Blog
