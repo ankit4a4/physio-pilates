@@ -1,8 +1,9 @@
- 'use client';
+'use client';
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -27,13 +28,25 @@ export default function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      service: formData.service || 'Not specified',
+      message: formData.message,
+      time: new Date().toLocaleString(),
+    };
 
-    setIsSubmitting(false);
-    setSubmitted(true);
+    try {
+      await emailjs.send(
+        "service_gc831ko", // 🔹 Replace with your EmailJS Service ID
+        "template_381wtw2", // 🔹 Replace with your EmailJS Template ID
+        templateParams,
+        "qo6SLdXEADDbP3U52" // 🔹 Replace with your EmailJS Public Key
+      );
 
-    setTimeout(() => {
-      setSubmitted(false);
+
+      setSubmitted(true);
       setFormData({
         name: '',
         email: '',
@@ -41,15 +54,22 @@ export default function ContactForm() {
         service: '',
         message: '',
       });
-    }, 3000);
+
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      alert('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <div >
-     
+    <div>
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            {/* Contact Info Section */}
             <div className="lg:col-span-1">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -62,12 +82,9 @@ export default function ContactForm() {
                 </h2>
 
                 <div className="space-y-6">
-                  <motion.div
-                    whileHover={{ x: 10 }}
-                    className="flex items-start space-x-4"
-                  >
-                    <div className="bg-[#b49559] 20 p-3 rounded-full flex-shrink-0">
-                      <MapPin className="h-6 w-6 text-[#fff]" />
+                  <motion.div whileHover={{ x: 10 }} className="flex items-start space-x-4">
+                    <div className="bg-[#b49559] p-3 rounded-full flex-shrink-0">
+                      <MapPin className="h-6 w-6 text-white" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-800 mb-1">Address</h3>
@@ -79,12 +96,9 @@ export default function ContactForm() {
                     </div>
                   </motion.div>
 
-                  <motion.div
-                    whileHover={{ x: 10 }}
-                    className="flex items-start space-x-4"
-                  >
+                  <motion.div whileHover={{ x: 10 }} className="flex items-start space-x-4">
                     <div className="bg-[#b49559] p-3 rounded-full flex-shrink-0">
-                      <Phone className="h-6 w-6 text-[#fff]" />
+                      <Phone className="h-6 w-6 text-white" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-800 mb-1">Phone</h3>
@@ -92,12 +106,9 @@ export default function ContactForm() {
                     </div>
                   </motion.div>
 
-                  <motion.div
-                    whileHover={{ x: 10 }}
-                    className="flex items-start space-x-4"
-                  >
+                  <motion.div whileHover={{ x: 10 }} className="flex items-start space-x-4">
                     <div className="bg-[#b49559] p-3 rounded-full flex-shrink-0">
-                      <Mail className="h-6 w-6 text-[#fff]" />
+                      <Mail className="h-6 w-6 text-white" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-800 mb-1">Email</h3>
@@ -105,12 +116,9 @@ export default function ContactForm() {
                     </div>
                   </motion.div>
 
-                  <motion.div
-                    whileHover={{ x: 10 }}
-                    className="flex items-start space-x-4"
-                  >
+                  <motion.div whileHover={{ x: 10 }} className="flex items-start space-x-4">
                     <div className="bg-[#b49559] p-3 rounded-full flex-shrink-0">
-                      <Clock className="h-6 w-6 text-[#fff]" />
+                      <Clock className="h-6 w-6 text-white" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-800 mb-1">Opening Hours</h3>
@@ -125,6 +133,7 @@ export default function ContactForm() {
               </motion.div>
             </div>
 
+            {/* Contact Form Section */}
             <div className="lg:col-span-2">
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
@@ -199,11 +208,11 @@ export default function ContactForm() {
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#b49559] focus:border-transparent transition-all"
                       >
                         <option value="" disabled>Select a service</option>
-                        <option value="physiotherapy">Physiotherapy</option>
-                        <option value="pilates">Pilates</option>
-                        <option value="yoga">Yoga</option>
-                        <option value="specialized">Specialized Treatments</option>
-                        <option value="courses">Teacher Training</option>
+                        <option value="Physiotherapy">Physiotherapy</option>
+                        <option value="Pilates">Pilates</option>
+                        <option value="Yoga">Yoga</option>
+                        <option value="Specialized Treatments">Specialized Treatments</option>
+                        <option value="Teacher Training">Teacher Training</option>
                       </select>
                     </div>
                   </div>
@@ -231,20 +240,16 @@ export default function ContactForm() {
                     disabled={isSubmitting || submitted}
                     className={`w-full py-4 rounded-lg font-semibold text-white transition-all duration-300 flex items-center justify-center space-x-2 ${
                       submitted
-                        ? 'bg-[#b49559]'
+                        ? 'bg-green-600'
                         : isSubmitting
                         ? 'bg-gray-400'
                         : 'bg-[#b49559] hover:bg-[#5CE2E7] shadow-lg'
                     }`}
                   >
                     {submitted ? (
-                      <>
-                        <span>Message Sent Successfully!</span>
-                      </>
+                      <span>Message Sent Successfully!</span>
                     ) : isSubmitting ? (
-                      <>
-                        <span>Sending...</span>
-                      </>
+                      <span>Sending...</span>
                     ) : (
                       <>
                         <Send className="h-5 w-5" />

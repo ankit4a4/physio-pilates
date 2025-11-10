@@ -141,7 +141,7 @@ export default function Footer() {
               <ul className="flex items-center gap-5 pt-2">
                 <li>
                   <Link
-                    href="https://www.instagram.com/physiopilates" // update later
+                    href="https://www.instagram.com/pphysiopilates?igsh=eXNrb2treXlzdTA2" // update later
                     target="_blank"
                     className="text-[#B49559] hover:text-[#5CE2E7] transition"
                   >
