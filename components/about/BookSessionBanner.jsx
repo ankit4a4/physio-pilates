@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import img from "../../assets/about/about-cta.jpeg"
+import img from "../../assets/about/about-cta.webp"
 
 export default function BookSessionBanner() {
   return (

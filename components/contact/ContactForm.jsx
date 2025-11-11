@@ -1,8 +1,9 @@
- 'use client';
+'use client';
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -27,13 +28,25 @@ export default function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      service: formData.service || 'Not specified',
+      message: formData.message,
+      time: new Date().toLocaleString(),
+    };
 
-    setIsSubmitting(false);
-    setSubmitted(true);
+    try {
+      await emailjs.send(
+        "service_gc831ko", // 🔹 Replace with your EmailJS Service ID
+        "template_381wtw2", // 🔹 Replace with your EmailJS Template ID
+        templateParams,
+        "qo6SLdXEADDbP3U52" // 🔹 Replace with your EmailJS Public Key
+      );
 
-    setTimeout(() => {
-      setSubmitted(false);
+
+      setSubmitted(true);
       setFormData({
         name: '',
         email: '',
@@ -41,15 +54,22 @@ export default function ContactForm() {
         service: '',
         message: '',
       });
-    }, 3000);
+
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch (error) {
+      console.error('EmailJS error:', error);
+      alert('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <div >
-     
+    <div>
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            {/* Contact Info Section */}
             <div className="lg:col-span-1">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -62,29 +82,21 @@ export default function ContactForm() {
                 </h2>
 
                 <div className="space-y-6">
-                  <motion.div
-                    whileHover={{ x: 10 }}
-                    className="flex items-start space-x-4"
-                  >
-                    <div className="bg-[#b49559] 20 p-3 rounded-full flex-shrink-0">
-                      <MapPin className="h-6 w-6 text-[#fff]" />
+                  <motion.div whileHover={{ x: 10 }} className="flex items-start space-x-4">
+                    <div className="bg-[#b49559] p-3 rounded-full flex-shrink-0">
+                      <MapPin className="h-6 w-6 text-white" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-800 mb-1">Address</h3>
                       <p className="text-gray-600 leading-relaxed">
-                        123 Wellness Street<br />
-                        Health City, HC 12345<br />
-                        United States
+                        LGF Left side, D--768, opp. market no-2, Block D, Chittaranjan Park,  New Delhi 110019
                       </p>
                     </div>
                   </motion.div>
 
-                  <motion.div
-                    whileHover={{ x: 10 }}
-                    className="flex items-start space-x-4"
-                  >
+                  <motion.div whileHover={{ x: 10 }} className="flex items-start space-x-4">
                     <div className="bg-[#b49559] p-3 rounded-full flex-shrink-0">
-                      <Phone className="h-6 w-6 text-[#fff]" />
+                      <Phone className="h-6 w-6 text-white" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-800 mb-1">Phone</h3>
@@ -92,12 +104,9 @@ export default function ContactForm() {
                     </div>
                   </motion.div>
 
-                  <motion.div
-                    whileHover={{ x: 10 }}
-                    className="flex items-start space-x-4"
-                  >
+                  <motion.div whileHover={{ x: 10 }} className="flex items-start space-x-4">
                     <div className="bg-[#b49559] p-3 rounded-full flex-shrink-0">
-                      <Mail className="h-6 w-6 text-[#fff]" />
+                      <Mail className="h-6 w-6 text-white" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-800 mb-1">Email</h3>
@@ -105,26 +114,29 @@ export default function ContactForm() {
                     </div>
                   </motion.div>
 
-                  <motion.div
-                    whileHover={{ x: 10 }}
-                    className="flex items-start space-x-4"
-                  >
+                  <motion.div whileHover={{ x: 10 }} className="flex items-start space-x-4">
                     <div className="bg-[#b49559] p-3 rounded-full flex-shrink-0">
-                      <Clock className="h-6 w-6 text-[#fff]" />
+                      <Clock className="h-6 w-6 text-white" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-800 mb-1">Opening Hours</h3>
-                      <p className="text-gray-600 leading-relaxed">
-                        Monday - Friday: 8:00 AM - 7:00 PM<br />
-                        Saturday: 9:00 AM - 5:00 PM<br />
-                        Sunday: Closed
-                      </p>
+                    <p className="text-gray-600 leading-relaxed">
+  Monday: 6:30 AM – 9:00 AM, 2:30 PM – 8:00 PM<br />
+  Tuesday: 6:30 AM – 8:00 PM<br />
+  Wednesday: 6:30 AM – 9:00 AM, 2:30 PM – 8:00 PM<br />
+  Thursday: 6:30 AM – 8:00 PM<br />
+  Friday: 6:30 AM – 8:00 PM<br />
+  Saturday: 6:30 AM – 3:00 PM<br />
+  Sunday: Closed
+</p>
+
                     </div>
                   </motion.div>
                 </div>
               </motion.div>
             </div>
 
+            {/* Contact Form Section */}
             <div className="lg:col-span-2">
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
@@ -199,11 +211,11 @@ export default function ContactForm() {
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#b49559] focus:border-transparent transition-all"
                       >
                         <option value="" disabled>Select a service</option>
-                        <option value="physiotherapy">Physiotherapy</option>
-                        <option value="pilates">Pilates</option>
-                        <option value="yoga">Yoga</option>
-                        <option value="specialized">Specialized Treatments</option>
-                        <option value="courses">Teacher Training</option>
+                        <option value="Physiotherapy">Physiotherapy</option>
+                        <option value="Pilates">Pilates</option>
+                        <option value="Yoga">Yoga</option>
+                        <option value="Specialized Treatments">Specialized Treatments</option>
+                        <option value="Teacher Training">Teacher Training</option>
                       </select>
                     </div>
                   </div>
@@ -231,20 +243,16 @@ export default function ContactForm() {
                     disabled={isSubmitting || submitted}
                     className={`w-full py-4 rounded-lg font-semibold text-white transition-all duration-300 flex items-center justify-center space-x-2 ${
                       submitted
-                        ? 'bg-[#b49559]'
+                        ? 'bg-green-600'
                         : isSubmitting
                         ? 'bg-gray-400'
                         : 'bg-[#b49559] hover:bg-[#5CE2E7] shadow-lg'
                     }`}
                   >
                     {submitted ? (
-                      <>
-                        <span>Message Sent Successfully!</span>
-                      </>
+                      <span>Message Sent Successfully!</span>
                     ) : isSubmitting ? (
-                      <>
-                        <span>Sending...</span>
-                      </>
+                      <span>Sending...</span>
                     ) : (
                       <>
                         <Send className="h-5 w-5" />
@@ -260,8 +268,7 @@ export default function ContactForm() {
       </section>
 
       <section className="h-96 bg-gray-100">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316d7f3a0d%3A0x1a0a3c3c1d3b3f0d!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.0833915716107!2d77.25058727528544!3d28.537213075717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce160878060fd%3A0xe2cc42b4d14c2664!2sPhysio%20Pilates!5e0!3m2!1sen!2sin!4v1762837395251!5m2!1sen!2sin" 
           width="100%"
           height="100%"
           style={{ border: 0 }}

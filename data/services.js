@@ -4,10 +4,10 @@ import phy3 from "../assets/services/physio/phy-3.jpg";
 import phy4 from "../assets/services/physio/phy-4.jpg";
 import phy5 from "../assets/services/physio/phy-5.jpg";
 //------------------------ Pilates--------------------------//
-import Pilate1 from "../assets/services/pilate/pilate-1.jpg";
+import Pilate1 from "../assets/services/pilate/pilate-1.webp";
 import Pilate2 from "../assets/services/pilate/pilate-2.jpg";
-import Pilate3 from "../assets/services/pilate/pilate-3.jpg";
-import Pilate4 from "../assets/services/pilate/pilate-4.jpg";
+import Pilate3 from "../assets/services/pilate/pilate-3.webp";
+import Pilate4 from "../assets/services/pilate/pilate-4.webp";
 import Pilate5 from "../assets/services/pilate/pilate-5.jpg";
 //----------------------- yog-------------------------------- //
 import Yog1 from "../assets/services/yog/yog-1.jpg";

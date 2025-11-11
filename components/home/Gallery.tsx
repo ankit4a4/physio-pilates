@@ -1,11 +1,11 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import img1 from "@/assets/home/homegallery1.jpg"
+import img1 from "@/assets/home/homegallery1.webp"
 import img2 from "@/assets/home/homegallery2.jpg"
-import img3 from "@/assets/home/homegallery3.jpg"
-import img4 from "@/assets/home/homegallery4.jpg"
-import img5 from "@/assets/home/homegallery5.jpg"
+import img3 from "@/assets/home/HomeGallery3.webp"
+import img4 from "@/assets/home/HomeGallery4.webp"
+import img5 from "@/assets/home/HomeGallery5.webp"
 import img6 from "@/assets/home/homegallery6.jpg"
 import Image from "next/image";
 

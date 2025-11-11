@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
-import img from "@/assets/about/aboutHero.jpg"
+import img from "@/assets/about/about-hero.webp"
+
 
 const FounderAbout = () => {
   return (

@@ -10,10 +10,10 @@ import phy3 from "@/assets/services/physio/phy-3.jpg";
 import phy4 from "@/assets/services/physio/phy-4.jpg";
 import phy5 from "@/assets/services/physio/phy-5.jpg";
 
-import pilate1 from "@/assets/services/pilate/pilate-1.jpg";
+import pilate1 from "@/assets/services/pilate/pilate-1.webp";
 import pilate2 from "@/assets/services/pilate/pilate-2.jpg";
-import pilate3 from "@/assets/services/pilate/pilate-3.jpg";
-import pilate4 from "@/assets/services/pilate/pilate-4.jpg";
+import pilate3 from "@/assets/services/pilate/pilate-3.webp";
+import pilate4 from "@/assets/services/pilate/pilate-4.webp";
 import pilate5 from "@/assets/services/pilate/pilate-5.jpg";
 
 import yog1 from "@/assets/services/yog/yog-1.jpg";
@@ -147,28 +147,30 @@ export default function GallerySection() {
             >
               <X className="h-6 w-6 text-white" />
             </motion.button>
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="relative max-w-5xl w-full"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <img
-                src={selectedImage.src}
-                alt={selectedImage.title}
-                className="w-full h-auto rounded-2xl shadow-2xl"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 rounded-b-2xl">
-                <span className="inline-block bg-[#5CE2E7] px-3 py-1 rounded-full text-sm text-white mb-2">
-                  {selectedImage.category}
-                </span>
-                <h3 className="text-2xl font-semibold text-white">
-                  {selectedImage.title}
-                </h3>
-              </div>
-            </motion.div>
+          <motion.div
+  initial={{ scale: 0.9, opacity: 0 }}
+  animate={{ scale: 1, opacity: 1 }}
+  exit={{ scale: 0.9, opacity: 0 }}
+  transition={{ duration: 0.3 }}
+  className="relative max-w-7xl max-h-[90vh] w-auto h-auto flex items-center justify-center"
+  onClick={(e) => e.stopPropagation()}
+>
+  <img
+    src={selectedImage.src.src || selectedImage.src}
+    alt={selectedImage.title}
+    className="max-h-[90vh] w-auto h-auto object-contain rounded-2xl shadow-2xl"
+  />
+
+  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 rounded-b-2xl">
+    <span className="inline-block bg-[#5CE2E7] px-3 py-1 rounded-full text-sm text-white mb-2">
+      {selectedImage.category}
+    </span>
+    <h3 className="text-2xl font-semibold text-white">
+      {selectedImage.title}
+    </h3>
+  </div>
+</motion.div>
+
           </motion.div>
         )}
       </AnimatePresence>

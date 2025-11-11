@@ -112,7 +112,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/blog"
+                    href="/blogs"
                     className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#B49559] transition"
                   >
                     <ChevronRight size={18} /> Blog
@@ -127,7 +127,7 @@ export default function Footer() {
 
               <div className="space-y-3 text-sm text-[#B49559]">
                 <p className="flex items-center gap-2">
-                  <MapPin size={18} /> Mumbai, Maharashtra
+                  <MapPin size={18} /> Chittaranjan Park, New Delhi 110019
                 </p>
                 <p className="flex items-center gap-2">
                   <Phone size={18} /> +91 9717505326
@@ -141,7 +141,7 @@ export default function Footer() {
               <ul className="flex items-center gap-5 pt-2">
                 <li>
                   <Link
-                    href="https://www.instagram.com/physiopilates" // update later
+                    href="https://www.instagram.com/pphysiopilates?igsh=eXNrb2treXlzdTA2" // update later
                     target="_blank"
                     className="text-[#B49559] hover:text-[#5CE2E7] transition"
                   >

@@ -29,7 +29,7 @@ export default function Certification() {
           <div className="space-y-8" data-aos="fade-up">
             <div className="flex gap-4" data-aos="zoom-in">
               <div className="w-16 h-16 flex items-center justify-center bg-white/20 rounded-full">
-                <Award className="w-8 h-8 text-[#fff]" />
+                <Award className="w-8 h-8 text-[#5ce2e7]" />
               </div>
               <div>
                 <h2 className="text-2xl md:text-4xl text-[#fff] tracking-wide font-semibold">
@@ -57,7 +57,7 @@ export default function Certification() {
             </div>
             <Link
               href="#"
-              className="inline-flex items-center gap-3 border hover:bg-[#5CE2E7] px-8 py-4 bg-[#b49559] text-white rounded-xl font-semibold hover:scale-[1.05] transition shadow-md border-white"
+              className="inline-flex items-center gap-3 border bg-[#5CE2E7] px-8 py-4  text-white rounded-xl font-semibold hover:scale-[1.05] transition shadow-md border-white"
               data-aos="zoom-in"
             >
               VIEW CERTIFICATIONS

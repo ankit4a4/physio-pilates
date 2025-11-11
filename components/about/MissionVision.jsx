@@ -44,7 +44,7 @@ export default function MissionVision() {
           <div className="bg-white/80 rounded-3xl shadow-xl border border-[#b4955915] p-10 hover:shadow-2xl transition duration-500">
             <div className="flex flex-col items-center mb-6">
               <div className="bg-teal-100 p-5 rounded-full shadow-inner mb-4">
-                <Target className="w-10 h-10 text-teal-600" />
+                <Target className="w-10 h-10 text-[#5ce2e7]" />
               </div>
               <h3 className="text-2xl font-semibold text-[#b49559]">
                 Our Mission
@@ -59,7 +59,7 @@ export default function MissionVision() {
           <div className="bg-white/80 rounded-3xl shadow-xl border border-[#b4955915] p-10 hover:shadow-2xl transition duration-500">
             <div className="flex flex-col items-center mb-6">
               <div className="bg-teal-100 p-5 rounded-full shadow-inner mb-4">
-                <Eye className="w-10 h-10 text-teal-600" />
+                <Eye className="w-10 h-10 text-[#5ce2e7]" />
               </div>
               <h3 className="text-2xl font-semibold text-[#b49559]">
                 Our Vision
