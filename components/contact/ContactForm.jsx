@@ -120,11 +120,16 @@ export default function ContactForm() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-800 mb-1">Opening Hours</h3>
-                      <p className="text-gray-600 leading-relaxed">
-                        Monday - Friday: 8:00 AM - 7:00 PM<br />
-                        Saturday: 9:00 AM - 5:00 PM<br />
-                        Sunday: Closed
-                      </p>
+                    <p className="text-gray-600 leading-relaxed">
+  Monday: 6:30 AM – 9:00 AM, 2:30 PM – 8:00 PM<br />
+  Tuesday: 6:30 AM – 8:00 PM<br />
+  Wednesday: 6:30 AM – 9:00 AM, 2:30 PM – 8:00 PM<br />
+  Thursday: 6:30 AM – 8:00 PM<br />
+  Friday: 6:30 AM – 8:00 PM<br />
+  Saturday: 6:30 AM – 3:00 PM<br />
+  Sunday: Closed
+</p>
+
                     </div>
                   </motion.div>
                 </div>
