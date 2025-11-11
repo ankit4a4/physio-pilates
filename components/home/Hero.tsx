@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
-import img1 from "@/assets/home/hero1.webp";
+import img1 from "@/assets/home/hero1.jpg";
 import img2 from "@/assets/home/hero2.webp";
 import img3 from "@/assets/home/hero3.webp";
 import img4 from "@/assets/home/Hero4.jpg";
