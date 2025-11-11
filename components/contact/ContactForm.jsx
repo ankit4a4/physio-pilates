@@ -89,9 +89,7 @@ export default function ContactForm() {
                     <div>
                       <h3 className="font-semibold text-gray-800 mb-1">Address</h3>
                       <p className="text-gray-600 leading-relaxed">
-                        123 Wellness Street<br />
-                        Health City, HC 12345<br />
-                        United States
+                        LGF Left side, D--768, opp. market no-2, Block D, Chittaranjan Park,  New Delhi 110019
                       </p>
                     </div>
                   </motion.div>
@@ -265,8 +263,7 @@ export default function ContactForm() {
       </section>
 
       <section className="h-96 bg-gray-100">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316d7f3a0d%3A0x1a0a3c3c1d3b3f0d!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.0833915716107!2d77.25058727528544!3d28.537213075717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce160878060fd%3A0xe2cc42b4d14c2664!2sPhysio%20Pilates!5e0!3m2!1sen!2sin!4v1762837395251!5m2!1sen!2sin" 
           width="100%"
           height="100%"
           style={{ border: 0 }}

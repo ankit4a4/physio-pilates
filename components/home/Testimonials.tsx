@@ -4,6 +4,12 @@ import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import client1 from "@/assets/home/client1.png";
+import client2 from "@/assets/home/client2.png";
+import client3 from "@/assets/home/client3.png";
+import client4 from "@/assets/home/client4.png";
+import client5 from "@/assets/home/client5.png";
+
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -18,29 +24,47 @@ export default function Testimonials() {
 
   const testimonials = [
     {
-      name: 'Sarah Mitchell',
-      role: 'Marketing Executive',
+      name: 'Samarth Karan',
+      role: 'Local Guide',
       content:
-        'The transformation I have experienced here is beyond words. The instructors are incredibly knowledgeable and caring. This place has become my sanctuary.',
+        'I had a great experience working with Dr. Surbhi. She was extremely accommodating of my schedule and took the time to fully understand my concerns around my runner’s knee and ITB issues. During each session, she performed a thorough assessment and asked very pointed, relevant questions that helped pinpoint the underlying causes of my discomfort.Her treatment approach was precise and effective, and after just 2–3 sessions, I noticed significant improvement in mobility and overall comfort. The exercises and movement techniques she recommended were clear, well-explained, and made a real difference in my recovery. I highly recommend her to anyone dealing with running-related injuries or seeking expert care.',
       image:
-        'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=200',
+        client1.src,
     },
     {
-      name: 'James Anderson',
-      role: 'Entrepreneur',
+      name: 'Amit Bahuguna',
+      role: 'Local Guide',
       content:
-        'After years of back pain, the physiotherapy treatments here have given me my life back. Professional, caring, and truly effective.',
+        'I had a wonderful experience with Dr.Surbhi,She understood my entire problems and also reviewed my earlier reports. She helped me to ease out my worries and concern firstly by looking at the reports then helped to diagnose the problem and after regular sitings I had great relief ....thanks alot Dr.Surbhi for taking out your time and came like a Sunray and great support.I would like to strongly recommend Physio Pilate for all such individuals who are going through any back and neck ect problems must visit once to this place.😊👍',
       image:
-        'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=200',
+        client2.src,
     },
     {
-      name: 'Emma Thompson',
+      name: 'Ashish Dasgupta',
       role: 'Certified Instructor',
       content:
-        'The Instructor training program was exceptional. The level of detail and support I received has prepared me perfectly for my career.',
+        'A few weeks before the start of Durga Puja, I landed up with spasm of Quadratus Lumborum, notoriously known as the QL muscle. The pain was excruciating when I was changing sides on the bed. Throughout the day, I used to carry the discomfort of my left lower back, unable to hop onto an autorickshaw or any of the jerky battery driven rickshaws.My obvious visit landed at Dr. Surabhi’s clinic for curative measures. For 6 continuous physio sessions over 2- 3 weeks, she performed a combination of physiotherapy techniques and rehabilitating my muscles. The process was slow but systematic as I could feel my recovery from my third physio session. Her approach was based on a sound understanding of the underlying problem and her confidence in putting me back into action. She was open to discussing the problem, giving practical solutions towards further prevention. Her do’s and don’ts were extremely helpful. Finally, I had a successful Durga Puja, with active participation.Highly recommended for personalized physio needs, mobility and rehabilitation of muscles post trauma or degeneration.',
       image:
-        'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=200',
+        client3.src,
     },
+      {
+      name: 'Rupanjali Mitra',
+      role: 'Client',
+      content:
+        'Dr. Surbhi is magical! Not only does she know her work well, she has an eye for details and can get to the root cause and then works on getting you pain free!I had initially visited her for a Plantar fasciitis concern for my husband and I was interested only in fitness. My husband has not only recovered well, but has moved into proper Pilates sessions for strength building and muscle training!Even I had a recurring knee issue, which I always thought was arthiritis, but thanks to her, i know the real cause, its remedy and working towards rehab slowly. She explains each thing so meticulously and notices every concern with equal attention! Its fun training with her kind of enthusiasm. Kudos to her and wish her all the best for the future!',
+      image:
+        client4.src,
+    },
+    {
+      name: 'Vibhuti Sharma',
+      role: 'Client',
+      content:
+        'In March 2024, I suffered a major back issue which made my daily routine difficult. After seeing many doctors and spending copious amounts of money, in August 2024 I came across Physio Pilates. I till date feel lucky to have met Surbhi. Started my Physio + Pilates journey in August 2024, it’s been 6 months and my back is more than halfway to recovery. I know it for sure that soon I will be 100% recovered and strengthened.I love how patient and understanding Surbhi is, and the way she caters to each patient with care, it’s commendable.',
+      image:
+        client5.src,
+    },
+    
+    
   ];
 
   const next = () => setCurrentIndex((prev) => (prev + 2) % testimonials.length);
@@ -90,7 +114,7 @@ export default function Testimonials() {
                 />
                 <div>
                   <h4 className="text-[#b49559] font-medium">{t.name}</h4>
-                  <span className="text-sm text-[#b49559]/70">{t.role}</span>
+                  {/* <span className="text-sm text-[#b49559]/70">{t.role}</span> */}
                 </div>
               </div>
             </div>

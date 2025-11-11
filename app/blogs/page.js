@@ -55,7 +55,7 @@ export default function BlogsPage() {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mt-6 leading-snug md:leading-tight tracking-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]"
             data-aos="fade-up"
           >
-            Our <span className="text-[#b59659]">Blog</span>
+            Our <span className="text-[#5ce2e7]">Blog</span>
           </h1>
 
           {/* Subtext */}
@@ -68,12 +68,13 @@ export default function BlogsPage() {
             from our experts — empowering you to live a stronger, balanced life.
           </p>
 
-          {/* Divider */}
-          <div
-            className="w-20 h-1 mt-10 mx-auto bg-gradient-to-r from-[#b59659] to-[#b49559] rounded-full"
-            data-aos="zoom-in"
-            data-aos-delay="300"
-          ></div>
+           {/* Decorative Divider */}
+             <motion.div
+               initial={{ opacity: 0, scale: 0.8 }}
+               animate={{ opacity: 1, scale: 1 }}
+               transition={{ delay: 0.4, duration: 0.6 }}
+               className="w-24 h-1 mt-10 mx-auto bg-gradient-to-r from-[#b59659] via-[#5ce2e7] to-[#b49559] rounded-full"
+             ></motion.div>
         </div>
       </section>
 
@@ -133,7 +134,7 @@ export default function BlogsPage() {
               </p>
 
               <Link href={`/blogs/${blog.slug}`}>
-                <button className="bg-[#b49559] hover:bg-[#a88a50] text-white px-5 py-2 rounded-full text-sm font-medium transition-transform duration-300 hover:scale-95">
+                <button className="bg-[#5ce2e7] hover:bg-[#a88a50] text-white px-5 py-2 rounded-full text-sm font-medium transition-transform duration-300 hover:scale-95">
                   Read More
                 </button>
               </Link>

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { GraduationCap, Users, Clock } from "lucide-react";
 import Image from "next/image";
-import img from "@/assets/home/homegallery4.jpg"
+import img from "@/assets/about/training.jpg"
 
 export default function CourseOverview() {
   return (
@@ -69,7 +69,7 @@ export default function CourseOverview() {
             width={100}
             src={img.src}
             alt="Teacher Training"
-            className="w-full h-full object-cover brightness-[0.9]"
+            className="w-full h-[480px] object-cover brightness-[0.9]"
           />
         </motion.div>
       </div>

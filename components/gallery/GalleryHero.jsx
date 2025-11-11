@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import img from "@/assets/home/homegallery1.jpg";
+import { motion } from "framer-motion";
 
 export default function GalleryHero() {
   useEffect(() => {
@@ -48,7 +49,7 @@ export default function GalleryHero() {
           className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mt-6 leading-snug md:leading-tight tracking-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]"
           data-aos="fade-up"
         >
-          Our <span className="text-[#b59659]">Gallery</span>
+          Our <span className="text-[#5ce2e7]">Gallery</span>
         </h1>
 
         {/* Paragraph */}
@@ -61,12 +62,13 @@ export default function GalleryHero() {
           physiotherapy, pilates, and wellness sessions.
         </p>
 
-        {/* Divider */}
-        <div
-          className="w-20 h-1 mt-10 mx-auto bg-gradient-to-r from-[#b59659] to-[#b49559] rounded-full"
-          data-aos="zoom-in"
-          data-aos-delay="300"
-        ></div>
+        {/* Decorative Divider */}
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: 0.4, duration: 0.6 }}
+                      className="w-24 h-1 mt-10 mx-auto bg-gradient-to-r from-[#b59659] via-[#5ce2e7] to-[#b49559] rounded-full"
+                    ></motion.div>
       </div>
     </section>
   );

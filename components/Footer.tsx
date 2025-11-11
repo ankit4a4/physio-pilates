@@ -127,7 +127,7 @@ export default function Footer() {
 
               <div className="space-y-3 text-sm text-[#B49559]">
                 <p className="flex items-center gap-2">
-                  <MapPin size={18} /> Mumbai, Maharashtra
+                  <MapPin size={18} /> Chittaranjan Park, New Delhi 110019
                 </p>
                 <p className="flex items-center gap-2">
                   <Phone size={18} /> +91 9717505326

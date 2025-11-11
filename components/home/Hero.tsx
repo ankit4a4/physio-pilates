@@ -4,11 +4,11 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
-import img1 from "@/assets/home/Hero1.jpg"
-import img2 from "@/assets/home/Hero2.jpg"
-import img3 from "@/assets/home/Hero3.jpg"
-import img4 from "@/assets/home/Hero4.jpg"
-import img5 from "@/assets/home/Hero5.jpg"
+import img1 from "@/assets/home/hero1.webp";
+import img2 from "@/assets/home/hero2.webp";
+import img3 from "@/assets/home/hero3.webp";
+import img4 from "@/assets/home/Hero4.jpg";
+import img5 from "@/assets/home/Hero5.jpg";
 import Link from 'next/link';
 
 const slides = [
@@ -43,7 +43,6 @@ const slides = [
     image: img5.src,
   },
 ];
-
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -83,7 +82,7 @@ export default function Hero() {
   };
 
   return (
-    <div className="relative h-screen  w-full overflow-hidden">
+    <div className="relative h-screen w-full overflow-hidden">
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={currentSlide}
@@ -138,9 +137,12 @@ export default function Hero() {
                 >
                   <Link href="/contact">
                     <motion.button
-                      whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(167, 199, 231, 0.5)' }}
+                      whileHover={{
+                        scale: 1.05,
+                        boxShadow: '0 10px 30px rgba(180,149,89,0.4)',
+                      }}
                       whileTap={{ scale: 0.95 }}
-                      className="bg-[#b49559] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#8AB4D9] transition-all duration-300 shadow-lg"
+                      className="bg-[#b49559] text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-lg"
                     >
                       {slides[currentSlide].cta}
                     </motion.button>
@@ -152,18 +154,19 @@ export default function Hero() {
         </motion.div>
       </AnimatePresence>
 
+      {/* Teal arrows (always teal, no hover color change) */}
       <button
         onClick={prevSlide}
-        className="absolute hidden md:block left-4 md:left-8 top-1/2 -translate-y-1/2 bg-[#b49559] hover:bg-white/30 backdrop-blur-sm p-3 rounded-full transition-all duration-300 z-10"
+        className="absolute hidden md:block left-4 md:left-8 top-1/2 -translate-y-1/2 bg-[#5ce2e7] backdrop-blur-sm p-3 rounded-full transition-all duration-300 z-10"
       >
-        <ChevronLeft className="h-6 w-6 text-white" />
+        <ChevronLeft className="h-6 w-6 text-black" />
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-4 hidden md:block md:right-8 top-1/2 -translate-y-1/2 bg-[#b49559] hover:bg-white/30 backdrop-blur-sm p-3 rounded-full transition-all duration-300 z-10"
+        className="absolute right-4 hidden md:block md:right-8 top-1/2 -translate-y-1/2 bg-[#5ce2e7] backdrop-blur-sm p-3 rounded-full transition-all duration-300 z-10"
       >
-        <ChevronRight className="h-6 w-6 text-white" />
+        <ChevronRight className="h-6 w-6 text-black" />
       </button>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3 z-10">
@@ -174,10 +177,11 @@ export default function Hero() {
               setDirection(index > currentSlide ? 1 : -1);
               setCurrentSlide(index);
             }}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide
-              ? 'bg-[#b49559] w-8'
-              : 'bg-[#b49559]/50 hover:bg-white/70'
-              }`}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide
+                ? 'bg-[#5ce2e7] w-8'
+                : 'bg-[#5ce2e7]/50 hover:bg-white/70'
+            }`}
           />
         ))}
       </div>

@@ -19,38 +19,44 @@ export default function OurPhilosophy() {
     {
       title: "Mindful Movement",
       desc: "We blend awareness with precision — every motion is intentional, every breath restorative.",
-      icon: <HeartPulse className="w-8 h-8 text-[#b49559]" />,
+      icon: (
+        <HeartPulse className="w-8 h-8 text-[#5ce2e7]" />
+      ),
     },
     {
       title: "Science-Backed Care",
       desc: "Our programs are built on proven physiotherapy principles, ensuring safety and real results.",
-      icon: <Brain className="w-8 h-8 text-[#b49559]" />,
+      icon: (
+        <Brain className="w-8 h-8 text-[#5ce2e7]" />
+      ),
     },
     {
       title: "Holistic Healing",
       desc: "We treat the whole person — body, mind, and energy — to restore balance and long-term vitality.",
-      icon: <Flower2 className="w-8 h-8 text-[#b49559]" />,
+      icon: (
+        <Flower2 className="w-8 h-8 text-[#5ce2e7]" />
+      ),
     },
   ];
 
   return (
     <section
       id="philosophy"
-      className="py-20 md:py-28 bg-gradient-to-br from-white to-[#b495590D] overflow-hidden"
+      className="py-20 md:py-28 bg-gradient-to-br from-white to-[#5ce2e70A] overflow-hidden"
       data-aos="fade-up"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
         {/* Section Header */}
         <div data-aos="zoom-in">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#b495590F] rounded-full border border-[#b4955922] mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#5ce2e710] rounded-full border border-[#5ce2e722] mb-6">
             <div className="w-2 h-2 bg-[#b49559] rounded-full"></div>
             <span className="text-sm font-medium tracking-widest text-[#b49559] uppercase">
               Our Philosophy
             </span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-[#b49559] leading-tight">
-            Where Science Meets Movement, <br className="hidden md:block" /> and
-            Healing Finds Flow
+            Where <span className="text-[#5ce2e7]">Science</span> Meets Movement,{" "}
+            <br className="hidden md:block" /> and Healing Finds Flow
           </h2>
         </div>
 
@@ -61,7 +67,8 @@ export default function OurPhilosophy() {
           data-aos-delay="200"
         >
           <p>
-            At <strong className="text-[#b49559]">Physio Pilates</strong>, we
+            At{" "}
+            <strong className="text-[#5ce2e7]">Physio Pilates</strong>, we
             believe movement is medicine — when guided mindfully and supported
             by science. Our approach unites clinical expertise with the
             restorative power of pilates to create a balanced path to recovery,
@@ -84,10 +91,10 @@ export default function OurPhilosophy() {
           {philosophyItems.map((item, i) => (
             <div
               key={i}
-              className="p-8 rounded-2xl bg-white/60 border border-[#b4955920] shadow-sm hover:shadow-md transition-all duration-300 group"
+              className="p-8 rounded-2xl bg-white/60 border border-[#5ce2e720] shadow-sm hover:shadow-md transition-all duration-300 group"
             >
               <div className="flex justify-center mb-4">{item.icon}</div>
-              <h3 className="text-xl font-semibold text-[#b49559] mb-3 group-hover:text-[#9c814d] transition-colors">
+              <h3 className="text-xl font-semibold text-[#b49559] mb-3 group-hover:text-[#5ce2e7] transition-colors">
                 {item.title}
               </h3>
               <p className="text-[#b49559]/80 leading-relaxed">
@@ -101,7 +108,7 @@ export default function OurPhilosophy() {
         <div className="mt-16" data-aos="zoom-in" data-aos-delay="400">
           <Link
             href="/contact"
-            className="inline-block px-8 py-3 bg-[#b49559] text-white font-semibold rounded-full shadow-md hover:bg-[#9c814d] transition-colors duration-300"
+            className="inline-block px-8 py-3 bg-[#b49559] text-white font-semibold rounded-full shadow-md hover:bg-[#5ce2e7] hover:text-[#001010] transition-colors duration-300"
           >
             Get in Touch
           </Link>

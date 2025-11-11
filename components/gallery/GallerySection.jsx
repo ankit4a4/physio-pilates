@@ -10,10 +10,10 @@ import phy3 from "@/assets/services/physio/phy-3.jpg";
 import phy4 from "@/assets/services/physio/phy-4.jpg";
 import phy5 from "@/assets/services/physio/phy-5.jpg";
 
-import pilate1 from "@/assets/services/pilate/pilate-1.jpg";
+import pilate1 from "@/assets/services/pilate/pilate-1.webp";
 import pilate2 from "@/assets/services/pilate/pilate-2.jpg";
-import pilate3 from "@/assets/services/pilate/pilate-3.jpg";
-import pilate4 from "@/assets/services/pilate/pilate-4.jpg";
+import pilate3 from "@/assets/services/pilate/pilate-3.webp";
+import pilate4 from "@/assets/services/pilate/pilate-4.webp";
 import pilate5 from "@/assets/services/pilate/pilate-5.jpg";
 
 import yog1 from "@/assets/services/yog/yog-1.jpg";

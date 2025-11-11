@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import img from "../../assets/about/AboutSection.jpg";
+import img from "../../assets/about/AboutSection.webp";
 
 export default function AboutStory() {
   useEffect(() => {
@@ -55,7 +55,7 @@ export default function AboutStory() {
 
           <p className="text-[#6b6b6b] leading-relaxed text-base md:text-lg bg-white/70 p-4 rounded-xl border border-[#b4955915]" data-aos="fade-up">
             Built on the belief that healing begins with harmony, 
-            <strong className="text-[#b49559]"> Physio Pilates</strong> was founded to bridge 
+            <strong className="text-[#5ce2e7]"> Physio Pilates</strong> was founded to bridge 
             the science of physiotherapy with the mindfulness of Pilates. 
             Our goal has always been simple — to help people reconnect 
             with their bodies through movement that restores and empowers.

@@ -25,8 +25,8 @@ export default function ServicesHero({ service }) {
         }}
       ></div>
 
-      {/* Elegant overlay gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#00101010] via-[#00101038] to-[#00101060]"></div>
+      {/* Overlay Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#00101010] via-[#00101038] to-[#00101060]" />
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 sm:px-8 md:px-10 text-white">
@@ -37,7 +37,7 @@ export default function ServicesHero({ service }) {
           transition={{ duration: 0.8 }}
           className="inline-flex items-center gap-2 px-4 py-2 bg-white/15 backdrop-blur-md rounded-full border border-white/20 shadow-sm"
         >
-          <div className="w-2.5 h-2.5 bg-[#b59659] rounded-full shadow-sm shadow-[#5CE2E760]" />
+          <div className="w-2.5 h-2.5 bg-[#5ce2e7] rounded-full shadow-sm shadow-[#5ce2e760]" />
           <span className="text-xs sm:text-sm font-medium tracking-[0.2em] uppercase text-[#EAEAEA]">
             Our Service
           </span>
@@ -53,20 +53,25 @@ export default function ServicesHero({ service }) {
           {service.title.includes("&") ? (
             <>
               {service.title.split("&")[0]}{" "}
-              <span className="text-[#b59659]">&</span>
-              {service.title.split("&")[1]}
+              <span className="text-[#b59659]">&</span>{" "}
+              <span className="text-[#5ce2e7]">
+                {service.title.split("&")[1]}
+              </span>
             </>
           ) : (
             <>
               {service.title.split(" ")[0]}{" "}
               <span className="text-[#b59659]">
-                {service.title.split(" ").slice(1).join(" ")}
+                {service.title.split(" ")[1] || ""}
+              </span>{" "}
+              <span className="text-[#5ce2e7]">
+                {service.title.split(" ").slice(2).join(" ")}
               </span>
             </>
           )}
         </motion.h1>
 
-        {/* Hero Description */}
+        {/* Description */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -82,7 +87,7 @@ export default function ServicesHero({ service }) {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="w-20 h-1 mt-10 mx-auto bg-gradient-to-r from-[#b59659] to-[#b49559] rounded-full"
+          className="w-24 h-1 mt-10 mx-auto bg-gradient-to-r from-[#b59659] via-[#5ce2e7] to-[#b49559] rounded-full"
         ></motion.div>
       </div>
     </section>
