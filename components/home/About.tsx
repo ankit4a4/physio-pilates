@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import img1 from "@/assets/home/HomeAbout1.jpg";
-import img2 from "@/assets/home/HomeAbout2.webp";
+import img2 from "@/assets/home/homeAbout2.webp";
 import img3 from "@/assets/home/HomeAbout3.webp";
 import Image from "next/image";
 
