@@ -2,7 +2,7 @@ import AboutHero from "@/components/about/AboutHero";
 import AboutStory from '@/components/about/AboutStory';
 import OurPhilosophy from '@/components/about/OurPhilosophy';
 import MissionVision from '@/components/about/MissionVision';
-import MeetTheExperts from "@/components/about/MeetTheExperts.jsx";
+// import MeetTheExperts from "@/components/about/MeetTheExperts.jsx";
 import BookSessionBanner from "@/components/about/BookSessionBanner";
 
 export default function AboutPage() {
@@ -12,7 +12,7 @@ export default function AboutPage() {
       <AboutStory />
       <OurPhilosophy/>
       <MissionVision/>
-      <MeetTheExperts/>
+      {/* <MeetTheExperts/> */}
       <BookSessionBanner />
     </main>
   );

@@ -57,12 +57,13 @@ export default function FounderHero() {
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          Discover the story, vision, and dedication behind{" "}
-          <br className="hidden sm:block" />
           <span className="text-[#b59659] font-semibold">
             Dr. Surbhi Silori Mishra
           </span>{" "}
-          — empowering lives through movement, strength, and mindful healing.
+          — founder of{" "}
+          <span className="text-[#b59659]">PhysioPilates</span>, a wellness
+          space built on holistic healing. With 10+ years in physiotherapy,
+          pilates, and yoga, she inspires movement, strength, and balance.
         </p>
 
         {/* Divider */}

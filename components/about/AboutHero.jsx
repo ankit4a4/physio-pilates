@@ -56,7 +56,7 @@ export default function AboutHero() {
         </h1>
 
         {/* Paragraph */}
-        <p
+        {/* <p
           className="text-base sm:text-lg md:text-xl mt-6 sm:mt-8 max-w-2xl mx-auto text-gray-100/90 leading-relaxed"
           data-aos="fade-up"
           data-aos-delay="200"
@@ -64,15 +64,25 @@ export default function AboutHero() {
           We’re redefining movement therapy through a mindful blend of
           physiotherapy, pilates, and holistic wellness — empowering every
           individual to move, heal, and thrive naturally.
+        </p> */}
+
+        {/* USP Line */}
+        <p
+          className="text-sm sm:text-base md:text-lg mt-4 max-w-2xl mx-auto text-gray-100/90 leading-relaxed italic"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          PhysioPilates — the only centre in Delhi NCR that provides a unique
+          combination of physiotherapy and pilates for treatment.
         </p>
 
-     {/* Decorative Divider */}
-             <motion.div
-               initial={{ opacity: 0, scale: 0.8 }}
-               animate={{ opacity: 1, scale: 1 }}
-               transition={{ delay: 0.4, duration: 0.6 }}
-               className="w-24 h-1 mt-10 mx-auto bg-gradient-to-r from-[#b59659] via-[#5ce2e7] to-[#b49559] rounded-full"
-             ></motion.div>
+        {/* Decorative Divider */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+          className="w-24 h-1 mt-10 mx-auto bg-gradient-to-r from-[#b59659] via-[#5ce2e7] to-[#b49559] rounded-full"
+        ></motion.div>
       </div>
     </section>
   );
