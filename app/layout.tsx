@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/ui/FloatingButtons";
-import CustomCursor from "@/components/ui/CustomCursor"
+// import CustomCursor from "@/components/ui/CustomCursor"
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600"],
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={montserrat.className}>
-        <CustomCursor/>
+        {/* <CustomCursor/> */}
         <Navbar />
         {children}
         <Footer />
