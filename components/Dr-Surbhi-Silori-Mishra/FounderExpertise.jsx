@@ -35,7 +35,7 @@ const FounderExpertise = () => {
                             </span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            Comprehensive therapeutic approaches tailored to your unique health journey
+                            Dr. Surbhi blends physiotherapy, pilates, and yoga to restore balance, mobility, and strength through mindful, holistic care.
                         </p>
                     </div>
 
@@ -52,21 +52,20 @@ const FounderExpertise = () => {
                                     Physiotherapy
                                 </h3>
                                 <p className="text-gray-600 leading-relaxed flex-grow">
-                                    Evidence-based treatment for musculoskeletal disorders, mobility enhancement,
-                                    and comprehensive pain management strategies tailored to individual needs.
+                                    Over a decade of clinical experience in physiotherapy — helping patients recover from injuries, improve mobility, and manage pain effectively.
                                 </p>
                                 <ul className="mt-6 space-y-2">
                                     <li className="flex items-center text-sm text-gray-500">
                                         <div className="w-1.5 h-1.5 bg-[#b49559] rounded-full mr-3"></div>
-                                        Musculoskeletal Disorders
+                                        Pain & Injury Management
                                     </li>
                                     <li className="flex items-center text-sm text-gray-500">
                                         <div className="w-1.5 h-1.5 bg-[#b49559] rounded-full mr-3"></div>
-                                        Mobility Enhancement
+                                        Posture & Mobility Correction
                                     </li>
                                     <li className="flex items-center text-sm text-gray-500">
                                         <div className="w-1.5 h-1.5 bg-[#b49559] rounded-full mr-3"></div>
-                                        Pain Management
+                                        Functional Recovery
                                     </li>
                                 </ul>
                             </div>
@@ -83,27 +82,26 @@ const FounderExpertise = () => {
                                     Pilates
                                 </h3>
                                 <p className="text-gray-600 leading-relaxed flex-grow">
-                                    Therapeutic pilates programs scientifically designed to strengthen core muscles,
-                                    improve postural alignment, and enhance overall flexibility and balance.
+                                    Certified Balance Body (USA) instructor guiding clients to build strength, balance, and core stability through personalized pilates routines.
                                 </p>
                                 <ul className="mt-6 space-y-2">
                                     <li className="flex items-center text-sm text-gray-500">
                                         <div className="w-1.5 h-1.5 bg-[#5CE2E7] rounded-full mr-3"></div>
-                                        Core Strengthening
+                                        Core Conditioning
                                     </li>
                                     <li className="flex items-center text-sm text-gray-500">
                                         <div className="w-1.5 h-1.5 bg-[#5CE2E7] rounded-full mr-3"></div>
-                                        Posture Correction
+                                        Balance & Posture Training
                                     </li>
                                     <li className="flex items-center text-sm text-gray-500">
                                         <div className="w-1.5 h-1.5 bg-[#5CE2E7] rounded-full mr-3"></div>
-                                        Flexibility Training
+                                        Functional Strength
                                     </li>
                                 </ul>
                             </div>
                         </div>
 
-                        {/* Dry Needling */}
+                        {/* Yoga & Wellness */}
                         <div className="group relative">
                             <div className="absolute inset-0 bg-gradient-to-r from-[#b49559] to-[#d4b87a] rounded-3xl blur-lg opacity-20 group-hover:opacity-30 transition-all duration-500"></div>
                             <div className="relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 group-hover:border-[#b49559] group-hover:-translate-y-2 h-full flex flex-col">
@@ -111,24 +109,23 @@ const FounderExpertise = () => {
                                     <Activity size={32} />
                                 </div>
                                 <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-[#b49559] transition-colors duration-300">
-                                    Dry Needling
+                                    Yoga & Wellness
                                 </h3>
                                 <p className="text-gray-600 leading-relaxed flex-grow">
-                                    Advanced myofascial technique for precise trigger point release,
-                                    accelerated tissue healing, and effective management of chronic pain conditions.
+                                    Certified in yoga from Shri Lal Bahadur Shastri Sanskrit Vidyapeeth — integrating movement, breath, and mindfulness for holistic healing.
                                 </p>
                                 <ul className="mt-6 space-y-2">
                                     <li className="flex items-center text-sm text-gray-500">
                                         <div className="w-1.5 h-1.5 bg-[#b49559] rounded-full mr-3"></div>
-                                        Trigger Point Release
+                                        Mindful Movement
                                     </li>
                                     <li className="flex items-center text-sm text-gray-500">
                                         <div className="w-1.5 h-1.5 bg-[#b49559] rounded-full mr-3"></div>
-                                        Tissue Healing
+                                        Stress & Posture Balance
                                     </li>
                                     <li className="flex items-center text-sm text-gray-500">
                                         <div className="w-1.5 h-1.5 bg-[#b49559] rounded-full mr-3"></div>
-                                        Chronic Pain Relief
+                                        Holistic Wellness Integration
                                     </li>
                                 </ul>
                             </div>
@@ -138,45 +135,35 @@ const FounderExpertise = () => {
             </section>
 
             {/* Vision Section */}
-            {/* Vision Section */}
             <section className="relative py-24 px-6 md:px-12 lg:px-24 bg-[#b49559] overflow-hidden">
                 <div className="max-w-5xl mx-auto relative">
                     <div className="text-center">
-                        {/* Section Badge */}
                         <div className="inline-flex items-center gap-2 bg-white rounded-full px-6 py-3 border border-gray-200 mb-8 shadow-sm">
                             <div className="w-2 h-2 bg-[#5CE2E7] rounded-full animate-pulse"></div>
                             <span className="text-sm font-medium text-[#222]">
                                 Philosophy & Approach
                             </span>
-                        </div>  
+                        </div>
 
-                        {/* Heading */}
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-[#FFF]">
                             Her Vision
                         </h2>
 
-                        {/* Main Content */}
                         <div className="bg-white rounded-3xl p-8 md:p-12 border border-gray-200 mb-8 shadow-md">
                             <p className="text-xl md:text-2xl text-[#222] leading-relaxed mb-8">
-                                Dr. Surbhi believes in empowering patients through comprehensive education
-                                and <span className="text-[#5CE2E7] font-semibold">personalized treatment plans</span>.
-                                Her philosophy centers on addressing the
-                                <span className="text-[#000] font-semibold"> root cause </span>
-                                of pain and dysfunction, creating sustainable pathways to wellness
-                                through evidence-based care and holistic practices.
+                                Dr. Surbhi’s vision is rooted in a{" "}
+                                <span className="text-[#5CE2E7] font-semibold">holistic approach</span> — uniting physiotherapy, pilates, and yoga to restore balance and build lifelong wellness.
                             </p>
 
-                            {/* Quote */}
                             <div className="relative">
                                 <div className="absolute -top-4 -left-4 text-6xl text-[#b49559] opacity-30">"</div>
                                 <blockquote className="text-2xl md:text-3xl font-light italic text-center text-[#000] relative z-10">
-                                    Movement is medicine — my goal is to make it accessible for everyone.
+                                    Healing begins with awareness — movement makes it lasting.
                                 </blockquote>
                                 <div className="absolute -bottom-4 -right-4 text-6xl text-[#5CE2E7] opacity-30">"</div>
                             </div>
                         </div>
 
-                        {/* Vision Points */}
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
                             <div className="text-center bg-white rounded-2xl p-6 shadow-md">
                                 <div className="w-12 h-12 bg-[#b49559] bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -184,7 +171,7 @@ const FounderExpertise = () => {
                                 </div>
                                 <h4 className="text-[#000] font-semibold mb-2">Patient Empowerment</h4>
                                 <p className="text-[#333] text-sm">
-                                    Education and active participation in healing
+                                    Encouraging patients to take charge of their healing
                                 </p>
                             </div>
 
@@ -194,7 +181,7 @@ const FounderExpertise = () => {
                                 </div>
                                 <h4 className="text-[#000] font-semibold mb-2">Root Cause Focus</h4>
                                 <p className="text-[#333] text-sm">
-                                    Addressing underlying issues for lasting results
+                                    Addressing deeper issues for sustainable recovery
                                 </p>
                             </div>
 
@@ -202,17 +189,15 @@ const FounderExpertise = () => {
                                 <div className="w-12 h-12 bg-[#b49559] bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                                     <Globe2 className="text-[#b49559]" size={24} />
                                 </div>
-                                <h4 className="text-[#000] font-semibold mb-2">Holistic Approach</h4>
+                                <h4 className="text-[#000] font-semibold mb-2">Holistic Wellness</h4>
                                 <p className="text-[#333] text-sm">
-                                    Integrating mind, body and lifestyle factors
+                                    Integrating physiotherapy, pilates, and yoga principles
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
-
         </>
     );
 };

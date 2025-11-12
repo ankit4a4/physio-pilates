@@ -133,7 +133,7 @@ export default function Footer() {
                   <Phone size={18} /> +91 9717505326
                 </p>
                 <p className="flex items-center gap-2">
-                  <Mail size={18} /> info@physiopilates.com
+                  <Mail size={18} /> physiopilates.12082022@gmail.com
                 </p>
               </div>
 

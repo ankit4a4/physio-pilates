@@ -47,12 +47,11 @@ export default function About() {
                 data-aos="fade-up"
               >
                 Welcome to{" "}
-                <strong className="text-[#5ce2e7]">Physio Pilates</strong> — a
-                holistic health & movement studio dedicated to healing,
-                strengthening and transforming the body through science-based
-                care.
+                <strong className="text-[#5ce2e7]">Physio Pilates</strong> —  <span className="text-black italic">
+                   "The only centre in Delhi which provides combination of physiotherapy and pilates for the treatment."
+                   </span>
               </p>
-              <p data-aos="fade-up">
+              <p data-aos="fade-up">  
                 We specialize in{" "}
                 <strong className="text-[#b49559]">
                   Physiotherapy, Pilates, Yoga, Dry Needling & Cupping Therapy
