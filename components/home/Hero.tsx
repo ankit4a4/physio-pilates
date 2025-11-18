@@ -179,7 +179,7 @@ export default function Hero() {
             }}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentSlide
-                ? 'bg-[#5ce2e7] w-8'
+                ? 'bg-[#b49559] w-8'
                 : 'bg-[#5ce2e7]/50 hover:bg-white/70'
             }`}
           />
