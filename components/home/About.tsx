@@ -29,7 +29,6 @@ export default function About() {
           <div className="space-y-8" data-aos="fade-up">
             <div className="space-y-4" data-aos="zoom-in">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#b495590F] rounded-full border border-[#b4955922]">
-                <div className="w-2 h-2 bg-[#5ce2e7] rounded-full"></div>
                 <span className="text-sm font-medium tracking-widest text-[#b49559]">
                   ABOUT US
                 </span>
@@ -37,7 +36,7 @@ export default function About() {
 
               <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#b49559] font-bold leading-tight">
                 Physio • Pilates •{" "}
-                <span className="text-[#5ce2e7]">Wellness</span> Redefined
+                <span className="text-[#b49559]">Wellness</span> Redefined
               </h2>
             </div>
 
@@ -46,8 +45,8 @@ export default function About() {
                 className="bg-white/70 p-4 rounded-xl border border-[#b4955915]"
                 data-aos="fade-up"
               >
-                Welcome to{" "}
-                <strong className="text-[#5ce2e7]">Physio Pilates</strong> —  <span className="text-black italic">
+                Welcome to Physio Pilates - 
+               <span className="text-black italic">
                    "The only centre in Delhi which provides combination of physiotherapy and pilates for the treatment."
                    </span>
               </p>
@@ -62,8 +61,8 @@ export default function About() {
                 className="bg-[#b4955908] p-4 rounded-xl border border-[#b4955915]"
                 data-aos="fade-up"
               >
-                With modern equipment & expert care, we help you{" "}
-                <strong className="text-[#5ce2e7]">
+                With expert care, we help you{" "}
+                <strong className="text-[#b49559]">
                   feel better, move better & live better
                 </strong>
                 .
@@ -85,7 +84,7 @@ export default function About() {
                   <div className="text-2xl md:text-3xl font-bold text-[#b49559] mb-2">
                     {num}
                   </div>
-                  <div className="text-sm font-medium text-[#5ce2e7] tracking-wide">
+                  <div className="text-sm font-medium text-black tracking-wide">
                     {text}
                   </div>
                 </div>

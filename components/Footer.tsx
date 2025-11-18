@@ -8,19 +8,21 @@ import {
   Facebook,
   Linkedin,
   Youtube,
-  MapPin,
+  MapPinned,
   Phone,
   Mail,
 } from "lucide-react";
+
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
     <>
-      <footer className="bg-[#FDFDFB] py-14 border-t border-white/20 font-sans">
+      <footer className="bg-[#FDFDFB] py-16 border-t font-sans">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-12">
+
             {/* Logo + Text */}
             <div className="space-y-5">
               <Image
@@ -30,7 +32,7 @@ export default function Footer() {
                 alt="Physio Pilates"
                 className="w-32"
               />
-              <p className="text-base leading-relaxed text-[#B49559]">
+              <p className="text-base leading-relaxed text-[#7A623B]">
                 Transform your life through mindful movement, expert care & holistic healing.
               </p>
             </div>
@@ -39,46 +41,22 @@ export default function Footer() {
             <div className="space-y-4">
               <h3 className="text-black font-semibold text-xl">Services</h3>
               <ul className="space-y-2">
-                <li>
-                  <Link
-                    href="/services/physiotherapy"
-                    className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#B49559] transition"
-                  >
-                    <ChevronRight size={18} /> Physiotherapy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/pilates"
-                    className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#B49559] transition"
-                  >
-                    <ChevronRight size={18} /> Pilates
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/dry-needling-and-cup-therapy"
-                    className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#B49559] transition"
-                  >
-                    <ChevronRight size={18} /> Therapy
-                  </Link>
-                </li>
-                  <li>
-                  <Link
-                    href="/services/yog"
-                    className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#B49559] transition"
-                  >
-                    <ChevronRight size={18} />Yoga
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/teacher-training-courses"
-                    className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#B49559] transition"
-                  >
-                    <ChevronRight size={18} /> Courses
-                  </Link>
-                </li>
+                {[
+                  { name: "Physiotherapy", link: "/services/physiotherapy" },
+                  { name: "Pilates", link: "/services/pilates" },
+                  { name: "Therapy", link: "/services/dry-needling-and-cup-therapy" },
+                  { name: "Yoga", link: "/services/yog" },
+                  { name: "Courses", link: "/teacher-training-courses" },
+                ].map((item, i) => (
+                  <li key={i}>
+                    <Link
+                      href={item.link}
+                      className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#7A623B] transition"
+                    >
+                      <ChevronRight size={20} strokeWidth={2.5} /> {item.name}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -86,110 +64,97 @@ export default function Footer() {
             <div className="space-y-4">
               <h3 className="text-black font-semibold text-xl">Company</h3>
               <ul className="space-y-2">
-                <li>
-                  <Link
-                    href="/about"
-                    className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#B49559] transition"
-                  >
-                    <ChevronRight size={18} /> About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/gallery"
-                    className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#B49559] transition"
-                  >
-                    <ChevronRight size={18} /> Gallery
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact"
-                    className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#B49559] transition"
-                  >
-                    <ChevronRight size={18} /> Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/blogs"
-                    className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#B49559] transition"
-                  >
-                    <ChevronRight size={18} /> Blog
-                  </Link>
-                </li>
+                {[
+                  { name: "About Us", link: "/about" },
+                  { name: "Gallery", link: "/gallery" },
+                  { name: "Contact", link: "/contact" },
+                  { name: "Blog", link: "/blogs" },
+                ].map((item, i) => (
+                  <li key={i}>
+                    <Link
+                      href={item.link}
+                      className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#7A623B] transition"
+                    >
+                      <ChevronRight size={20} strokeWidth={2.5} /> {item.name}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
-            {/* Social + Contact */}
-            <div className="space-y-4">
+            {/* Contact */}
+            <div className="space-y-5">
               <h3 className="font-semibold text-xl text-black">Contact Us</h3>
 
-              <div className="space-y-3 text-sm text-[#B49559]">
-                <p className="flex items-center gap-2">
-                  <MapPin size={18} /> Chittaranjan Park, New Delhi 110019
-                </p>
-                <p className="flex items-center gap-2">
-                  <Phone size={18} /> +91 9717505326
-                </p>
-                <p className="flex items-center gap-2">
-                  <Mail size={18} /> physiopilates.12082022@gmail.com
-                </p>
-              </div>
+          <div className="space-y-4 text-sm text-[#7A623B]">
+  <p className="flex items-start gap-3">
+    <span className="w-5 h-5 flex items-center justify-center mt-3">
+      <MapPinned size={20} strokeWidth={2.2} className="text-[#7A623B]" />
+    </span>
+    LGF Left side, D--768, opp. market no-2, Block D, Chittaranjan Park, New Delhi 110019
+  </p>
+
+  <p className="flex items-center gap-3">
+    <Phone size={18} strokeWidth={2.7} className="text-[#7A623B]" />
+    +91 9717505326
+  </p>
+
+  <p className="flex items-center gap-3">
+    <Mail size={18} strokeWidth={2.7} className="text-[#7A623B]" />
+    physiopilates.12082022@gmail.com
+  </p>
+</div>
+
 
               {/* Social Icons */}
               <ul className="flex items-center gap-5 pt-2">
                 <li>
                   <Link
-                    href="https://www.instagram.com/pphysiopilates?igsh=eXNrb2treXlzdTA2" // update later
+                    href="https://www.instagram.com/pphysiopilates"
                     target="_blank"
-                    className="text-[#B49559] hover:text-[#5CE2E7] transition"
+                    className="text-[#7A623B] hover:text-[#5CE2E7] transition"
                   >
-                    <Instagram size={22} />
+                    <Instagram size={24} strokeWidth={2.5} />
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="https://www.facebook.com/physiopilates" // update later
+                    href="https://www.facebook.com/physiopilates"
                     target="_blank"
-                    className="text-[#B49559] hover:text-[#5CE2E7] transition"
+                    className="text-[#7A623B] hover:text-[#5CE2E7] transition"
                   >
-                    <Facebook size={22} />
+                    <Facebook size={24} strokeWidth={2.5} />
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="https://www.linkedin.com/company/physiopilates" // update later
+                    href="https://www.linkedin.com/company/physiopilates"
                     target="_blank"
-                    className="text-[#B49559] hover:text-[#5CE2E7] transition"
+                    className="text-[#7A623B] hover:text-[#5CE2E7] transition"
                   >
-                    <Linkedin size={22} />
+                    <Linkedin size={24} strokeWidth={2.5} />
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="https://www.youtube.com/@physiopilates" // update later
+                    href="https://www.youtube.com/@physiopilates"
                     target="_blank"
-                    className="text-[#B49559] hover:text-[#5CE2E7] transition"
+                    className="text-[#7A623B] hover:text-[#5CE2E7] transition"
                   >
-                    <Youtube size={22} />
+                    <Youtube size={24} strokeWidth={2.5} />
                   </Link>
                 </li>
               </ul>
             </div>
+
           </div>
         </div>
       </footer>
 
-      {/* Bottom Bar */}
-      <div className="py-6 h-16 bg-[#B49559] border-t border-white/20 text-center text-sm">
+      <div className="py-6 h-16 bg-[#B49559] text-center text-sm">
         <p className="text-white">
           © {currentYear} Physio Pilates. All rights reserved. | Powered by{" "}
-          <Link
-            href="https://rankmantra.com/"
-            target="_blank"
-            className="underline hover:text-white transition"
-          >
+          <Link href="https://rankmantra.com/" target="_blank" className="underline">
             Rankmantra
           </Link>
         </p>

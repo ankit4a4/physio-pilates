@@ -15,7 +15,6 @@ export default function Certification() {
   }, []);
 
   const certifications = [
-    "Govt. Recognized Training Standards",
     "Experienced & Qualified Faculty",
     "Advanced Practical Learning",
     "Lifetime Support & Guidance",
