@@ -119,7 +119,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="https://www.facebook.com/physiopilates"
+                    href="https://www.facebook.com"
                     target="_blank"
                     className="text-[#7A623B] hover:text-[#5CE2E7] transition"
                   >
@@ -128,7 +128,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="https://www.linkedin.com/company/physiopilates"
+                    href="https://www.linkedin.com/company/"
                     target="_blank"
                     className="text-[#7A623B] hover:text-[#5CE2E7] transition"
                   >
@@ -137,7 +137,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="https://www.youtube.com/@physiopilates"
+                    href="https://www.youtube.com/"
                     target="_blank"
                     className="text-[#7A623B] hover:text-[#5CE2E7] transition"
                   >
