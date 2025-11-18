@@ -56,7 +56,7 @@ export default function Certification() {
             </div>
             <Link
               href="#"
-              className="inline-flex items-center gap-3 border bg-[#5CE2E7] px-8 py-4  text-white rounded-xl font-semibold hover:scale-[1.05] transition shadow-md border-white"
+              className="inline-flex items-center gap-3 border bg-transparent hover:bg-[#5ce2e7] px-8 py-4  text-white rounded-xl font-semibold hover:scale-[1.05] transition shadow-md border-white"
               data-aos="zoom-in"
             >
               VIEW CERTIFICATIONS
@@ -73,11 +73,11 @@ export default function Certification() {
                 <Trophy className="w-8 h-8 text-[#b89650] mb-3" />
                 <div className="text-4xl text-[#b89650] mb-2 font-semibold">100%</div>
                 <div className="text-sm tracking-wide text-black/80">Certification Success</div>
-              </div>
+              </div> 
 
               <div
                 data-aos="zoom-in"
-                className="bg-[#b49559] shadow shadow-white/60 p-8 aspect-square flex flex-col justify-center items-center text-center rounded-lg"
+                className="bg-[#5CE2E7] shadow shadow-white/60 p-8 aspect-square flex flex-col justify-center items-center text-center rounded-lg"
               >
                 <Users className="w-8 h-8 text-white mb-3" />
                 <div className="text-4xl text-white mb-2 font-semibold">5000+</div>
@@ -88,7 +88,7 @@ export default function Certification() {
             <div className="space-y-4 mt-8">
               <div
                 data-aos="zoom-in"
-                className="bg-[#b49559] shadow shadow-white/60 p-8 aspect-square flex flex-col justify-center items-center text-center rounded-lg"
+                className="bg-[#5CE2E7] shadow shadow-white/60 p-8 aspect-square flex flex-col justify-center items-center text-center rounded-lg"
               >
                 <GraduationCap className="w-8 h-8 text-white mb-3" />
                 <div className="text-4xl text-white mb-2 font-semibold">10+ Years</div>
