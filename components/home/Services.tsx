@@ -77,7 +77,7 @@ export default function Services() {
                 <service.icon className="w-8 h-8" />
               </div>
 
-              <h3 className="text-2xl font-semibold text-[#b49559] mb-3">
+              <h3 className="text-2xl font-semibold text-black mb-3">
                 {service.title}
               </h3>
 

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/ui/FloatingButtons";
+import favicon from "@/assets/favicon.png"
 // import CustomCursor from "@/components/ui/CustomCursor"
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -14,6 +15,9 @@ export const metadata: Metadata = {
   title: "Physio • Pilates • Wellness Redefined – Delhi NCR's Premier Movement Studio",
   description:
     "The only centre in Delhi NCR which provides combination of physiotherapy and pilates for the treatment.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
