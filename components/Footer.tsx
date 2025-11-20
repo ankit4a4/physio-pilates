@@ -24,13 +24,13 @@ export default function Footer() {
           <div className="grid md:grid-cols-4 gap-12">
 
             {/* Logo + Text */}
-            <div className="space-y-5">
+            <div className="space-y-4">
               <Image
                 src={logo.src}
                 width={120}
                 height={120}
                 alt="Physio Pilates"
-                className="w-32"
+                className="h-44 w-auto"
               />
               <p className="text-base leading-relaxed text-[#7A623B]">
                 Transform your life through mindful movement, expert care & holistic healing.
@@ -119,7 +119,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="https://www.facebook.com/physiopilates"
+                    href="https://www.facebook.com"
                     target="_blank"
                     className="text-[#7A623B] hover:text-[#5CE2E7] transition"
                   >
@@ -128,7 +128,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="https://www.linkedin.com/company/physiopilates"
+                    href="https://www.linkedin.com/company/"
                     target="_blank"
                     className="text-[#7A623B] hover:text-[#5CE2E7] transition"
                   >
@@ -137,7 +137,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="https://www.youtube.com/@physiopilates"
+                    href="https://www.youtube.com/"
                     target="_blank"
                     className="text-[#7A623B] hover:text-[#5CE2E7] transition"
                   >
