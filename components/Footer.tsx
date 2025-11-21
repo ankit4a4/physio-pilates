@@ -30,7 +30,7 @@ export default function Footer() {
                 width={120}
                 height={120}
                 alt="Physio Pilates"
-                className="h-44 w-auto"
+                className="sm:h-40 h-36 w-auto"
               />
               <p className="text-base leading-relaxed text-[#7A623B]">
                 Transform your life through mindful movement, expert care & holistic healing.

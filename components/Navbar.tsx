@@ -49,10 +49,10 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-32">
+        <div className="flex justify-between items-center h-24 sm:h-32">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <Image src={Logo} alt="Wellness Logo" className="h-32 w-full" priority />
+            <Image src={Logo} alt="Wellness Logo" className="h-24 sm:h-32 w-full" priority />
           </Link>
 
           {/* Desktop Menu */}
