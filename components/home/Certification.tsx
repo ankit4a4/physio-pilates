@@ -81,7 +81,7 @@ export default function Certification() {
 
               <div
                 data-aos="zoom-in"
-                className="bg-[#5CE2E7] shadow shadow-white/40 p-8 aspect-square flex flex-col justify-center items-center text-center rounded-lg"
+                className="bg-[#5CE2E7] border-2 border-white shadow shadow-white/40 p-8 aspect-square flex flex-col justify-center items-center text-center rounded-lg"
               >
                 <Users className="w-8 h-8 text-white mb-3" />
                 <div className="text-4xl text-white mb-2 font-semibold">5000+</div>
@@ -94,7 +94,7 @@ export default function Certification() {
 
               <div
                 data-aos="zoom-in"
-                className="bg-[#5CE2E7] shadow shadow-white/40 p-8 aspect-square flex flex-col justify-center items-center text-center rounded-lg"
+                className="bg-[#5CE2E7] border-2 border-white  shadow shadow-white/80 p-8 aspect-square flex flex-col justify-center items-center text-center rounded-lg"
               >
                 <GraduationCap className="w-8 h-8 text-white mb-3" />
                 <div className="text-4xl text-white mb-2 font-semibold">10+ Years</div>
