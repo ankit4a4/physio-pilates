@@ -20,7 +20,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-8 md:py-24 bg-gradient-to-br from-white to-[#b495590D]"
+        className="py-8 md:py-24 bg-[#5CE2E7]/10"
       data-aos="fade-up"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,25 +44,27 @@ export default function About() {
               <p
                 className="bg-white/70 p-4 rounded-xl border border-[#b4955915]"
                 data-aos="fade-up"
-              >
+              > 
+              <strong className="text-gray-600">
                 Welcome to Physio Pilates - 
-               <span className="text-black italic">
+              </strong>
+               <span className="text-gray-600 italic">
                    "The only centre in Delhi which provides combination of physiotherapy and pilates for the treatment."
                    </span>
               </p>
-              <p data-aos="fade-up">  
+              <p data-aos="fade-up " className="text-gray-600">  
                 We specialize in{" "}
-                <strong className="text-[#b49559]">
+                <strong className="text-gray-600">
                   Physiotherapy, Pilates, Yoga, Dry Needling & Cupping Therapy
                 </strong>
                 , offering personalised recovery & posture correction programs.
               </p>
               <p
-                className="bg-[#b4955908] p-4 rounded-xl border border-[#b4955915]"
+                className="bg-[#b4955908] p-4 rounded-xl border border-[#b4955915] text-gray-600"
                 data-aos="fade-up"
               >
                 With expert care, we help you{" "}
-                <strong className="text-[#b49559]">
+                <strong className="text-gray-600">
                   feel better, move better & live better
                 </strong>
                 .

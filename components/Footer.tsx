@@ -32,7 +32,7 @@ export default function Footer() {
                 alt="Physio Pilates"
                 className="sm:h-40 h-36 w-auto"
               />
-              <p className="text-base leading-relaxed text-[#7A623B]">
+              <p className="text-base leading-relaxed text-gray-600">
                 Transform your life through mindful movement, expert care & holistic healing.
               </p>
             </div>
@@ -51,7 +51,7 @@ export default function Footer() {
                   <li key={i}>
                     <Link
                       href={item.link}
-                      className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#7A623B] transition"
+                      className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-gray-600 transition"
                     >
                       <ChevronRight size={20} strokeWidth={2.5} /> {item.name}
                     </Link>
@@ -73,7 +73,7 @@ export default function Footer() {
                   <li key={i}>
                     <Link
                       href={item.link}
-                      className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-[#7A623B] transition"
+                      className="flex items-center gap-2 text-lg hover:text-[#5CE2E7] text-gray-600 transition"
                     >
                       <ChevronRight size={20} strokeWidth={2.5} /> {item.name}
                     </Link>
@@ -86,21 +86,21 @@ export default function Footer() {
             <div className="space-y-5">
               <h3 className="font-semibold text-xl text-black">Contact Us</h3>
 
-          <div className="space-y-4 text-sm text-[#7A623B]">
+          <div className="space-y-4 text-sm text-gray-600">
   <p className="flex items-start gap-3">
     <span className="w-5 h-5 flex items-center justify-center mt-3">
-      <MapPinned size={20} strokeWidth={2.2} className="text-[#7A623B]" />
+      <MapPinned size={20} strokeWidth={2.2} className="text-gray-600" />
     </span>
     LGF Left side, D--768, opp. market no-2, Block D, Chittaranjan Park, New Delhi 110019
   </p>
 
   <p className="flex items-center gap-3">
-    <Phone size={18} strokeWidth={2.7} className="text-[#7A623B]" />
+    <Phone size={18} strokeWidth={2.7} className="text-gray-600" />
     +91 9717505326
   </p>
 
   <p className="flex items-center gap-3">
-    <Mail size={18} strokeWidth={2.7} className="text-[#7A623B]" />
+    <Mail size={18} strokeWidth={2.7} className="text-gray-600" />
     physiopilates.12082022@gmail.com
   </p>
 </div>

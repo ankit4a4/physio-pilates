@@ -102,7 +102,7 @@ export default function Testimonials() {
                 ))}
               </div>
 
-              <p className="text-lg text-[#b49559] leading-relaxed mb-6">
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
                 "{t.content}"
               </p>
 
@@ -113,7 +113,7 @@ export default function Testimonials() {
                   className="w-14 h-14 rounded-full object-cover"
                 />
                 <div>
-                  <h4 className="text-[#b49559] font-medium">{t.name}</h4>
+                  <h4 className="text-black font-medium">{t.name}</h4>
                   {/* <span className="text-sm text-[#b49559]/70">{t.role}</span> */}
                 </div>
               </div>
