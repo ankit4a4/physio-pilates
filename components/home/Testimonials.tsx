@@ -1,26 +1,18 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { motion } from 'framer-motion';
 import client1 from "@/assets/home/client1.png";
 import client2 from "@/assets/home/client2.png";
 import client3 from "@/assets/home/client3.png";
 import client4 from "@/assets/home/client4.png";
 import client5 from "@/assets/home/client5.png";
+import homeServiceImg from '@/assets/home/testimonial.jpg';
 
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 900,
-      easing: "ease-in-out",
-      once: true,
-    });
-  }, []);
 
   const testimonials = [
     {
@@ -76,33 +68,49 @@ export default function Testimonials() {
     testimonials[(currentIndex + 1) % testimonials.length],
   ];
 
-  return (
-    <section className="py-8 md:py-16 bg-white " data-aos="fade">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  // Framer Motion Variants
+  const fadeUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0 },
+  };
 
-        <div className="text-center mb-16 space-y-4" data-aos="fade-up">
-          <span className="text-sm tracking-widest text-[#b49559]">
-            TESTIMONIALS
-          </span>
-          <h2 className="text-4xl md:text-5xl text-[#b49559] tracking-wide">
+  return (
+    <section className="py-16 bg-white" >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Header */}
+        <motion.div
+          className="text-center mb-16 space-y-4"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        >
+          <span className="inline-block px-5 py-2 rounded-full bg-[#C49625]/10 text-[#C49625] font-semibold tracking-wide">TESTIMONIALS</span>
+          <h2 className="text-4xl md:text-5xl text-[#C49625] font-extrabold tracking-wide">
             Client Stories
           </h2>
-        </div>
+        </motion.div>
 
+        {/* Testimonials Grid */}
         <div className="grid md:grid-cols-2 gap-10">
           {visible.map((t, i) => (
-            <div
+            <motion.div
               key={i}
-              data-aos="zoom-in"
-              className="bg-[#F9FAFB] p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300"
+              className="bg-white p-8 rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUp}
+              transition={{ delay: i * 0.2 }}
             >
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-[#ffe234] text-[#ffe234]" />
+                  <Star key={i} className="w-5 h-5 fill-[#C49625] text-[#C49625]" />
                 ))}
               </div>
 
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+              <p className="text-lg text-[#C49625] leading-relaxed mb-6">
                 "{t.content}"
               </p>
 
@@ -113,32 +121,36 @@ export default function Testimonials() {
                   className="w-14 h-14 rounded-full object-cover"
                 />
                 <div>
-                  <h4 className="text-black font-medium">{t.name}</h4>
-                  {/* <span className="text-sm text-[#b49559]/70">{t.role}</span> */}
+                  <h4 className="text-[#C49625] font-medium">{t.name}</h4>
+                  {/* <span className="text-sm text-[#C49625]/70">{t.role}</span> */}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        <div
+        {/* Navigation */}
+        <motion.div
           className="flex justify-center items-center gap-4 mt-10"
-          data-aos="fade-up"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
         >
           <button
             onClick={prev}
             className="p-3 border border-gray-300 hover:border-[#5CE2E7] hover:bg-[#5CE2E7]/10 rounded-full transition-all duration-300"
           >
-            <ChevronLeft className="w-5 h-5 text-[#b49559]" />
+            <ChevronLeft className="w-5 h-5 text-[#C49625]" />
           </button>
 
           <button
             onClick={next}
             className="p-3 border border-gray-300 hover:border-[#5CE2E7] hover:bg-[#5CE2E7]/10 rounded-full transition-all duration-300"
           >
-            <ChevronRight className="w-5 h-5 text-[#b49559]" />
+            <ChevronRight className="w-5 h-5 text-[#C49625]" />
           </button>
-        </div>
+        </motion.div>
 
       </div>
     </section>
