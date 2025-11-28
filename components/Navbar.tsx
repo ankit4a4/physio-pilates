@@ -42,17 +42,17 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-10 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-[999] transition-all duration-300 ${
         scrolled
           ? 'bg-white/95 backdrop-blur-sm shadow-md border-b border-gray-100'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-32">
+        <div className="flex justify-between items-center h-24 sm:h-32">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
-            <Image src={Logo} alt="Wellness Logo" className="h-32 w-full" priority />
+            <Image src={Logo} alt="Wellness Logo" className="h-24 sm:h-32 w-full" priority />
           </Link>
 
           {/* Desktop Menu */}

@@ -20,71 +20,77 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-8 md:py-24 bg-gradient-to-br from-white to-[#b495590D]"
+      className="relative py-16 md:py-28 bg-[#5CE2E7] overflow-hidden"
       data-aos="fade-up"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Soft white glow top wave */}
+      <div className="absolute top-0 left-0 w-full h-32 bg-white/20 blur-2xl"></div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
-          {/* Left Side Text */}
-          <div className="space-y-8" data-aos="fade-up">
-            <div className="space-y-4" data-aos="zoom-in">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#b495590F] rounded-full border border-[#b4955922]">
-                <span className="text-sm font-medium tracking-widest text-[#b49559]">
+
+          {/* LEFT TEXT SIDE */}
+          <div className="space-y-10" data-aos="fade-up">
+
+            {/* TAG + HEADING */}
+            <div className="space-y-4">
+              <div className="inline-flex items-center gap-2 px-5 py-2 bg-white/20 backdrop-blur-md rounded-full border border-white/30 shadow-sm">
+                <span className="text-sm font-medium tracking-[0.2em] text-white text-shadow-[0_1px_4px_rgba(0,0,0,0.25)]">
                   ABOUT US
                 </span>
               </div>
 
-              <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#b49559] font-bold leading-tight">
-                Physio • Pilates •{" "}
-                <span className="text-[#b49559]">Wellness</span> Redefined
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white text-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
+                Physio • Pilates • Wellness Redefined
               </h2>
             </div>
 
-            <div className="space-y-6 text-[#b49559]/80 leading-relaxed text-lg">
+            {/* PARAGRAPHS */}
+            <div className="space-y-6 text-white leading-relaxed text-lg text-shadow-[0_1px_6px_rgba(0,0,0,0.25)]">
               <p
-                className="bg-white/70 p-4 rounded-xl border border-[#b4955915]"
+                className="bg-white/10 p-5 rounded-xl border border-white/20 backdrop-blur-md shadow-md"
                 data-aos="fade-up"
               >
-                Welcome to Physio Pilates - 
-               <span className="text-black italic">
-                   "The only centre in Delhi which provides combination of physiotherapy and pilates for the treatment."
-                   </span>
+                <strong className="text-white">Welcome to Physio Pilates —</strong>{" "}
+                <span className="italic text-white/90">
+                  "The only centre in Delhi offering physiotherapy + pilates combined treatments."
+                </span>
               </p>
-              <p data-aos="fade-up">  
+
+              <p data-aos="fade-up" className="text-white">
                 We specialize in{" "}
-                <strong className="text-[#b49559]">
+                <strong className="text-[#ffffff]">
                   Physiotherapy, Pilates, Yoga, Dry Needling & Cupping Therapy
-                </strong>
-                , offering personalised recovery & posture correction programs.
+                </strong>{" "}
+                providing personalized posture and recovery programs.
               </p>
+
               <p
-                className="bg-[#b4955908] p-4 rounded-xl border border-[#b4955915]"
+                className="bg-white/10 p-5 rounded-xl border border-white/20 backdrop-blur-md shadow-md"
                 data-aos="fade-up"
               >
                 With expert care, we help you{" "}
-                <strong className="text-[#b49559]">
+                <strong className="text-white">
                   feel better, move better & live better
-                </strong>
-                .
+                </strong>.
               </p>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-2 md:gap-8 md:pt-8">
+            {/* STATS */}
+            <div className="grid grid-cols-2 gap-5 md:gap-10 pt-4">
               {[
                 ["800+", "Happy Patients"],
-                ["20+", "Certified Experts"],
                 ["10+", "Years Experience"],
               ].map(([num, text], i) => (
                 <div
                   key={i}
                   data-aos="zoom-in"
-                  className="text-center p-4 rounded-2xl bg-white/60 border border-[#b4955920] shadow-sm hover:shadow-md transition-shadow"
+                  className="text-center p-6 rounded-2xl bg-white/20 border border-white/30 shadow-md hover:scale-105 transition-all backdrop-blur-md"
                 >
-                  <div className="text-2xl md:text-3xl font-bold text-[#b49559] mb-2">
+                  <div className="text-4xl font-extrabold text-white mb-1 text-shadow-[0_2px_6px_rgba(0,0,0,0.35)]">
                     {num}
                   </div>
-                  <div className="text-sm font-medium text-black tracking-wide">
+                  <div className="text-sm font-medium text-white tracking-wide text-shadow-[0_1px_4px_rgba(0,0,0,0.3)]">
                     {text}
                   </div>
                 </div>
@@ -92,49 +98,43 @@ export default function About() {
             </div>
           </div>
 
-          {/* Right Side Images */}
+          {/* RIGHT IMAGES SIDE */}
           <div
-            className="relative flex items-center justify-center overflow-hidden h-[400px] sm:h-[500px] md:h-[600px]"
+            className="relative flex items-center justify-center overflow-visible h-[420px] sm:h-[500px] md:h-[620px]"
             data-aos="zoom-in"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-[#5ce2e733] to-[#b495590A] rounded-3xl -rotate-3 scale-105"></div>
+            {/* White glow behind images */}
+            <div className="absolute inset-0 bg-white/30 blur-3xl rounded-3xl"></div>
 
-            {/* Center Image (always visible, adjusts size on smaller screens) */}
+            {/* Center Image */}
             <div className="relative z-20 group">
               <Image
                 src={img1.src}
                 height={100}
                 width={100}
-                className="w-60 sm:w-72 md:w-80 lg:w-[400px] h-[340px] sm:h-[420px] md:h-[400px] object-cover rounded-2xl shadow-2xl transform group-hover:scale-105 transition-transform duration-500"
+                className="w-60 sm:w-72 md:w-80 lg:w-[420px] h-[360px] sm:h-[440px] md:h-[450px] object-cover rounded-2xl shadow-xl transform group-hover:scale-105 duration-500"
                 alt="Main Studio"
-                data-aos="fade-up"
               />
             </div>
 
-            {/* Hidden on mobile */}
-            <div
-              className="absolute left-4 md:left-8 top-8 z-30 group hidden sm:block"
-              data-aos="zoom-in"
-            >
+            {/* Left Small Image */}
+            <div className="absolute left-4 md:left-10 top-10 z-30 hidden sm:block group">
               <Image
                 height={180}
                 width={100}
                 src={img2.src}
-                className="relative w-36 sm:w-44 md:w-48 h-52 sm:h-48 object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition-transform"
+                className="w-40 md:w-48 h-52 md:h-56 object-cover rounded-xl shadow-lg transform group-hover:scale-105 duration-500"
                 alt="Pilates"
               />
             </div>
 
-            {/* Hidden on mobile */}
-            <div
-              className="absolute right-4 md:right-8 bottom-8 z-30 group hidden sm:block"
-              data-aos="zoom-in"
-            >
+            {/* Right Small Image */}
+            <div className="absolute right-4 md:right-10 bottom-10 z-30 hidden sm:block group">
               <Image
                 src={img3.src}
                 height={100}
                 width={100}
-                className="relative w-36 sm:w-44 md:w-48 h-52 sm:h-48 object-cover rounded-xl shadow-lg transform group-hover:scale-105 transition-transform"
+                className="w-40 md:w-48 h-52 md:h-56 object-cover rounded-xl shadow-lg transform group-hover:scale-105 duration-500"
                 alt="Rehab"
               />
             </div>

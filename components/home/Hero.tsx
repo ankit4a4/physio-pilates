@@ -1,14 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Image from 'next/image';
-import img1 from "@/assets/home/hero1.jpg";
-import img2 from "@/assets/home/hero2.webp";
-import img3 from "@/assets/home/hero3.webp";
-import img4 from "@/assets/home/Hero4.jpg";
-import img5 from "@/assets/home/Hero5.jpg";
+import img1 from "@/assets/home/hero3.jpg";
+import img2 from "@/assets/home/hero2.jpg";
+import img3 from "@/assets/home/hero1.jpg";
 import Link from 'next/link';
 
 const slides = [
@@ -30,31 +27,11 @@ const slides = [
     cta: 'Start Your Yoga Journey',
     image: img3.src,
   },
-  {
-    title: 'Dry Needling & Cupping Therapy',
-    subtitle: 'Targeted relief from chronic pain, tension and muscle tightness using scientific deep-tissue therapy.',
-    cta: 'Experience Relief',
-    image: img4.src,
-  },
-  {
-    title: 'Become a Certified Trainer',
-    subtitle: 'Professional Instructor training courses in physiotherapy, pilates and yoga to build your healthcare career.',
-    cta: 'Enroll Now',
-    image: img5.src,
-  },
 ];
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [direction, setDirection] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setDirection(1);
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 6000);
-    return () => clearInterval(timer);
-  }, []);
 
   const nextSlide = () => {
     setDirection(1);
@@ -67,22 +44,29 @@ export default function Hero() {
   };
 
   const slideVariants = {
-    enter: (direction: any) => ({
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0,
+    enter: (direction: number) => ({
+      x: direction > 0 ? "100%" : "-100%",
+      opacity: 1,
+      position: "absolute"
     }),
     center: {
       x: 0,
       opacity: 1,
+      position: "absolute"
     },
-    exit: (direction: any) => ({
-      x: direction < 0 ? 1000 : -1000,
-      opacity: 0,
+    exit: (direction: number) => ({
+      x: direction < 0 ? "100%" : "-100%",
+      opacity: 1,
+      position: "absolute"
     }),
   };
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div className="relative h-screen w-full overflow-hidden bg-black">
+
+      {/* 🔥 Top Gradient for Logo Visibility */}
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black/50 to-transparent z-[5]" />
+
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={currentSlide}
@@ -92,84 +76,80 @@ export default function Hero() {
           animate="center"
           exit="exit"
           transition={{
-            x: { type: 'spring', stiffness: 300, damping: 30 },
-            opacity: { duration: 0.5 },
+            x: { type: "spring", stiffness: 60, damping: 20 },
           }}
           className="absolute inset-0"
         >
+
+          {/* Background Image */}
           <div
             className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${slides[currentSlide].image})`,
-            }}
+            style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent" />
           </div>
 
+          {/* Content */}
           <div className="relative h-full flex items-center">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-              <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.8 }}
-                className="max-w-2xl"
-              >
+              <div className="max-w-2xl">
+
                 <motion.h1
                   className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5, duration: 0.8 }}
+                  transition={{ delay: 0.2 }}
                 >
                   {slides[currentSlide].title}
                 </motion.h1>
+
                 <motion.p
-                  className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed"
-                  initial={{ opacity: 0, y: 30 }}
+                  className="text-xl md:text-2xl text-white/90 mb-8"
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.7, duration: 0.8 }}
+                  transition={{ delay: 0.3 }}
                 >
                   {slides[currentSlide].subtitle}
                 </motion.p>
+
                 <motion.div
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.9, duration: 0.8 }}
+                  transition={{ delay: 0.4 }}
                 >
                   <Link href="/contact">
                     <motion.button
-                      whileHover={{
-                        scale: 1.05,
-                        boxShadow: '0 10px 30px rgba(180,149,89,0.4)',
-                      }}
-                      whileTap={{ scale: 0.95 }}
-                      className="bg-[#b49559] text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 shadow-lg"
+                      whileHover={{ scale: 1.05 }}
+                      className="bg-[#b49559] text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg"
                     >
                       {slides[currentSlide].cta}
                     </motion.button>
                   </Link>
                 </motion.div>
-              </motion.div>
+
+              </div>
             </div>
           </div>
         </motion.div>
       </AnimatePresence>
 
-      {/* Teal arrows (always teal, no hover color change) */}
+      {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute hidden md:block left-4 md:left-8 top-1/2 -translate-y-1/2 bg-[#5ce2e7] backdrop-blur-sm p-3 rounded-full transition-all duration-300 z-10"
+        className="absolute hidden md:block left-6 top-1/2 -translate-y-1/2 bg-white/80 p-3 rounded-full shadow-lg z-20"
       >
-        <ChevronLeft className="h-6 w-6 text-black" />
+        <ChevronLeft className="h-6 w-6 text-[#C49625]" />
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-4 hidden md:block md:right-8 top-1/2 -translate-y-1/2 bg-[#5ce2e7] backdrop-blur-sm p-3 rounded-full transition-all duration-300 z-10"
+        className="absolute hidden md:block right-6 top-1/2 -translate-y-1/2 bg-white/80 p-3 rounded-full shadow-lg z-20"
       >
-        <ChevronRight className="h-6 w-6 text-black" />
+        <ChevronRight className="h-6 w-6 text-[#C49625]" />
       </button>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3 z-10">
+      {/* Dots */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3 z-20">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -177,10 +157,8 @@ export default function Hero() {
               setDirection(index > currentSlide ? 1 : -1);
               setCurrentSlide(index);
             }}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide
-                ? 'bg-[#b49559] w-8'
-                : 'bg-[#5ce2e7]/50 hover:bg-white/70'
+            className={`h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide ? "bg-[#b49559] w-8" : "bg-white w-3 opacity-70"
             }`}
           />
         ))}

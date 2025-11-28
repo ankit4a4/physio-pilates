@@ -35,8 +35,8 @@ export default function CourseOverview() {
 
           <div className="flex flex-wrap gap-6 mt-6 justify-center md:justify-start">
             <div className="flex items-center gap-3">
-              <GraduationCap className="text-[#5de3e8] w-6 h-6" />
-              <span className="text-[#b49559] font-medium">International Certification</span>
+              {/* <GraduationCap className="text-[#5de3e8] w-6 h-6" /> */}
+              {/* <span className="text-[#b49559] font-medium">International Certification</span> */}
             </div>
             <div className="flex items-center gap-3">
               <Users className="text-[#5de3e8] w-6 h-6" />

@@ -1,57 +1,68 @@
 "use client";
-import { Phone, Mail, MapPin } from "lucide-react";
-import Link from "next/link";
+
 import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
+import img from "@/assets/about/about-cta.webp"; // Replace with your desired image
 
-export default function CTA() {
+export default function CTABanner() {
   return (
-    <section id="contact" className="py-12 bg-[#b49559]">
-      <div className="max-w-4xl mx-auto px-4 text-center">
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="space-y-3"
+    <section className="relative w-full overflow-hidden py-20">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 rounded-3xl shadow-2xl overflow-hidden border border-[#d0e7e7]">
+        
+        {/* Image Section with Teal Overlay */}
+        <div
+          className="relative h-full bg-cover bg-center"
+          style={{ backgroundImage: `url(${img.src})` }}
         >
-          <span className="text-xs font-semibold tracking-widest text-[#fff] uppercase">
-            Contact Us
-          </span>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0BC3C3]/70 via-[#0BC3C3]/40 to-transparent"></div>
+        </div>
 
-          <h2 className="text-3xl font-bold text-white">
-            Let's Begin Your Healing Journey
-          </h2>
-
-          <p className="text-white/90 text-sm max-w-xl mx-auto">
-            Book a consultation or chat with us on WhatsApp
-          </p>
-        </motion.div>
-
-        {/* Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="mt-8 flex flex-col sm:flex-row gap-4 justify-center"
-        >
-          <Link
-            href="https://wa.me/919717505326"
-            target="_blank"
-            className="px-8 py-3 bg-[#b49559] hover:bg-[#5CE2E7] text-white border border-white font-semibold rounded-xl shadow-md transition-all duration-300 hover:scale-105"
+        {/* Content Section */}
+        <div className="relative bg-white/90 py-16 px-8 sm:px-12 text-center md:text-left backdrop-blur-md">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl md:text-4xl font-extrabold leading-snug"
           >
-            WhatsApp Us
-          </Link>
+            <span className="bg-gradient-to-r from-[#0BC3C3] to-[#0A9E9E] bg-clip-text text-transparent">
+              Rebuild • Recover • Rise
+            </span>
+          </motion.h2>
 
-          <Link
-            href="/contact"
-            className="px-8 py-3 bg-[#b49559] hover:bg-[#5CE2E7] text-white border border-white font-semibold rounded-xl shadow-md transition-all duration-300 hover:scale-105"
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="text-gray-700 mt-5 max-w-md md:max-w-lg mx-auto md:mx-0"
           >
-            Book Appointment
-          </Link>
-        </motion.div>
+            Heal your body with expert physiotherapy sessions crafted for you. 
+            Empower your movement, restore balance, and experience a path to recovery.
+          </motion.p>
 
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="mt-8"
+          >
+            <Link
+              href="/book-session"
+              className="inline-block bg-gradient-to-r from-[#0BC3C3] to-[#0A9E9E] text-white font-semibold px-10 py-3 rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            >
+              Book Your Session
+            </Link>
+          </motion.div>
+
+          {/* Decorative shimmer line */}
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: "120px" }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="mt-8 h-[3px] bg-gradient-to-r from-[#0BC3C3] to-[#0A9E9E] mx-auto md:mx-0 rounded-full"
+          />
+        </div>
       </div>
     </section>
   );

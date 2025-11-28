@@ -15,9 +15,10 @@ export default function WhyChooseUs() {
       desc: "We combine physiotherapy and Pilates-based rehabilitation to create a holistic experience that restores both your physical and mental balance.",
     },
     {
-      title: "Why trust our training?",
-      desc: "All programs are guided by internationally certified trainers with 10+ years of practical clinical and teaching experience.",
+      title: "Why choose our programs?",
+      desc: "Our programs are designed to address your unique needs, whether you're recovering from an injury, rehabilitating ]after surgery, or simply seeking to improve your overall wellness.",
     },
+
     {
       title: "Why choose our instructors?",
       desc: "Our team includes physiotherapists and movement experts who provide personalized mentorship and real-time feedback.",

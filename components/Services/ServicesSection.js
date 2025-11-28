@@ -28,7 +28,7 @@ export default function ServicesSection({ service }) {
           </div>
 
           {/* ✅ Levels BELOW the image */}
-          <div className="flex flex-wrap justify-center gap-3 mt-6">
+          {/* <div className="flex flex-wrap justify-center gap-3 mt-6">
             {service.levels?.map((level, index) => (
               <span
                 key={index}
@@ -38,7 +38,7 @@ export default function ServicesSection({ service }) {
                 {level}
               </span>
             ))}
-          </div>
+          </div> */}
         </motion.div>
 
         {/* 📄 RIGHT: Content */}

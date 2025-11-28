@@ -10,7 +10,7 @@ export default function FloatingButtons() {
       <Link
         href="https://wa.me/919717505326?text=Hi!%20I%20would%20like%20to%20know%20more%20about%20your%20services."
         target="_blank"
-        className="flex items-center gap-2 bg-[#25D366] text-white shadow-lg font-medium rounded-full px-4 py-2 hover:bg-[#20b85e] transition"
+        className="flex items-center gap-2 bg-[#5ce2e7] text-white shadow-lg font-medium rounded-full px-4 py-2  transition"
       >
         <MessageCircle size={20} /> Chat Us
       </Link>
