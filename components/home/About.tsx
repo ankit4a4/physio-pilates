@@ -75,7 +75,7 @@ export default function About() {
             <div className="grid grid-cols-3 gap-2 md:gap-8 md:pt-8">
               {[
                 ["800+", "Happy Patients"],
-                ["20+", "Certified Experts"],
+                // ["20+", "Certified Experts"],
                 ["10+", "Years Experience"],
               ].map(([num, text], i) => (
                 <div

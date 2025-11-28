@@ -38,7 +38,7 @@ const slides = [
   },
   {
     title: 'Become a Certified Trainer',
-    subtitle: 'Professional Instructor training courses in physiotherapy, pilates and yoga to build your healthcare career.',
+    subtitle: 'Professional Instructor training courses in pilates  to build your healthcare career.',
     cta: 'Enroll Now',
     image: img5.src,
   },

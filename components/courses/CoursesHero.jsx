@@ -50,7 +50,7 @@ export default function CoursesHero() {
           className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mt-6 leading-snug md:leading-tight tracking-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]"
           data-aos="fade-up"
         >
-          Explore <span className="text-[#b59659]">Teacher Training</span>,{" "}
+          Explore <span className="text-[#b59659]"></span>{" "}
           <br className="hidden sm:block" />
           Workshops & Courses
         </h1>
