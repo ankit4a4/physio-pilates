@@ -41,7 +41,7 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="font-semibold text-xl">Services</h3>
             <ul className="space-y-2">
-              {["Physiotherapy", "Pilates", "Therapy", "Yoga", "Courses"].map((name, i) => (
+              {["Physiotherapy", "Pilates", "Yog", "Courses"].map((name, i) => (
                 <li key={i}>
                   <Link
                     href={`/services/${name.toLowerCase()}`}

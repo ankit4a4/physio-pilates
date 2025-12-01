@@ -22,9 +22,9 @@ const slides = [
     image: img2.src,
   },
   {
-    title: 'Yoga For Body & Mind',
-    subtitle: 'Enhance flexibility, balance and inner peace with our guided yoga sessions for all levels.',
-    cta: 'Start Your Yoga Journey',
+    title: 'Yog For Body & Mind',
+    subtitle: 'Enhance flexibility, balance and inner peace with our guided Yog sessions for all levels.',
+    cta: 'Start Your Yog Journey',
     image: img3.src,
   },
 ];

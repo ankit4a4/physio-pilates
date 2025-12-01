@@ -32,7 +32,7 @@ export const articles = [
         smallheading:
           "What qualifications do I need before starting a Pilates instructor course?",
         smalldesc:
-          "Most programs recommend 6–12 months of Pilates practice and some experience in yoga, fitness, or physiotherapy.",
+          "Most programs recommend 6–12 months of Pilates practice and some experience in Yog, fitness, or physiotherapy.",
       },
     ],
   },

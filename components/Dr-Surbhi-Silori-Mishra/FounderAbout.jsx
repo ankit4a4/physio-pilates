@@ -49,7 +49,7 @@ const FounderAbout = () => {
 
               <p className="text-xl text-gray-600 leading-relaxed mb-8 max-w-2xl">
                 Founder of <span className="text-[#b49559] font-semibold">PhysioPilates</span>, 
-                combining physiotherapy, pilates, and yoga to help people move, heal, and stay fit. 
+                combining physiotherapy, pilates, and Yogp people move, heal, and stay fit. 
                 Guiding patients with a holistic and evidence-based approach.
               </p>
 
@@ -88,10 +88,10 @@ const FounderAbout = () => {
 
                 <p className="text-xl text-gray-700 leading-relaxed mb-8">
                   After completing her Bachelor's from IPH New Delhi and Master’s from IAMR, 
-                  Dr. Surbhi pursued a PG in Yoga from Shri Lal Bahadur Shastri Sanskrit Vidyapeeth. 
+                  Dr. Surbhi pursued a PG in Yogidyapeeth. 
                   In 2017, she began her journey into Pilates and became a Balanced Body (USA) instructor. 
                   In 2023, she founded <span className="text-[#b49559] font-semibold">PhysioPilates</span>, 
-                  helping thousands of patients through a holistic blend of physiotherapy, pilates, and yoga.
+                  helping thousands of patients through a holistic blend of physiotherapy, pilates, and Yog.
                 </p>
 
                 <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 mb-8">
@@ -103,7 +103,7 @@ const FounderAbout = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-800">Holistic Wellness Approach</h4>
-                      <p className="text-gray-600">Integrating Physiotherapy, Pilates & Yoga for balanced recovery.</p>
+                      <p className="text-gray-600">Integrating Physiotherapy, Pilates & Yog for balanced recovery.</p>
                     </div>
                   </div>
                 </div>
@@ -131,7 +131,7 @@ const FounderAbout = () => {
                   <div className="w-3 h-3 bg-[#b49559] rounded-full mt-2 flex-shrink-0"></div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                      PG in Yoga
+                      PG in Yog
                     </h3>
                     <p className="text-gray-600">
                       Earned from Shri Lal Bahadur Shastri Sanskrit Vidyapeeth – You Vigyan Kendra.

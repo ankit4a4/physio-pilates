@@ -254,7 +254,7 @@ export default function ContactForm() {
                         </option>
                         <option value="Physiotherapy">Physiotherapy</option>
                         <option value="Pilates">Pilates</option>
-                        <option value="Yoga">Yoga</option>
+                        <option value="Yoga">Yog</option>
                         <option value="Specialized Treatments">
                           Specialized Treatments
                         </option>

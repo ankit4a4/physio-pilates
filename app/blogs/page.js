@@ -85,7 +85,7 @@ export default function BlogsPage() {
       >
         <p className="text-lg text-gray-600 leading-relaxed">
           Explore our collection of expert articles covering physiotherapy,
-          pilates, yoga, and holistic wellness. Learn from professionals and
+          pilates, Yog, and holistic wellness. Learn from professionals and
           stay ahead in your health journey.
         </p>
       </section>

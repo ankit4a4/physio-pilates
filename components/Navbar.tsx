@@ -5,11 +5,14 @@ import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Logo from '@/assets/logo2.png';
+
+// ▶️ ADD BOTH LOGOS HERE
+import Logo1 from '@/assets/logo1.png'; // shown at top
+import Logo2 from '@/assets/logo2.png'; // shown on scroll
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false); // mobile main menu
-  const [isAboutOpenMobile, setIsAboutOpenMobile] = useState(false); // mobile about submenu
+  const [isOpen, setIsOpen] = useState(false);
+  const [isAboutOpenMobile, setIsAboutOpenMobile] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
@@ -17,8 +20,8 @@ export default function Navbar() {
     { name: 'About', href: '/about', hasDropdown: true },
     { name: 'Physiotherapy', href: '/services/physiotherapy' },
     { name: 'Pilates', href: '/services/pilates' },
-    { name: 'Yoga', href: '/services/yog' },
-    { name: 'Therapy', href: '/services/dry-needling-and-cup-therapy' },
+    { name: 'Yog', href: '/services/yog' },
+    // { name: 'Therapy', href: '/services/dry-needling-and-cup-therapy' },
     { name: 'Courses', href: '/teacher-training-courses' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'Blogs', href: '/blogs' },
@@ -36,7 +39,6 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    // lock body scroll when mobile menu open
     document.body.style.overflow = isOpen ? 'hidden' : 'auto';
   }, [isOpen]);
 
@@ -50,9 +52,15 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24 sm:h-32">
-          {/* Logo */}
+          
+          {/* ▶️ LOGO SWITCH HERE */}
           <Link href="/" className="flex-shrink-0">
-            <Image src={Logo} alt="Wellness Logo" className="h-24 sm:h-32 w-full" priority />
+            <Image
+              src={scrolled ? Logo2 : Logo1}
+              alt="Wellness Logo"
+              className="h-24 sm:h-32 w-auto transition-all duration-300"
+              priority
+            />
           </Link>
 
           {/* Desktop Menu */}
@@ -60,7 +68,6 @@ export default function Navbar() {
             {navItems.map((item) => {
               const isActive = pathname === item.href;
 
-              // Desktop: use group hover to show dropdown; About is a Link (click navigates)
               if (item.hasDropdown) {
                 return (
                   <div key={item.name} className="relative group">
@@ -81,23 +88,16 @@ export default function Navbar() {
                       </Link>
                       <ChevronDown
                         size={20}
-                        className={`transition-transform duration-200 ${
-                          // rotate on hover for a little UI nicety
-                          'group-hover:-rotate-180'
-                        }`}
+                        className={`transition-transform duration-200 group-hover:-rotate-180`}
                       />
                     </div>
 
-                    {/* Dropdown: visible on group hover */}
-                    <div
-                      className="absolute left-0 top-full mt-2 bg-[#b49559] shadow-md rounded-lg py-2 min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
-                      // keep it visible while hovering the dropdown itself
-                    >
+                    <div className="absolute left-0 top-full mt-2 bg-[#b49559] shadow-md rounded-lg py-2 min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                       {aboutSubItems.map((sub) => (
                         <Link
                           key={sub.name}
                           href={sub.href}
-                          className="block px-4 py-2 text-white  text-sm whitespace-nowrap"
+                          className="block px-4 py-2 text-white text-sm whitespace-nowrap"
                         >
                           {sub.name}
                         </Link>
@@ -138,13 +138,11 @@ export default function Navbar() {
           <button
             onClick={() => {
               setIsOpen((s) => !s);
-              // reset mobile about submenu when closing main menu
               if (isOpen) setIsAboutOpenMobile(false);
             }}
             className={`lg:hidden p-2 transition-colors duration-300 ${
               scrolled ? 'text-[#b49559]' : 'text-white'
             } hover:text-[#b49559]`}
-            aria-label="Toggle menu"
           >
             {isOpen ? <X size={26} /> : <Menu size={26} />}
           </button>
@@ -160,14 +158,11 @@ export default function Navbar() {
 
               if (item.hasDropdown) {
                 return (
-                  <div key={item.name}>
+                  <div key={item.name}>	10
                     <div className="flex items-center justify-between">
-                      {/* About row: clicking the label should still navigate to /about;
-                          the chevron toggles submenu on mobile */}
                       <Link
                         href={item.href}
                         onClick={() => {
-                          // close mobile menu when navigating to About page
                           setIsOpen(false);
                           setIsAboutOpenMobile(false);
                         }}
@@ -181,8 +176,6 @@ export default function Navbar() {
                       <button
                         onClick={() => setIsAboutOpenMobile((s) => !s)}
                         className="p-2"
-                        aria-expanded={isAboutOpenMobile}
-                        aria-label="Toggle about submenu"
                       >
                         <ChevronDown
                           className={`transition-transform duration-200 ${
@@ -200,7 +193,6 @@ export default function Navbar() {
                             key={sub.name}
                             href={sub.href}
                             onClick={() => {
-                              // close mobile menu after navigating to sub page
                               setIsOpen(false);
                               setIsAboutOpenMobile(false);
                             }}
@@ -219,12 +211,12 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
+                  onClick={() => setIsOpen(false)}
                   className={`block text-base tracking-wide transition-colors duration-300 ${
                     isActive
                       ? 'text-[#b49559] border-l-4 border-[#b49559] pl-2 font-medium'
                       : 'text-gray-700 hover:text-[#b49559]'
                   }`}
-                  onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </Link>
