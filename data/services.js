@@ -61,14 +61,14 @@ export const services = [
   },
   {
     slug: "yog",
-    title: "Yoga",
+    title: "Yog",
     mainimg: Yog1,
     heroDescription:
-      "Discover peace, flexibility, and inner strength through yoga — where body, breath, and mind unite.",
+      "Discover peace, flexibility, and inner strength through Yog — where body, breath, and mind unite.",
     description1:
-      "Our yoga sessions combine traditional practices with modern science to bring balance to your body, mind, and spirit. From beginners seeking flexibility to advanced practitioners looking for mindfulness, each class helps you cultivate inner peace and physical strength.",
+      "Our Yog sessions combine traditional practices with modern science to bring balance to your body, mind, and spirit. From beginners seeking flexibility to advanced practitioners looking for mindfulness, each class helps you cultivate inner peace and physical strength.",
     description2: [
-      "Guided sessions including Hatha, Vinyasa, and restorative yoga styles suited to all levels.",
+      "Guided sessions including Hatha, Vinyasa, and restorative Yog styles suited to all levels.",
       "Incorporates breathing techniques (Pranayama) and meditation to promote relaxation and focus.",
       "Helps improve flexibility, stability, and muscle tone while reducing anxiety and fatigue.",
       "Experience the benefits of holistic healing through movement, breath, and mindfulness.",

@@ -4,6 +4,7 @@ import CoursesHero from '@/components/courses/CoursesHero'
 import CourseOverview from '@/components/courses/CourseOverview'
 import CourseDetails from '@/components/courses/CourseDetails'
 import WhyChooseUs from '@/components/courses/WhyChooseUs'
+import Certification from '@/components/courses/Certification'
 
 const page = () => {
   return (
@@ -11,6 +12,7 @@ const page = () => {
         <CoursesHero/>
         <CourseOverview/>
         <CourseDetails/>
+        <Certification/>
         <WhyChooseUs/>
     </main>
   )

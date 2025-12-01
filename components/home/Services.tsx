@@ -11,36 +11,36 @@ export default function Services() {
     AOS.init({ duration: 1000, easing: "ease-in-out", once: true });
   }, []);
 
-  const services = [
-    {
-      icon: Activity,
-      title: "Physiotherapy & Rehabilitation",
-      description:
-        "Restore your movement and confidence with advanced physiotherapy treatments designed to heal pain, correct posture, and rebuild strength.",
-      link: "/services/physiotherapy",
-    },
-    {
-      icon: Heart,
-      title: "Pilates Training",
-      description:
-        "Enhance body control, balance, and flexibility with personalized Pilates sessions focused on posture, strength & long-term wellness.",
-      link: "/services/pilates",
-    },
-    {
-      icon: Droplet,
-      title: "Dry Needling & Cupping Therapy",
-      description:
-        "Target muscle stiffness, knots, and inflammation with evidence-based dry needling and cupping techniques.",
-      link: "/services/dry-needling-and-cupping-therapy",
-    },
-    {
-      icon: Sparkles,
-      title: "Yoga Sessions",
-      description:
-        "Achieve harmony of mind, body, and spirit with guided Yoga programs suitable for all levels.",
-      link: "/services/yog",
-    },
-  ];
+const services = [
+  {
+    icon: Activity,
+    title: "Physiotherapy & Rehabilitation",
+    description:
+      "Restore your movement and confidence with advanced physiotherapy treatments designed to heal pain, correct posture, and rebuild strength.",
+    link: "/services/physiotherapy",
+  },
+  {
+    icon: Heart,
+    title: "Pilates Training",
+    description:
+      "Enhance body control, balance, and flexibility with personalized Pilates sessions focused on posture, strength & long-term wellness.",
+    link: "/services/pilates",
+  },
+  {
+    icon: Sparkles,
+    title: "Yog Sessions",
+    description:
+      "Achieve harmony of mind, body, and spirit with guided Yog programs suitable for all levels.",
+    link: "/services/yog",
+  },
+  {
+    icon: Droplet,
+    title: "Instructor Training Course",
+    description:
+      "Become a certified instructor with a professionally designed course focused on practical techniques, theory, and real-world training.",
+    link: "/teacher-training-courses",
+  },
+];
 
   return (
     <section

@@ -8,6 +8,11 @@ import client2 from "@/assets/home/client2.png";
 import client3 from "@/assets/home/client3.png";
 import client4 from "@/assets/home/client4.png";
 import client5 from "@/assets/home/client5.png";
+import client6 from "@/assets/home/client6.png";
+import client7 from "@/assets/home/client7.png";
+import client8 from "@/assets/home/client8.png";
+import client9 from "@/assets/home/client9.png";
+
 import homeServiceImg from '@/assets/home/testimonial.jpg';
 
 
@@ -55,6 +60,46 @@ export default function Testimonials() {
       image:
         client5.src,
     },
+        {
+      name: 'Riddhi Kotnala',
+      role: 'Client',
+      content:
+        'Surbhi’s physio sessions really helped me cure my lower back issues. Not only she gives you therapy sessions to cure your pain, she also helps you with physical movements do’s and don’t which worked really well in my case. Highly recommend!!',
+      image:
+        client6.src,
+    },
+    {
+      name: 'Vibhuti Sharma',
+      role: 'Client',
+      content:
+        'Surbhi’s physio sessions really helped me cure my lower back issues. Not only she gives you therapy sessions to cure your pain, she also helps you with physical movements do’s and don’t which worked really well in my case. Highly recommend!!',
+      image:
+        client6.src,
+    },
+    {
+      name : "Nandita Guha Mazumdar",
+      role : "client",
+      content : 
+      `Dr. Surbhi Silori is an excellent physiotherapist. She treated my 72-year-old relative for shoulder pain, and within just three sessions, there was a remarkable improvement. The pain reduced significantly, and the relief has been long-lasting. Her approach is professional, compassionate, and highly effective. I truly appreciate her expertise and would highly recommend her to anyone in need of physiotherapy.`,
+      image : client7.src ,
+    }
+    ,
+     {
+      name : "Tanushree Mishra",
+      role : "client",
+      content : 
+      `I have a very satisfactory experience with Dr. Surbhi, literally virtuous efforts for taking good care of patients. She is very knowledgeable and skilful. Bunch of gratitude for providing an excellent health care and enhancing it simultaneously!!! ✨`,
+      image : client8.src ,
+    }
+    ,
+     {
+      name : "Shyam Sundar Sridhar",
+      role : "client",
+      content : 
+      `Dr. Surbhi is without doubt one of the best physiotherapists and pilates instructors in Delhi. She is very knowledgeable and meticulous, and customizes each session to aid recovery and build a baseline of fitness and strength. She is also a very patient and supportive instructor who motivates me to push through challenging exercises instead of giving up. Thanks to her sessions, I have been able to recover from a serious issue and regain my strength in my left hand. I continue to practice pilates under her guidance, and the intensity of the exercises makes me feel a great sense of achievement after completing them. Dr. Surbhi's personalized approach and her positive attitude make her an excellent choice for anyone seeking physiotherapy or better fitness and health.`,
+      image : client9.src ,
+    }
+   
     
     
   ];

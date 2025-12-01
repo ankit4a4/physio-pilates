@@ -78,7 +78,7 @@ const FounderAchievements = () => {
                         </div>
                     </div>
 
-                    {/* Yoga & Wellness */}
+                    {/* Yog& Wellness */}
                     <div className="group relative">
                         <div className="absolute -inset-1 bg-[#b49559] rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-300"></div>
                         <div className="relative bg-white rounded-2xl p-8 border-2 border-gray-100 group-hover:border-[#b49559] transition-all duration-300 h-full flex items-start space-x-6">
@@ -89,10 +89,10 @@ const FounderAchievements = () => {
                             </div>
                             <div className="flex-1">
                                 <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-[#b49559] transition-colors duration-300">
-                                    PG in Yoga Science
+                                    PG in YogScience
                                 </h3>
                                 <p className="text-gray-600 leading-relaxed">
-                                    Postgraduate specialization in Yoga from Shri Lal Bahadur Shastri Sanskrit Vidyapeeth — integrating ancient wisdom with modern rehab
+                                    Postgraduate specialization in Yogfrom Shri Lal Bahadur Shastri Sanskrit Vidyapeeth — integrating ancient wisdom with modern rehab
                                 </p>
                                 <div className="flex items-center mt-4">
                                     <div className="w-12 h-1 bg-[#b49559] rounded-full mr-3"></div>
@@ -116,7 +116,7 @@ const FounderAchievements = () => {
                                     Founder – PhysioPilates Wellness
                                 </h3>
                                 <p className="text-gray-600 leading-relaxed">
-                                    Established in 2023, treating thousands through a blend of physiotherapy, Pilates, and yoga-based holistic care
+                                    Established in 2023, treating thousands through a blend of physiotherapy, Pilates, and Yogbased holistic care
                                 </p>
                                 <div className="flex items-center mt-4">
                                     <div className="w-12 h-1 bg-[#5CE2E7] rounded-full mr-3"></div>

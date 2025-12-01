@@ -60,7 +60,7 @@ export default function About() {
               <p data-aos="fade-up" className="text-white">
                 We specialize in{" "}
                 <strong className="text-[#ffffff]">
-                  Physiotherapy, Pilates, Yoga, Dry Needling & Cupping Therapy
+                  Physiotherapy, Pilates, Yog, Dry Needling & Cupping Therapy
                 </strong>{" "}
                 providing personalized posture and recovery programs.
               </p>

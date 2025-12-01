@@ -40,13 +40,11 @@ const galleryImages = [
   { src: pilate3, category: 'Pilates' },
   { src: pilate4, category: 'Pilates' },
   { src: pilate5, category: 'Pilates' },
-
-  { src: yog1, category: 'Yoga' },
-  { src: yog2, category: 'Yoga' },
-  { src: yog3, category: 'Yoga' },
-  { src: yog4, category: 'Yoga' },
-  { src: yog5, category: 'Yoga' },
-
+  { src: yog1, category: 'Yog'},
+  { src: yog2, category: 'Yog' },
+  { src: yog3, category: 'Yog' },
+  { src: yog4, category: 'Yog' },
+  { src: yog5, category: 'Yog' },
   { src: therapy1, category: 'Dry Needling & Cup Therapy'},
   { src: therapy2, category: 'Dry Needling & Cup Therapy'},
   { src: therapy3, category: 'Dry Needling & Cup Therapy' },
@@ -54,7 +52,7 @@ const galleryImages = [
   { src: therapy5, category: 'Dry Needling & Cup Therapy'},
 ];
 
-const categories = ['All', 'Physiotherapy', 'Pilates', 'Yoga', 'Dry Needling & Cup Therapy'];
+const categories = ['All', 'Physiotherapy', 'Pilates', 'Yog', 'Dry Needling & Cup Therapy'];
 
 export default function GallerySection() {
   const [selectedCategory, setSelectedCategory] = useState('All');

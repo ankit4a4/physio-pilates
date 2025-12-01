@@ -35,7 +35,7 @@ const FounderExpertise = () => {
                             </span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                            Dr. Surbhi blends physiotherapy, pilates, and yoga to restore balance, mobility, and strength through mindful, holistic care.
+                            Dr. Surbhi blends physiotherapy, pilates, and Yogto restore balance, mobility, and strength through mindful, holistic care.
                         </p>
                     </div>
 
@@ -101,7 +101,7 @@ const FounderExpertise = () => {
                             </div>
                         </div>
 
-                        {/* Yoga & Wellness */}
+                        {/* Yog& Wellness */}
                         <div className="group relative">
                             <div className="absolute inset-0 bg-gradient-to-r from-[#b49559] to-[#d4b87a] rounded-3xl blur-lg opacity-20 group-hover:opacity-30 transition-all duration-500"></div>
                             <div className="relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 group-hover:border-[#b49559] group-hover:-translate-y-2 h-full flex flex-col">
@@ -109,10 +109,10 @@ const FounderExpertise = () => {
                                     <Activity size={32} />
                                 </div>
                                 <h3 className="text-2xl font-bold text-gray-800 mb-4 group-hover:text-[#b49559] transition-colors duration-300">
-                                    Yoga & Wellness
+                                    Yog& Wellness
                                 </h3>
                                 <p className="text-gray-600 leading-relaxed flex-grow">
-                                    Certified in yoga from Shri Lal Bahadur Shastri Sanskrit Vidyapeeth — integrating movement, breath, and mindfulness for holistic healing.
+                                    Certified in Yogfrom Shri Lal Bahadur Shastri Sanskrit Vidyapeeth — integrating movement, breath, and mindfulness for holistic healing.
                                 </p>
                                 <ul className="mt-6 space-y-2">
                                     <li className="flex items-center text-sm text-gray-500">
@@ -152,7 +152,7 @@ const FounderExpertise = () => {
                         <div className="bg-white rounded-3xl p-8 md:p-12 border border-gray-200 mb-8 shadow-md">
                             <p className="text-xl md:text-2xl text-[#222] leading-relaxed mb-8">
                                 Dr. Surbhi’s vision is rooted in a{" "}
-                                <span className="text-[#5CE2E7] font-semibold">holistic approach</span> — uniting physiotherapy, pilates, and yoga to restore balance and build lifelong wellness.
+                                <span className="text-[#5CE2E7] font-semibold">holistic approach</span> — uniting physiotherapy, pilates, and Yogto restore balance and build lifelong wellness.
                             </p>
 
                             <div className="relative">
@@ -191,7 +191,7 @@ const FounderExpertise = () => {
                                 </div>
                                 <h4 className="text-[#000] font-semibold mb-2">Holistic Wellness</h4>
                                 <p className="text-[#333] text-sm">
-                                    Integrating physiotherapy, pilates, and yoga principles
+                                    Integrating physiotherapy, pilates, and Yogprinciples
                                 </p>
                             </div>
                         </div>

@@ -63,7 +63,7 @@ export default function FounderHero() {
           — founder of{" "}
           <span className="text-[#b59659]">PhysioPilates</span>, a wellness
           space built on holistic healing. With 10+ years in physiotherapy,
-          pilates, and yoga, she inspires movement, strength, and balance.
+          pilates, and Yog she inspires movement, strength, and balance.
         </p>
 
         {/* Divider */}
